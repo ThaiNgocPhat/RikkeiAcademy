@@ -1,0 +1,21 @@
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 0px;
+    margin: 0px;
+}
+.container_2{
+    display: flex;
+}
+img{
+    width: 600px;
+    height: 700px;
+}
+.card{
+    margin-left: auto;
+}
+.container_1{
+    display: flex;
+}
+.card_1{
+    margin-right: auto;
+}
