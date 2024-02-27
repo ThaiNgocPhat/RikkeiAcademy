@@ -1,21 +1,171 @@
 body{
     font-family: Arial, Helvetica, sans-serif;
-    padding: 0px;
     margin: 0px;
+    padding: 0px;
 }
-.container_2{
+.left-product{
+    color: red;
+    font-size: 30px;
+    margin:10px;
+}
+.center-product{
+    text-align: center;
+}
+a{
+    padding: 10px;
+    color: black;
+}
+.right-product{
+    float: right;
+}
+.btn{
+    border: 2px solid red; 
+    border-radius: 20px; 
+    padding: 10px 20px; 
+    background-color: transparent; 
+    color: red; 
+    cursor: pointer; 
+    transition: background-color 0.3s, color 0.3s; 
+}
+.btn-1{
+        border: none;
+        border-radius: 20px;
+        padding: 10px 20px;
+        cursor: pointer;
+        transition: box-shadow 0.3s;
+    }
+.main-product{
     display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-content: center;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px;
 }
-img{
-    width: 600px;
-    height: 700px;
+
+.img-product{
+    width: 500px;
+    height: 600px;
+    border:2px solid red;
+    border-radius: 20px;
 }
-.card{
-    margin-left: auto;
+.left{
+    width: 25%;
+    height: 400px;
 }
-.container_1{
+.btn-2{
+    border: 2px solid red; 
+    border-radius: 20px; 
+    padding: 10px 20px; 
+    background-color: red; 
+    color: white; 
+    cursor: pointer; 
+    transition: background-color 0.3s;
+    width: 300px;
+    height: 60px;
+    
+
+}
+.Follower{
     display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+    padding: 30px;
+    gap: 300px;
 }
-.card_1{
-    margin-right: auto;
+.Icon-User{
+    color: red;
+    font-size: 30px;
+}
+.icon-left{
+    text-align: center;
+    justify-content: center;
+    border-right: 2px solid pink;
+    padding-right: 200px;
+}
+.icon-center{
+    border-right: 2px solid pink;
+    padding-right: 200px;
+}
+
+.main-list{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+}
+.icon{
+    color:green;
+    font-size: large;
+}
+.img-left{
+    width: 50%;
+    height: 500px;
+}
+.list-right{
+    line-height: 5;
+}
+
+.Plan{
+    text-align: center;
+    padding-top: 100px;
+}
+.main-plan{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-content: center;
+    justify-content: center;
+    align-items: center;        
+    gap: 50px;
+}
+.plan-icon{
+    color: green;
+}
+   
+
+li{
+    list-style: none; /*ẩn dấu chấm của li*/
+    display: flex;
+    align-items: center;
+    gap:10px
+    /* flex-direction: chieu ngang- doc */
+    /* align-item: can cac thuoc tinh  theo chieu doc*/
+    /* justify-content: can cac thuoc tinh  theo chieu doc */
+    /* gap: khoang cach giua cac phan tu con */
+    /* display: flex;
+    align-items: center;
+    gap:10px */
+}
+.Plan-left,
+.Plan-center,   
+.Plan-right p{
+    text-align: center;
+} 
+.btn-3,.btn-4,.btn-5{
+    border: 2px solid red;
+    border-radius: 20px;
+    width: 200px;
+    height: 60px;
+    color: red;
+    background-color: transparent;
+}
+.Plan-left,
+.Plan-center,
+.Plan-right{
+    line-height: 5;
+    border: 2px solid rgb(244, 233, 233);
+    margin-bottom: 50px;
+    width: 250px;
+    height: 1100px;
+    border-radius: 20px;
+}    
+.img-Nextwork{
+    
 }
