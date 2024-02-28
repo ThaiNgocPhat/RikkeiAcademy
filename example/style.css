@@ -1,9 +1,37 @@
-
-body{
-    font-family: "Rubik", sans-serif;
-}
-.wrapper{
-    width: 1440px;
-    margin: 0 auto ;
+/* Reset CSS */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
+/* Style cho Search Box */
+.search-container {
+    position: relative;
+    max-width: 300px;
+}
+
+.search-input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.search-icon {
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    transform: translateY(-50%);
+    cursor: pointer;
+}
+
+.search-icon i {
+    color: #666;
+}
+
+/* Hover style cho icon */
+.search-icon:hover i {
+    color: #333;
+}

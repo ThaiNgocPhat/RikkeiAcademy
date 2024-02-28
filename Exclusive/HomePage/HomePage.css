@@ -1,0 +1,19 @@
+
+#top-header{
+    display:flex;
+    justify-content: space-between;
+    background-color: black;
+    height: 30px;
+    padding-top:5px ;
+}
+.top{
+    padding-left: 600px;
+    color: aliceblue;
+}
+.Sale{
+    color: white;
+}
+#menu{
+    display: flex;
+    
+}
