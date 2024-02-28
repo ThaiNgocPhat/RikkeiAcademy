@@ -1,0 +1,304 @@
+body {
+    font-family: "Rubik", sans-serif;
+}
+.wrapper {
+    width: 1440px;
+    margin: 0 auto;
+}
+.container {
+    width: 1140px;
+  /* căn giữa thẻ block */
+    margin: 0 auto;
+  /* căn giữa 1 đoạn text dùng text-align:center */
+}
+.header-item {
+    list-style: none;
+}
+.header-login,
+.header-register{
+    border: 2px solid red; 
+    border-radius: 20px; 
+    padding: 10px 20px; 
+    background-color: transparent; 
+    color: red; 
+    cursor: pointer; 
+    transition: background-color 0.3s, color 0.3s; 
+}
+.header-menu {
+    display: flex;
+    gap: 40px;
+}
+#header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.header-right {
+    display: flex;
+    gap: 20px;
+}
+
+
+#hero {
+    display: flex;
+    align-items: center;
+    margin-top: 80px;
+    gap: 14px;
+}
+.hero-title {
+    font-weight: 500;
+    font-size: 50px;
+    line-height: 70px;
+}
+.hero-title b {
+    font-weight: 700;
+}
+.hero-description {
+    font-size: 16px;
+    line-height: 30px;
+    font-weight: 400;
+    color: #4f5665;
+    margin-top: 20px;
+}
+.hero-description b {
+    font-weight: 500;
+}
+.hero-button-start{
+    border: 2px solid red; 
+    border-radius: 20px; 
+    padding: 10px 20px; 
+    background-color: transparent; 
+    color: red; 
+    cursor: pointer; 
+    width: 300px;
+    height: 70px;
+}
+.hero-button-start:hover{
+    background-color: red;
+    color: white;
+}
+
+
+#intro{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+    padding: 30px;
+    gap: 300px;
+    margin: 30px;
+}
+.intro-left{
+    text-align: center;
+    justify-content: center;
+    border-right: 2px solid pink;
+    padding-right: 200px;
+    display: flex;
+    gap: 3px;
+}
+.intro-center{
+    text-align: center;
+    justify-content: center;
+    border-right: 2px solid pink;
+    padding-right: 200px;
+    display: flex;
+    gap: 3px;
+}
+.intro-right{
+    text-align: center;
+    justify-content: center;
+    padding-right: 200px;
+    display: flex;
+    gap: 3px; 
+}
+.intro-User{
+    color: red;
+    font-size: 30px;
+}
+
+
+#feature{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-content: stretch;
+    justify-content: space-between;
+    align-items: center;
+    gap: 60px;
+}
+.feature-right{
+    line-height: 2;
+}
+li{
+    list-style: none;
+
+}
+.icon{
+    color: green;
+}
+
+
+.plan-header{
+    text-align: center;
+    padding-top: 100px;
+}
+.plan-list{
+    padding-top: 100px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+    gap:70px;
+}
+.plan-left,
+.plan-center,
+.plan-right{
+    border: 2px solid red;
+    border-radius: 20px;
+    width: 250px;
+    height: 900px;
+    text-align: center;
+}
+li{
+    line-height: 4;
+
+}
+.plan-left p{
+    padding-top: 118px;
+}
+.plan-center p{
+    padding-top: 58px;
+}
+.plan-right p{
+    margin-top: 40px;
+}
+.btn{
+    border: 2px solid red;
+    width: 150px;
+    height: 60px;
+    border-radius: 20px;
+    background-color: white;
+}
+.plan-content li{
+    display: flex;
+    align-items: center;
+    gap:10px;
+}
+
+
+.sponsor-content{
+    text-align: center;
+    padding: 80px;
+}
+
+#customer{
+    display: flex;
+    gap: 40px;
+}
+.Viezh{
+    border: 2px solid red;
+    border-radius: 20px;
+    width: 300px;
+    height: 200px;
+    padding-right: 50px;
+}
+.Viezh-1{
+    display: flex;
+    align-items: center;
+    gap: 90px;
+}
+.Viezh-2{
+    display: flex;
+}
+.Yessica{
+    border: 2px solid red;
+    border-radius: 20px;
+}
+.Yessica-1{
+    display: flex;
+    align-items: center;
+    gap: 130px;
+}
+.Yessica-2{
+    display: flex;
+}
+.Kim{
+    border: 2px solid red;
+    border-radius: 20px; 
+}
+.Kim-1{
+    display: flex;
+    align-items: center;
+    gap: 90px;
+}
+.Kim-2{
+    display: flex;
+}
+.customer-icon{
+    color:rgb(245, 245, 58);
+}
+
+
+.btn-a{
+    display: flex;
+    justify-content: space-between
+}
+.btn-left{
+    padding-top: 100px;
+}
+.btn-right{
+    display: flex;
+    align-items: center
+}
+.btn-right-right{
+    padding-top: 25px;
+}
+
+.subscribe-father{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.subscribe-left h1{
+    font-size: 35px;
+}
+.subscribe-btn{
+    width: 300px;
+    height: 60px;
+    border: 2px solid red;
+    border-radius: 30px;
+    background-color: white;
+}
+.subscribe-btn:hover{
+    background-color: red;
+    color: white;
+}
+
+
+.footer{
+    display: flex;
+    padding:100px ;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+.footer-icon{
+    color: red;
+    display: flex;
+    gap: 300px;
+}
+.About{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+    gap:70px;
+}
+li{
+    line-height: 4;
+}
