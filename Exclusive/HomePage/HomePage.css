@@ -1,10 +1,12 @@
-
 #top-header{
     display:flex;
     justify-content: space-between;
     background-color: black;
     height: 30px;
     padding-top:5px ;
+}
+.header{
+    padding-right: 150px;
 }
 .top{
     padding-left: 600px;
@@ -13,7 +15,216 @@
 .Sale{
     color: white;
 }
+
+
 #menu{
     display: flex;
+    padding-left: 150px;
+    padding-right: 150px;
+}
+.menu-1{
+    display: flex;
+    justify-content: space-around;
+    padding-top: 20px;
+}
+.menu-2{
+    font-size: 40px;
+}
+.menu-3{
+    padding-right: 200px;
+    padding-left: 150px;
+}
+a{
+    margin-right: 0px;
+    margin-right: 40px;
+    text-decoration: none;
+    color: black;
+}
+a:hover{
+    text-decoration: underline;
+    color:brown;
+}
+.menu-4-icon{
+    align-items: baseline;
+    background-color: #F5F5F5;
+    height: 20px;
+    height: 22px;
+    padding-top: 10px;
+}
+.menu-4-header{
+    display: flex;
+}
+input{
+    width: 200px;
+    padding-right: 10px;
+    background-color:#F5F5F5;
+    border: #F5F5F5;
+    width: 200px;
+    height: 30px;
+}
+
+
+
+.menu-5{
+    display: flex;
+}
+.menu-5-icon{
+    padding-right: 50px;
+    margin-left:50px ;
+}
+.menu-5-right{
+    padding-right: 150px;
+}
+#hero{
+    display: flex;
+    justify-content: space-between;
+    border-top:1px solid black;
+    margin-top: 50px;
+}
+li{
+    list-style: none;
+    line-height: 2.5;
+}
+.hero-list{
+    padding-left: 100px;
+    border-right: 1px solid black;
+    padding-right:100px ;
+    padding-top: 40px;
+}
+.hero-img{
+    margin-right: 135px;
+    margin-top: 25px;
+    padding-top: 40px;
+}
+.Woman-icon{
+    margin-left: 50px;
+}
+.Men-icon{
+    margin-left: 68px;
+}
+
+
+.Today-header{
+    margin-left: 140px;
+    margin-top: 200px ;
+}
+.Sales-Time-Button{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.Sale-Time{
+    display: flex;
+    align-items: center;
+    padding-top: 30px;
+    padding-left: 150px;
+}
+.Sales b {
+    font-size: 40px;
+    padding-right: 50px;
     
+}
+.countdown {
+    list-style-type: none;
+    padding-right: 700px;
+}
+
+.countdown li {
+    display: inline-block;
+    margin-right: 20px;
+    /* Khoảng cách giữa các mục */
+    vertical-align: middle;
+    /* Căn chỉnh theo chiều dọc */
+}
+
+.countdown li .label {
+    font-size: 14px;
+    color: #666;
+}
+
+.countdown li .number {
+    font-size: 24px;
+    color: #000;
+    font-weight: bold;
+}
+
+.countdown li .separator {
+    font-size: 24px;
+    color: #000;
+    font-weight: bold;
+    margin: 0 5px;
+    /* Khoảng cách giữa số và dấu hai chấm */
+}
+.countdown li .separator {
+    font-size: 24px;
+    color: pink; /* Màu của dấu hai chấm */
+    font-weight: bold;
+    margin:5px; /* Khoảng cách giữa số và dấu hai chấm */
+}
+.Button {
+    display: inline-block;
+    cursor: pointer;
+    margin-right: 150px;
+}
+.Button {
+    display: inline-block;
+    cursor: pointer;
+}
+.Button i {
+    font-size: 24px;
+    color: #333;
+    /* Màu của mũi tên */
+    border-radius: 50%;
+    /* Tạo hình dạng hình tròn */
+    background-color: #ccc;
+    /* Màu nền của biểu tượng */
+    padding: 10px;
+    /* Kích thước của biểu tượng */
+    transition: background-color 0.3s ease;
+    /* Hiệu ứng chuyển đổi màu nền */
+}
+/* Thay đổi màu nền khi hover */
+.Button i:hover {
+    background-color: #ff0000;
+    /* Màu nền của biểu tượng khi hover */
+}
+
+
+
+.image-container {
+    position: relative;
+    display: inline-block;
+}
+.discount {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background-color: #ff0000;
+    color: #ffffff;
+    padding: 5px;
+    border-radius: 5px;
+}
+.Product-img{
+    padding-top: 40px;
+}
+#product{
+    padding-left: 150px;
+}
+.image-container {
+    position: relative;
+    display: inline-block;
+}
+.Product-icon {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
+.Product-icon i {
+    margin-left: 5px;
+    display: flex;
+    flex-direction: column;
+    padding-top: 5px;
+}
+.space{
+    text-decoration: line-through;
 }
