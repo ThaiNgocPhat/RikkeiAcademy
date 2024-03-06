@@ -1,0 +1,18 @@
+.color-picker {
+    display: flex;
+    align-items: center;
+  }
+  
+  .color-picker label {
+    margin-right: 10px;
+    background-color: #DB4444;
+  }
+  
+  .color-picker input {
+    width: 20px;
+    height: 20px;
+    /* border: none; */
+    border-radius: 50%;
+    background-color: #DB4444;
+  }
+  
