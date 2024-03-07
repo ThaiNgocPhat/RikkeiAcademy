@@ -81,6 +81,7 @@ body {
   padding-top: 98px;
   justify-content: space-between;
   align-items: center;
+  padding-bottom: 16px;
 }
 .menu-1 {
   font-size: 24px;
@@ -124,14 +125,18 @@ input::placeholder {
   display: flex;
   gap: 16px;
   padding-left: 24px;
+  align-items: center;
 }
-.hr{
-  margin-top: 16px;
+.menu-5 img{
+  padding-bottom: 10px;
 }
 
 #hero {
   display: flex;
   justify-content: space-between;
+  border-top: 1px solid black;
+  margin-top: 40px;
+  padding-top: 40px;
 }
 li {
   list-style: none;
@@ -140,14 +145,10 @@ li {
 .asd {
   padding-bottom: 16px;
 }
-.hero-img{
-  padding-top: 40px;
-}
 .hero-list {
   align-items: flex-end;
   justify-content: space-between;
   border-right: 1px solid black;
-  padding-top: 40px;
 }
 .list {
   margin-bottom: 16px;
@@ -250,7 +251,7 @@ li {
 
 .Product-Sales {
   display: flex;
-  gap: 20px;
+  gap: 40px;
 }
 .discount {
   position: absolute;
@@ -338,9 +339,7 @@ li {
 .Title-Icon i:hover {
   background-color: #ff0000;
 }
-.Category-Camera{
-  background-color: red;
-}
+
 
 
 
@@ -400,8 +399,8 @@ Best-Img-2 {
 
 .image-container {
   position: relative;
-  width: 270px;
   height: 250px;
+  width: 270px;
   background-color: #f5f5f5;
   display: flex;
   align-items: center;
@@ -750,8 +749,132 @@ Best-Img-2 {
 
 
 
+.cart-icon-container {
+  position: relative;
+  display: inline-block;
+}
+
+.cart-item-count {
+  position: absolute;/*ghi đè lên phần tử cha*/
+  top: -10px;
+  right: -10px;
+  background-color: red;
+  color: white;
+  border-radius: 50%;
+  padding: 2px 4px;
+  font-size: 12px;
+}
+.account-icon{
+    color: black;
+    background-color:white; 
+    border-radius: 50%; 
+    padding: 8px; 
+}
+.account-icon:hover{
+    color: white;
+    background-color:red; 
+    border-radius: 50%; 
+    padding: 8px; 
+
+}
+.Account-Login {
+  display: flex;
+  flex-direction: column;
+  gap: 13px;
+  background-color: #0000000A;
+}
+
+.Account-Login  div {
+  display: flex;
+  align-items: center;
+}
+.Account-Login img {
+  width: 32px; 
+  height: 32px; 
+}
 
 
+.Account-Login span {
+  font-size: 14px; 
+}
+
+.Account-icon{
+  position: relative;
+  transition: all 0.7s linear;
+}
+.Account-icon i{
+  cursor: pointer;
+}
+
+.Account-Login{
+  position: absolute;
+  color:white;
+    top: 40px;
+    right: 0;
+    width: 300px;
+    display: none;
+    background-color:rgba(0, 0, 0, 0.827);
+  /* top - left - right - bottom */
+}
+
+.Account-icon:hover .Account-Login{
+  display: block;
+}
+.header{
+    padding-top: 16px;
+    padding-bottom: 80px;
+}
+.Wishlist{
+    padding-top: 80px;
+    padding-bottom: 60px;
+    display: flex;
+    justify-content: space-between;
+}
+.Wishlist-Btn{
+    width: 223px;
+    height: 56px;
+    border: 1px solid #000;
+    border-radius: 4px;
+}
+.Span{
+    font-size: 20px;
+}
+.Wishlist-Product{
+    display: flex;
+}
 
 
+.add-to-cart {
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    opacity: 0;
+    background-color: black;
+    padding: 10px 20px;
+    /* border-radius: 5px; */
+    transition: top 0.3s ease, opacity 0.3s ease;
+    width: 100%;
+    text-align: center;
+}
 
+.image-container:hover .add-to-cart {
+    top: 85%; /* Đẩy phần add-to-cart lên trên */
+    opacity: 1;
+}
+
+.add-text {
+    color: white; /* Màu chữ */
+    font-size: 12px;
+}
+
+.add-to-cart img {
+    width: 100%;
+}
+.shopping-cart{
+  color: white;
+}
+.JustForYou{
+  display: flex;
+  padding-bottom: 140px;
+}

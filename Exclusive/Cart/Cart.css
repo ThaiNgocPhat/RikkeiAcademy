@@ -1,0 +1,89 @@
+.Page{
+    padding-top: 80px;
+    padding-bottom: 80px;
+}
+.Cart{
+    display: flex;
+    gap: 40px;
+    flex-direction: column;
+    padding-bottom: 140px;
+}
+.Cart-Title{
+    display: flex;
+    justify-content: space-between;
+    background: rgba(255, 255, 255, 1);
+    box-shadow: 0px 1px 13px 0px rgba(0, 0, 0, 0.05);
+    height: 72px;
+    align-items: center;
+    padding-left: 40px;
+    padding-right: 40px;
+    gap: 284px;
+}
+.Cart-Product{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 284px;
+    justify-content: center;
+}
+.Cart-Img{
+    width: 50px;
+    height: 39px;
+}
+.cancel-container{
+    display: flex;
+}
+
+
+
+.Cart-Product-Quantity {
+    display: flex;
+    align-items: center;
+}
+
+.quantity-controls {
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.quantity-button {
+    padding: 5px 10px;
+    background-color: #f0f0f0;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.quantity-input {
+    width: 40px;
+    text-align: center;
+    padding-right: 40px; /* Khoảng cách để nút không bị che khuất ô số */
+}
+
+.Cart-Product-Img{
+    display: flex;
+}
+/* .cancel-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1; 
+} */
+
+.fa-xmark {
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    color: #ff0000; 
+    font-size: 16px;
+    cursor: pointer;
+    width: 24px;
+    height: 24px;
+}
+
+

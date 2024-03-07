@@ -1,0 +1,73 @@
+hr{
+    margin-top: 16px;
+    margin-bottom: 60px;
+}
+.Sign-Up-Img{
+    Width:805px;
+    Height:781px;
+}
+.SignUp{
+    display: flex;
+    padding-bottom: 140px;
+}
+.Sign-Input{
+    padding-left: 129px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.Sign-Input p {
+    font-size: 16px;
+}
+.Sign-Input h1 {
+    font-size: 30px;
+}
+.Sign-Up-Title{
+    display: flex;
+    gap: 24px;
+    flex-direction: column;
+    padding-bottom: 48px;
+}
+
+.Sign-Input form input[type="text"],
+.Sign-Input form input[type="password"],
+.Sign-Input form input[type="number or email"],
+.Sign-Input form input[type="date"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    font-size: 16px;
+    border-top:none;
+    border-left:none;
+    border-right:none;
+    border-bottom: 1px solid #000;
+
+}
+.submit{
+    width: 100%;
+    height: 56px;
+    background-color: #DB4444;
+    color: white;
+}
+.Google-btn{
+    width: 100%;
+    height: 56px;
+    border: 1px solid black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.Gooogle-Button{
+    display: flex;
+    gap: 16px;
+    flex-direction: column;
+    padding-bottom: 32px;
+    padding-top: 56px;
+}
+.text-center{
+    text-align: center;
+}
+.text-center a{
+    padding-left: 16px;
+}
+
