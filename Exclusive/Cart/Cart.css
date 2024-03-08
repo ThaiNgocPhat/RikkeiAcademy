@@ -2,11 +2,14 @@
     padding-top: 80px;
     padding-bottom: 80px;
 }
+#Cart{
+    margin-top: 40px;
+}
 .Cart{
     display: flex;
     gap: 40px;
     flex-direction: column;
-    padding-bottom: 140px;
+    padding-bottom: 40px;
 }
 .Cart-Title{
     display: flex;
@@ -19,71 +22,170 @@
     padding-right: 40px;
     gap: 284px;
 }
+.Product-Price{
+    display: flex;
+    justify-content: space-between;
+    width: 284px;
+    gap: 284px;
+}
+.Quantity-Subtotal{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 384px;
+}
 .Cart-Product{
     display: flex;
     justify-content: space-between;
     align-items: center;
     gap: 284px;
+    height: 102px;
     justify-content: center;
+    box-shadow: 0px 1px 13px 0px rgba(0, 0, 0, 0.05);
 }
 .Cart-Img{
     width: 50px;
     height: 39px;
 }
-.cancel-container{
+.Cart-Img-Price{
     display: flex;
-}
-
-
-
-.Cart-Product-Quantity {
-    display: flex;
+    justify-content: center;
     align-items: center;
-}
-
-.quantity-controls {
-    display: flex;
-    align-items: center;
-    position: relative;
-}
-
-.quantity-button {
-    padding: 5px 10px;
-    background-color: #f0f0f0;
-    border: none;
-    cursor: pointer;
-    font-weight: bold;
-    position: absolute;
-    right: 0;
-    top: 50%;
-    transform: translateY(-50%);
-}
-
-.quantity-input {
-    width: 40px;
-    text-align: center;
-    padding-right: 40px; /* Khoảng cách để nút không bị che khuất ô số */
+    width: 425px;
+    padding-right: 35px;
+    gap: 177px;
 }
 
 .Cart-Product-Img{
     display: flex;
 }
-/* .cancel-container {
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: 1; 
-} */
-
-.fa-xmark {
-    position: absolute;
-    top: 5px;
-    left: 5px;
-    color: #ff0000; 
-    font-size: 16px;
-    cursor: pointer;
-    width: 24px;
-    height: 24px;
+.cancel-container{
+    display: flex;
+    flex-direction: column-reverse;
+    position: relative;
+    align-items: center;
+    gap: 20px;
+    flex-direction: row;
 }
 
+.quantity-controls {
+    display: flex;
+    align-items: center; 
+    position: relative;
+}
+.Button-Quantity{
+    display: flex;
+    align-items: center;
+    position: absolute ;
+    flex-direction: column;
+}
+.quantity-button  {
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+    padding-left: 43px;
+    display: flex;
+    
+}
 
+.quantity-input {
+    text-align: center;
+    padding-right: 40px;
+    width: 72px;
+    height: 44px;
+    border-radius: 4px;
+    margin-left: 1px;
+}
+.fa-xmark{
+    background-color: red;
+    border: none;
+    border-radius: 47px;
+    width: 15px;
+    height: 15px;
+    position: absolute;
+    top: -7px;
+    left: -6px;
+    color: white;
+    text-align: center;
+}
+.Quantity-Button{
+    margin-top: 24px;
+    margin-bottom: 80px;
+    display: flex;
+    justify-content: space-between;
+    font-size: 16px;
+}
+.Button-Left,
+.Button-Right{
+    border: 1px solid rgba(0, 0, 0, 0.5);
+    width: 218px;
+    height: 56px;
+    padding: 16px 47px 16px 47px;
+    border-radius: 4px;
+}
+.Code-Apply-Total{
+    display: flex;
+    justify-content:space-between;
+}
+.Code-Apply{
+    width: 527px;
+    height: 56px;
+    display: flex;
+    gap: 16px;
+}
+.Code{
+    width: 300px;
+    height: 56px;
+    border: 1px solid rgba(0, 0, 0, 1);
+    border-radius: 4px;
+    padding: 16px 0px 16px 24px;
+    
+}
+.Apply{
+    width: 211px;
+    height: 56px;
+    border: 1px solid rgba(0, 0, 0, 1);
+    border-radius: 4px;
+    padding: 16px 47px 16px 47px;
+}
+.Apply:hover{
+    background-color: red;
+    cursor: pointer;
+    color: white;
+}
+.Code:hover {
+    background-color: red;
+    cursor: pointer;
+    color: white;
+}
+.Cart-Total{
+    width: 470px;
+    height: 324px;
+    border: 1.5px solid rgba(0, 0, 0, 1);
+    display: flex;
+    flex-direction: column;
+}
+.Cart-Description{
+    padding: 32px 346px 24px 24px;
+}
+.Subtotal,
+.Shopping,
+.Total{
+    display: flex;
+    justify-content: space-between;
+}
+
+.Subtotal{
+    border-bottom: 1px solid black;
+    width: 422px;
+    margin: auto;
+    padding-bottom: 16px;
+    margin-bottom: 150px;
+}
+.Shopping{
+    border-bottom: 1px solid black;
+    width: 422px;
+    margin: auto;
+    padding-bottom: 16px;
+    margin-bottom: 150px;
+}
