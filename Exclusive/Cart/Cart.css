@@ -97,7 +97,7 @@
     margin-left: 1px;
 }
 .fa-xmark{
-    background-color: red;
+    background-color:rgba(219, 68, 68, 1);
     border: none;
     border-radius: 47px;
     width: 15px;
@@ -126,6 +126,7 @@
 .Code-Apply-Total{
     display: flex;
     justify-content:space-between;
+    margin-bottom:140px ;
 }
 .Code-Apply{
     width: 527px;
@@ -139,6 +140,7 @@
     border: 1px solid rgba(0, 0, 0, 1);
     border-radius: 4px;
     padding: 16px 0px 16px 24px;
+    opacity: 50%;
     
 }
 .Apply{
@@ -149,43 +151,64 @@
     padding: 16px 47px 16px 47px;
 }
 .Apply:hover{
-    background-color: red;
+    background-color:rgba(219, 68, 68, 1);
     cursor: pointer;
     color: white;
 }
 .Code:hover {
-    background-color: red;
+    background-color:rgba(219, 68, 68, 1);
     cursor: pointer;
     color: white;
 }
-.Cart-Total{
+.Cart-Total {
     width: 470px;
-    height: 324px;
+    height:324px;
     border: 1.5px solid rgba(0, 0, 0, 1);
-    display: flex;
-    flex-direction: column;
 }
-.Cart-Description{
-    padding: 32px 346px 24px 24px;
-}
-.Subtotal,
-.Shopping,
-.Total{
-    display: flex;
-    justify-content: space-between;
+.Cart-Description {
+    margin: 32px 0px 24px 24px;
 }
 
-.Subtotal{
+.Subtotal,
+.Shopping,
+.Total {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 16px;
+}
+
+.Subtotal {
     border-bottom: 1px solid black;
     width: 422px;
     margin: auto;
-    padding-bottom: 16px;
-    margin-bottom: 150px;
 }
 .Shopping{
     border-bottom: 1px solid black;
     width: 422px;
     margin: auto;
-    padding-bottom: 16px;
-    margin-bottom: 150px;
+    padding-top: 16px;
+}
+.Total{
+    width: 422px;
+    margin: auto;
+    padding-top: 16px;
+}
+.Code-Apply-Total-Button{
+    width: 260px;
+    height: 56px;
+    border-radius: 4px;
+    padding: 16px 46px 16px 46px;
+    border: 2px solid black;
+    margin-left: 89px;
+    margin-top: 16px;
+}
+.Code-Apply-Total-Button:hover{
+    background-color:rgba(219, 68, 68, 1);
+    color: white;
+}
+
+
+.Subtotal:last-child,
+.Shopping:last-child {
+    margin-bottom: 16px; /* Thêm khoảng cách dưới cùng */
 }

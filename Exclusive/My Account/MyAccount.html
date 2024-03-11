@@ -4,11 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="../HomePage/HomePage.css">
     <link rel="stylesheet" href="../Wishlist/Wishlist.css">
-    <link rel="stylesheet" href="../Category/Category.css">
-    <link rel="stylesheet" href="Cart.css">
-        <link
+    <link rel="stylesheet" href="../HomePage/HomePage.css">
+    <link rel="stylesheet" href="MyAccount.css">
+     <link
         rel="stylesheet"
         href="https://site-assets.fontawesome.com/releases/v6.4.2/css/all.css"
     />
@@ -20,7 +19,7 @@
     />
 </head>
 <body>
-    <div>
+     <div>
       <section id="top-header">
         <div class="top">
           <span
@@ -39,14 +38,13 @@
         </div>
       </section>
     </div>
-
     <div class="container">
       <section id="menu">
-        
+        <!-- Left -->
         <div class="menu-1">
           <span><b>Exclusive</b></span>
         </div>
-      
+        <!-- Center -->
         <nav class="menu-2">
           <a href="Homne.html">Home</a>
           <a href="Contact.htnl">Contact</a>
@@ -54,7 +52,7 @@
           <a href="SignUp.html">Sign Up</a>
         </nav>
 
-        
+        <!-- Right -->
         <div class="menu-3">
           <div class="menu-search">
             <div class="menu-4">
@@ -69,14 +67,10 @@
             </div>
           </div>
           <div class="menu-5">
-            <span class="cart-icon-container">
+              <span class="cart-icon-container">
                 <span><i class="fa-regular fa-heart menu-5-icon"></i></span>
-                <span class="cart-item-count">4</span>
             </span>
-            <span class="cart-icon-container">
-              <span><i class="fa-regular fa-cart-shopping"></i></span>
-              <span class="cart-item-count">2</span>
-            </span>
+              <i class="fa-regular fa-cart-shopping"></i>
             <span class="Account-icon">
               <i class="fa-solid fa-user account-icon"></i>
               <div class="Account-Login">
@@ -102,158 +96,86 @@
                 </div>
               </div>
             </span>
-          </div>
         </div>
-      </section>
-    </div>
-    <hr class="hr">
-    
-    <div class="container">
-      <p class="Page">Home/ Cart</p>
-    </div>
-    
-    <div class="container">
-      <div class="Cart">
-        <div class="Cart-Title">
-              <div class="Product-Price">
-                <p>Product</p>
-                <p>Price</p>
-              </div>
-             <div class="Quantity-Subtotal">
-              <p>Quantity</p>
-              <p>Subtotal</p>
-             </div>
-          </div>
       </div>
+    </section>
     </div>
-             
-      <div class="container">
-        <div class="Cart-Product">
-            <div class="Cart-Img-Price">
-                <div class="cancel-container">
-                  <img src="./Picture/g27cq4-500x500 1.png" class="Cart-Img" alt="">
-                  <i class="fa-solid fa-xmark"></i>
-                  <p>LCD Monitor</p>
-                </div>
-                <div class="Cart-Product-Price">
-                <p>$650</p>
-            </div> 
+     <hr class="hr">
+
+
+     <div class="container">
+        <div class="MyAccount-Title">
+            <div class="Title-Left">
+            <p>Home / </p>
+            <span>My Account</span>
+        </div>
+        <div class="Title-Right">
+            <p>Welcome! </p>
+            <span>Md Rimel</span>
+        </div>
+        </div>
+     </div>
+     <div class="container">
+        <div class="account-menu">
+            <div class="account-sub">
+                <ul>
+              <li class="parent">Manage My Account
+            </ul>
+                <ul class="submenu">
+                  <li class="My-Profile">My Profile</li>
+                  <li>Address Book</li>
+                  <li>My Payment Options</li>
+                </ul>
             </div>
-              
-            <div class="Quantity-Subtotal">
-              <div class="quantity-controls">
-                <div class="Number-Quantity">
-                  <input type="text" class="quantity-input" value="01">
-                </div>
-                <div class="Button-Quantity">
-                  <button class="quantity-button increase"><i class="fa-solid fa-chevron-up"></i></button>
-                  <button class="quantity-button decrease"><i class="fa-solid fa-chevron-down"></i></button>
-                </div>
-              </div>
-              <div class="Cart-Product-Total-Price">
-                <p>$650</p>
-              </div>
+            <div class="account-sub">
+            <ul>
+                <li class="parent">My Orders
+            </ul>
+                <ul class="submenu">
+                        <li>My Returns</li>
+                        <li>My Cancellations</li>
+                </ul>
+            </div>
+            <div class="account-sub">
+                 <li class="parent">My WishList</li>
+            </div>
+          </div>
+          <div class="Edit-Profile">
+            <div class="Profile-Title">
+                <p>Edit Your Profile</p>
+            </div>
+            <div class="Profile-Name">
+            <form>
+            <div for="username" class="username">First Name</div>
+            <input type="text" id="username" name="Md" required>
+            <div for="username" class="username">Last Name</div>
+            <input type="text" id="username" name="Rimel" required>
+            </form>
+            </div>
+            <div class="Profile-Name">
+            <form>
+            <div for="username" class="username">Email</div>
+            <input type="text" id="username" name="rimel1111@gmail.com" required>
+            <div for="username" class="username">Address</div>
+            <input type="text" id="username" name="Kingstn, 5236, United State" required>
+            </form>
+            </div>
+            <div class="Profile-Name">
+            <form>
+            <div for="username" class="username">Email</div>
+            <input type="text" id="username" name="rimel1111@gmail.com" required>
+            <div for="username" class="username">Address</div>
+            <input type="text" id="username" name="Kingstn, 5236, United State" required>
+            <input type="text" id="username" name="Kingstn, 5236, United State" required>
+            <input type="text" id="username" name="Kingstn, 5236, United State" required>
+            </form>
             </div>
           </div>
         </div>
-        <div class="container">
-        <div class="Cart-Product" id="Cart">
-            <div class="Cart-Img-Price">
-                <div class="cancel-container">
-                  <img src="./Picture/g92-2-500x500 1.svg" class="Cart-Img" alt="">
-                  <p>H1 Gamepad</p>
-                </div>
-                <div class="Cart-Product-Price">
-                <p>$550</p>
-            </div> 
-            </div>
-              
-            <div class="Quantity-Subtotal">
-              <div class="quantity-controls">
-                <div class="Number-Quantity">
-                  <input type="text" class="quantity-input" value="02">
-                </div>
-                <div class="Button-Quantity">
-                  <button class="quantity-button increase"><i class="fa-solid fa-chevron-up"></i></button>
-                  <button class="quantity-button decrease"><i class="fa-solid fa-chevron-down"></i></button>
-                </div>
-              </div>
-              <div class="Cart-Product-Total-Price">
-                <p>$1100</p>
-              </div>
-            </div>
-          </div>
-        </div>
+          
 
-        <div class="container">
-          <div class="Quantity-Button">
-            <div class="Button-Left">
-              <button>Return To Shop</button>
-            </div>
-            <div class="Button-Right">
-              <button>Update Cart</button>
-            </div>
-          </div>
-        </div>
 
-        <div class="container">
-          <div class="Code-Apply-Total">
-            <div class="Code-Apply">
-            <div class="Code">
-              <button>Coupon Code</button>
-            </div>
-            <div class="Apply">
-              <button>Apply Coupon</button>
-            </div>
-          </div>
 
-          <div class="Cart-Total">
-            <div class="Cart-Description">
-              <span ><b>Cart Total</b></span>
-            </div>
-
-            <div class="Subtotal">
-              <div class="Subtotal-Title">
-                <span>Subtotal:</span>
-              </div>
-              <div class="Subtotal-Price">
-                <span>$1750</span>
-              </div>
-            </div>
-            <div class="Shopping">
-              <div class="Subtotal-Title">
-                <span>Shopping:</span>
-              </div>
-              <div class="Subtotal-Price">
-                <span>Free</span>
-              </div>
-            </div>
-            <div class="Total">
-              <div class="Subtotal-Title">
-                <span>Total:</span>
-              </div>
-              <div class="Subtotal-Price">
-                <span>$1750</span>
-              </div>
-            </div>
-            <div class="Code-Apply-Total-Button">
-            <button>Procees to checkout</button>
-          </div>
-          </div>
-          
-          </div>
-        </div>
-      </main>
-        
-          
-        
-        
-            
-            
-          
-          
-          
-          
 
 
 

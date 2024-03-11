@@ -1,0 +1,39 @@
+.MyAccount-Title{
+    display: flex;
+    justify-content: space-between;
+    padding-top: 80px;
+    padding-bottom: 80px;
+}
+.Title-Left{
+    display: flex;
+}
+.Title-Left p{
+    font-weight: 1;
+}
+.Title-Right{
+    display: flex;
+}
+.Title-Right span{
+    color: red;
+}
+
+.submenu{
+    margin-left: 34px;
+    display: flex;
+    gap: 8px;
+    flex-direction: column;
+    font-weight:1;
+}
+.account-sub{
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+.account-menu{
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+.My-Profile{
+    color:rgba(219, 68, 68, 1);
+}
