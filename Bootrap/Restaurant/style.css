@@ -1,0 +1,137 @@
+
+.container{
+    width: 1170px;
+    margin-right: auto;
+    padding-top: 10px;
+}
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: absolute;
+    color: white;
+    font-size: 24px; 
+    z-index: 1; 
+}
+.Menu-List a{
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+}
+.Menu-List a:hover{
+    color: orange;
+}
+.header-btn button{
+    width: 200px;
+    height: 45px;
+    background-color: orange;
+    border-radius: 30px;
+    color: white;
+}
+#Header-List {
+    display: flex;
+    justify-content: space-between;
+    width: 1170px;
+    padding-top: 20px;
+}
+span{
+    font-family: 'Dancing Script', cursive;
+    font-size: 30px;
+    font-weight: 700px;
+}
+.Icon-Menu{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+}
+.Nav-Search{
+    display: flex;
+    gap: 15px;
+}
+.Nav-Search input{
+    width: 300px;
+    height: 40px;
+    border-radius: 30px;
+    border: none;
+    padding-left: 20px;
+}
+.Menu-List nav a {
+    margin-right: 20px;
+}
+.Order-Now{
+    width: 200px;
+    height: 45px;
+    border-radius: 30px;
+    background-color: orange;
+}
+.Name-Product h1{
+    font-family: 'Dancing Script', cursive;
+    font-size: 70px;
+}
+.Name-Product{
+        position: absolute;
+        top: 30%; 
+        left: 12%; 
+        z-index: 1; 
+        color: white;
+}
+    .carousel-control-prev .carousel-control-prev-icon {
+    display: none;
+}
+
+    .carousel-control-prev .visually-hidden {
+    display: none;
+}
+    .carousel-control-next .carousel-control-next-icon {
+    display: none;
+}
+
+    .carousel-control-next .visually-hidden {
+    display: none;
+}
+.carousel-indicators{
+    position: absolute;
+    left:0;
+    bottom: 200px !important;
+    transform: translateX(-50%);
+}
+.carousel-indicators .active{
+    width: 15px !important;
+    height: 15px !important;
+    border-radius: 100%;
+}
+.carousel-indicators .active:hover{
+    background-color: orange !important;
+    
+}
+.carousel-indicators .Slide-2{
+    width: 15px !important;
+    height: 15px !important;
+    border-radius: 100%;
+}
+.carousel-indicators .Slide-3{
+    width: 15px !important;
+    height: 15px !important;
+    border-radius: 100%;
+}
+.We-Are-Feane {
+    position: relative;
+    color: white;
+    background-color:#040411db;
+}
+.We-Are-Feane h1{
+    font-family: 'Dancing Script', cursive;
+    font-size: 70px;
+}
+.Name-Description{
+    position: absolute;
+    top: 40%; 
+    left: 51%; 
+    z-index: 1; 
+    color: white;
+}
+.Img{
+    padding-left: 200px;
+    padding-top: 100px;
+}
