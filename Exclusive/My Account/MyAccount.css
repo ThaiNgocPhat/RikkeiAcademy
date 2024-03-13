@@ -34,6 +34,133 @@
     flex-direction: column;
     gap: 24px;
 }
-.My-Profile{
-    color:rgba(219, 68, 68, 1);
+#Profile-Title{
+    color: rgba(219, 68, 68, 1);
 }
+.Edit-Profile{
+    display: flex;
+    flex-direction: row;
+    gap: 24px;
+    margin-bottom: 140px;
+}
+.Edit-Your-Profile{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 24px;
+    margin-left: 100px;
+    padding-left: 80px;
+    width: 870px;
+    height: 630px;
+}
+.Profile-Title{
+    color: rgba(219, 68, 68, 1);
+    font-size: 20px;
+}
+
+.Profile-Last-First-Name{
+    display: flex;
+    justify-content: flex-start;
+    gap: 50px;
+
+}
+.Profile-FirstName input{
+    width: 330px;
+    height: 50px;
+    border-radius: 4px;
+    background: rgba(245, 245, 245, 1);
+    border: none;
+
+}
+.Profile-LastName input{
+    width: 330px;
+    height: 50px;
+    border-radius: 4px;
+     background: rgba(245, 245, 245, 1);
+    border: none;
+}
+.Profile-FirstName{
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+.Profile-LastName{
+    display: flex;
+    flex-direction: column;
+}
+.Profile-Email-Address{
+    display: flex;
+    justify-content:flex-start;
+    gap: 50px;
+}
+.Profile-Email input{
+    width: 330px;
+    height: 50px;
+    border-radius: 4px;
+    background: rgba(245, 245, 245, 1);
+    border: none;
+}
+.Profile-Address input {
+    width: 330px;
+    height: 50px;
+    border-radius: 4px;
+    background: rgba(245, 245, 245, 1);
+    border: none;
+}
+.Profile-Changes form {
+    display: flex;
+    flex-direction: column;
+    gap: 16px; /* Khoảng cách giữa các input */
+}
+
+.Profile-Changes input[type="text"],
+.Profile-Changes input[type="password"] {
+    width: 710px;
+    height: 50px;
+    padding: 10px;
+    box-sizing: border-box; /* Đảm bảo kích thước của input tính cả padding và border */
+    border: 1px solid #ccc; /* Đường viền */
+    border-radius: 5px; /* Bo tròn góc */
+    font-size: 16px; /* Kích thước chữ */
+    background: rgba(245, 245, 245, 1);
+    border: none;
+}
+.Profile-Last-First-Name form {
+    display: flex;
+    flex-direction: column;
+    gap: 16px; /* Khoảng cách giữa các form */
+}
+
+.Profile-Last-First-Name .Profile-FirstName,
+.Profile-Last-First-Name .Profile-LastName {
+    display: flex;
+    align-items: center; /* Canh các phần tử theo chiều dọc */
+}
+
+.Profile-Last-First-Name .Profile-FirstName .username,
+.Profile-Last-First-Name .Profile-LastName .username {
+    margin-bottom: 8px; /* Khoảng cách giữa chữ và input */
+}
+.Profile-Email-Address form {
+    display: flex;
+    flex-direction: column;
+    gap: 16px; /* Khoảng cách giữa các form */
+}
+
+.Profile-Email-Address .Profile-Email,
+.Profile-Email-Address .Profile-Address {
+    display: flex;
+    align-items: center; /* Canh các phần tử theo chiều dọc */
+}
+
+.Profile-Email-Address .Profile-Email .username,
+.Profile-Email-Address .Profile-Address .username {
+    margin-bottom: 8px; /* Khoảng cách giữa chữ và input */
+}
+.Edit-Your-Profile {
+    box-shadow: 0px 1px 13px 0px rgba(0, 0, 0, 0.05);
+}
+
+
+
