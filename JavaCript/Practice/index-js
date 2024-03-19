@@ -1,0 +1,149 @@
+//bài tập 1: viết chương trình kiểm tra một số nguyên nhập từ bàn phím có phải là số chẵn hay không
+//nếu số chẵn thì in ra màn hình "Even number",nếu không phải thì in ra màn hình "Odd number"
+// const number = prompt("Enter a number: ");
+// if (number % 2 === 0) {
+//     console.log("Even number");
+// }else {
+//     console.log("Odd number");
+// }
+
+
+//bài tập 2:hãy viết đoạn mã cung cấp đầu vào cho mức lương của hai người. Nhiệm vụ của bạn là tìm ra người có mức lương cao nhất.
+//Output: Nếu người thứ nhất có mức lương cao nhất, chương trình sẽ in ra person1 lên trên màn hình cửa sổ dòng lệnh. Nếu người thứ 2 có mức lương cao nhất
+//chương trình sẽ in ra person2 lên trên màn hình cửa sổ dòng lệnh.bằng toán tử ba ngôi
+// const person1 = prompt("Enter the salary of person1: ");
+// const person2 = prompt("Enter the salary of person2: ");
+// console.log(person1 > person2 ? "person1" : "person2");
+// if (person1 > person2) {
+//     console.log("person1");
+// }   else {
+//     console.log("person2");
+// }   
+
+//bài tập 3:viết đoạn mã cung cấp nhập đầu vào là một ký tự. Nhiệm vụ của bạn là tìm xem ký tự đã cho là bảng chữ cái viết hoa
+//một bảng chữ cái viết thường hay một ký tự không phải là chữ cái.
+// const character = prompt("Enter a character: ");
+// if (character === character.toUpperCase()) {
+//     console.log("upper-case alphabet");
+// }
+// else if (character === character.toLowerCase()) {
+//     console.log("lower-case alphabet");
+// }
+// else {
+//     console.log("not an alphabet");
+// }
+
+
+//bài tập 4:Cho phương trình bậc 2: a * x^2 + b *x +c = 0 (a!=0) được nhập lần lượt từ bàn phím. Hãy viết chương trình thực hiện in ra số nghiệm của phương trình trên bằng ngôn ngữ javascript. Kết quả hiển thị ra màn hình có các dạng sau:
+// Nếu phương trình vô nghiệm (không có nghiệm số thực) in ra màn hình: The equation has no solution!
+// Nếu phương trình có một nghiệm số thực, in ra màn hình: The equation has one real solution!
+// Nếu phương trình có 2 nghiệm số thực phân biệt,và hai nghiệm x1 và x2, in ra màn hình: The equation has two real solutions! B1: Tính delta = b*b - 4 *a *c B2: Δ > 0: thì phương trình tồn tại 2 nghiệm thực phân biệt, tương tự Δ = 0 và Δ < 0 Check cả điều kiện a = 0 thì phương trình có nghiệm gì/
+// const a = parseInt(prompt("Nhập a"));
+// const b = parseInt(prompt("Nhập b"));
+// const c = parseInt(prompt("Nhập c"));
+// let delta = b*b - 4*a*c;
+// if(delta > 0) {
+//     const x1 = (-b + Math.sqrt(delta)) / (2 * a);
+//     const x2 = (-b - Math.sqrt(delta)) / (2 * a);
+//     console.log(`Phương trình có hai nghiệm thực là: x1 = ${x1}, x2 = ${x2}`);
+// }   else if (delta === 0) {
+//     const x = -b / (2 * a);
+//     console.log(`Phương trình có một nghiệm thực là: x = ${x}`);
+// }  else {
+//     console.log("The equation has no solution!");
+// }
+
+///kiểm tra năm nhuận
+// const year = parentInt(prompt("Nhập năm: "));
+// if(year % 4 === 0 && year % 100 !== 0 || year % 400 === 0){
+//     console.log(`${year} là năm nhuận`);
+// } else {
+//     console.log(`${year} không phải là năm nhuận`);
+// }
+
+
+// Cho 1 số từ 0 đến 6. Viết chương trình để in ra thứ trong tuần
+// const day = parseInt(prompt("Nhập ngày"));
+// let dayString;
+// switch (day) {
+//     case 0:
+//         dayString = "Chủ nhật";
+//         break;
+//     case 1:
+//         dayString = "Thứ 2";
+//         break;
+//     case 2:
+//         dayString = "Thứ 3";
+//         break;
+//     case 3:
+//         dayString = "Thứ 4";
+//         break;
+//     case 4:
+//         dayString = "Thứ 5";
+//         break;
+//     case 5:
+//         dayString = "Thứ 6";
+//         break;
+//     case 6:
+//         dayString = "Thứ 7";
+//         break;
+// }   
+// console.log(dayString);
+
+
+//Cho 2 biến kiểu số nguyên a, b và 1 biến kiểu ký tự c. Cả 3 biến này đều được nhập từ bàn phím. Biết biến c là 1 trong 4 ký tự 
+//'+', '-', '*' hoặc '/'. Bạn hãy viết chương trình hiển thị giá trị của biểu thức khi áp dụng phép toán c lên a và b. 
+//Ví dụ nếu bạn nhập a = 7, c = '+', b = 9 Thì màn hình sẽ hiển thị ra: 16 -> Gợi ý: sử dụng switch case
+// const a = parseInt(prompt("Enter a: "));
+// const c = prompt("Enter c: ");
+// const b = parseInt(prompt("Enter b: "));
+// switch (c) {
+//     case '+':
+//         console.log(a + b);
+//         break;
+//     case '-':
+//         console.log(a - b);
+//         break;
+//     case '*':
+//         console.log(a * b);
+//         break;
+//     case '/':
+//         console.log(a / b);
+//         break;
+//     default:
+//         console.log("Lỗi");
+//         break;
+// }
+
+
+
+//Viết chương trình nhập vào tháng và hiển thị ra số ngày trong tháng đó. Xét cả trường hợp năm nhuận (tháng 2 có 29 ngày) -> Gợi ý: sử dụng switch case
+// const month = parseInt(prompt("Nhập tháng"));
+// const year = parseInt(prompt("Nhập năm"));
+// switch (month) {
+//     case 1:
+//     case 3:
+//     case 5:
+//     case 7:
+//     case 8:
+//     case 10:
+//     case 12:
+//         console.log(`${month}/${year} có 31 ngày`)
+//         break;
+//     case 4:
+//     case 6:
+//     case 9:
+//     case 11:
+//         console.log(`${month}/${year} có 30 ngày`);
+//         break;
+//     case 2:
+//         if (year % 4 ===0 && year % 100 !== 0 || year % 400 === 0) {
+//             console.log(`${month}/${year} có 29 ngày`);
+//         } else {
+//             console.log(`${month}/${year} có 28 ngày`);
+//         }
+//         break;
+//     default:
+//         console.log("Tháng không hợp lệ");
+//         break;
+// }
