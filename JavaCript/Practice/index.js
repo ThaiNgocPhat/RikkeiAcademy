@@ -87,7 +87,7 @@
 //     case 6:
 //         dayString = "Thứ 7";
 //         break;
-// }   
+// }
 // console.log(dayString);
 
 
@@ -193,7 +193,7 @@
 // let count = 0;
 // for(let i = n; i > 0; i = Math.floor(i/10)){
 //     count++;
-// } 
+// }
 // console.log(count);
 
 //bài 8:nhập số N và tính tổng số N đấy
@@ -219,7 +219,7 @@
 // let sum = 0;
 // for (let i = 1; i <= n; i++) {
 //     sum += i * i;
-// } 
+// }
 // console.log(sum);
 
 //bài tập 11: chuỗi palindrome
@@ -227,7 +227,7 @@
 // let palindrome = " ";
 // for (let i = number; i > 0; i = Math.floor(i/10)) {
 //     palindrome += (i % 10).toString();
-// } 
+// }
 // if (number == palindrome) {
 //     console.log("Đây là chuỗi palindrome");
 // }   else {
@@ -323,6 +323,12 @@
 //     }
 //     i++;
 // }
+// const n = parseInt(prompt("Nhập số n: "));
+// for(let i = 1; i <= n; i++){
+//     if(n % i == 0){
+//         console.log(i);
+//     }
+// }
 
 //bài tập 18:Viết một ứng dụng để in ra màn hình console một bảng cửu chương từ 1 đến 10.sử dụng for,while để giải
 // for(let i = 1; i <= 10; i++){
@@ -397,3 +403,209 @@
 //bài tập 22:tìm tất cả các số chia hết cho 7 nhưng không chia hết cho 5
 //trong khoảng 2000 đến 3200(tính cả 2000 và 3200).các số thu được in ra một chuỗi trên một dòng
 //và được phân cách bởi dấu phẩy
+// let sum = " ";
+// for (let i = 2000; i <= 3200; i++) {
+//     if (i % 7 === 0 && i % 5 !== 0) {
+//         sum += i + ", ";
+//     }
+// }
+// console.log(sum);
+// let i = 1;
+// let sum = '';
+// while(i <= 3200){
+//     if(i % 7 === 0 && i % 5 !== 0){
+//         sum += i + ", ";
+//     }
+//     i++;
+// }
+// console.log(sum);
+
+
+//baì tập 23 continue:hãy đếm số lượng các số lẻ không chia hết cho 5 và 7
+//nằm trong một khoảng a và b,với a và b nhập từ bàn phím
+// let count = 0;
+// for(let i = 3; i <= 9; i++){
+//     if(i % 2 !== 0 && i % 5 !== 0 && i % 7 !== 0){
+//         count++;
+//     }
+// }
+// console.log(count);
+// let count = 0;
+// for( let  i = 3; i <= 9; i++){
+//     if( i % 2 === 0 || i % 5 === 0 || i % 7 === 0){
+//     continue;
+// }
+//     count++;
+//     console.log(i);
+// }
+// console.log(`Số thoả mãn là ${count} `);
+
+//bài tập 24:nhập một số nguyên dương n > 0 từ bàn phím
+//in ra giá trị tổng bình phương của tất cả các số lẻ nhỏ hơn hoặc bằng n
+//dùng while và continue để giải
+// const n = parseInt (prompt("Nhập số n:"));
+// let sum = 0;
+// let i = 1;
+// while(i <= n){
+//     if(i % 2 === 0){
+//         i++;
+//         continue;
+//     }
+//     sum += i * i;
+//     i++;
+// }
+// console.log(sum);
+// for(let i = 1; i <= n; i++){
+//     if(i % 2 === 0){
+//         continue;
+//     }
+//     sum += i * i;
+// }
+// console.log(sum);
+
+//bài tập 25:Chúng ta sẽ phát triển một ứng dụng nhiều chức năng cho phép người dùng chọn chức năng để sử dụng.
+//Menu gồm :
+//- Kiểm tra tính chẵn lẻ của 1 số.
+//- Kiểm tra số nguyên tố.
+//- Kiểm tra một số có chia hết cho 3 không.
+//- Thoát
+//Gợi ý các bước thực hiện:
+//Bước 1: Khai báo biến choice để ghi nhớ lựa chọn của người dùng.
+//Bước 2: Sử dụng vòng lặp while để hiển thị menu như yêu cầu và cho phép người dùng nhập lựa chọn của họ.
+//Bước 3: Sử dụng cấu trúc điều kiện switch … case để xét giá trị người dùng nhập vào và điều hướng đến chức năng tương
+//ứng . Nếu người dùng nhập không hợp lệ thì thông báo nhập sai và yêu cầu nhập lại.
+// let choice;
+// let isCheck = true;
+// while(isCheck){
+//     choice = parseInt(prompt(`Mời bạn nhập số mình chọn: .
+//     1.Kiểm tra tính chẵn lẻ của số.
+//     2.Kiểm tra số nguyên tố.
+//     3.Kiểm tra số có chia hết cho 3 hay không
+//     4.Thoát`));
+//     switch(choice){
+//         case 1:
+//             const number = parseInt(prompt("Nhập số: "));
+//             if(number % 2 === 0){
+//                 console.log("Số chẵn");
+//             } else {
+//                 console.log("Số lẻ");
+//             }
+//             break;
+//         case 2:
+//             const number2 = parseInt(prompt("Nhập số: "));
+//             let isPrime = true;
+//             for(let i = 2; i <= Math.sqrt(number2); i++){
+//                 if(number2 % i === 0){
+//                     isPrime = false;
+//                     break;
+//                 }
+//             }
+//             if(isPrime){
+//                 console.log("Số nguyên tố");
+//             } else {
+//                 console.log("Không phải số nguyên tố");
+//             }
+//             break;
+//         case 3:
+//             const number3 = parseInt(prompt("Nhập số: "));
+//             if(number3 % 3 === 0){
+//                 console.log("Số chia hết cho 3");
+//             } else {
+//                 console.log("Số không chia hết cho 3");
+//             }
+//             break;
+//         case 4:
+//             isCheck = false;
+//             break;
+//         default:
+//             console.log("Nhập sai, vui lòng nhập lại");
+//             break;
+//     }
+//}
+
+
+//Trong phần này, chúng ta sẽ phát triển một ứng dụng tính chu vi và diện tích theo từng loại hình dựa trên menu chức năng.
+//Menu gồm :
+//- Tính chu vi và diện tích hình chữ nhật .
+//- Tính chu vi và diện tích hình tam giác
+//- Tính chu vi và diện tích hình tròn.
+//- Thoát
+//Gợi ý các bước thực hiện:
+//Bước 1: Khai báo biến choice để ghi nhớ lựa chọn của người dùng.
+//Bước 2: Sử dụng vòng lặp while để hiển thị menu như yêu cầu và cho phép người dùng nhập lựa chọn của họ.
+//Bước 3: Sử dụng cấu trúc điều kiện switch … case để xét giá trị người dùng nhập vào và điều hướng đến chức năng tương
+var choice;
+let isCheck = true;
+while(isCheck){
+    choice = parseInt(prompt(`Mời bạn nhập số mình chọn: .
+    1.Tính chu vi và diện tích hình chữ nhật.
+    2.Tính chu vi và diện tích hình tam giác.
+    3.tính chu vi và diện tích hình tròn.
+    4.Thoát`));
+    switch(choice){
+        case 1:
+            var length = parseInt(prompt("Mời bạn nhập chiều dài: "));
+            var width = parseInt(prompt("Mời bạn nhập chiều rộng: "));
+            let choice2 = parseInt(prompt(`Mời bàn chọn bàn nhậu tiếp thep: 
+            1.Tính chu vi hình chữ nhật.
+            2.Tính diện tích hình chữ nhật.`))
+            switch(choice2){
+                case 1:
+                    console.log(`Chu vi hình chữ nhật là: ${(length + width) * 2}`);
+                    break;
+                case 2:
+                    console.log(`Dtich hình chữ nhật là: ${length * width}`);
+                    break;
+            }
+            break;
+        case 2:
+            const a = parseInt(prompt("Nhập cạnh a: "));
+            const b = parseInt(prompt("Nhập cạnh b: "));
+            const c = parseInt(prompt("Nhập cạnh c: "));
+            const p = (a + b + c) / 2;
+            let choice3 = parseInt(prompt(`Mời bạn chọn bước tiếp theo:
+            1.Tính chu vi hình tam giác.
+            2.Tính diện tích hình tam giác.`));
+            switch(choice3){
+                case 1:
+                    console.log(`Chu vi hình tam giác là: ${a + b + c}`);
+                    break;
+                case 2:
+                    console.log(`Diện tích hình tam giác là: ${Math.sqrt(p * (p - a) * (p - b) * (p - c))}`);
+                    break;
+            }
+            break;
+        case 3:
+            const r = parseInt(prompt("Nhập bán kính: "));
+            let choice4 = parseInt(prompt(`Mời bạn chọn bước tiếp theo:
+            1.Tính chu vi hình tròn.
+            2.Tính diện tích hình tròn.`));
+            switch(choice4){
+                case 1:
+                    console.log(`Chu vi hình tròn là: ${2 * Math.PI * r}`);
+                    break;
+                case 2:
+                    console.log(`Diện tích hình tròn là: ${Math.PI * r * r}`);
+                    break;
+            }
+            break;
+        case 4:
+            isCheck = false;
+            break;
+        default:
+            console.log("Nhập sai, vui lòng nhập lại");
+            break;
+    }
+}
+
+//số mũ tự nhiên
+//cho một số tự nhiên N và số mũ P được nhập từ bàn phím
+//hãy viết chương trình tính giá trị của N^P
+//yêu cầu 0 <= P,N <= 15
+// const N = parseInt(prompt("Nhập số N: "));//số tự nhiên
+// const P = parseInt(prompt("Nhập số mũ P: "));//số mũ
+// let result = 1;//kết quả
+// for (let i = 0; i < P; i++) { //i chạy từ 0 đến P
+//     result *= N; //result = result * N;
+// }
+// console.log(result);
