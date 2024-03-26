@@ -72,5 +72,17 @@
 // }
 // console.log(result); 
 
-//tìm số lớn nhất trong các số nhập từ bàn phím
-//ví dụ: cho số 2395 => số lớn nhất là 9
+//bài tập 9:tìm số lớn thứ hai trong chuỗi
+// let arr = [2,9,8,7,9];
+// let max = arr[0];
+// let secondMax = arr[0];
+// for(let i = 0; i < arr.length; i++){
+//     if(arr[i] > max){
+//         secondMax = max;
+//         max = arr[i];
+//     }
+//     if(arr[i] > secondMax && arr[i] < max){
+//         secondMax = arr[i];
+//     }
+// }
+// console.log(secondMax);

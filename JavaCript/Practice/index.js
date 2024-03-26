@@ -534,69 +534,69 @@
 //Bước 1: Khai báo biến choice để ghi nhớ lựa chọn của người dùng.
 //Bước 2: Sử dụng vòng lặp while để hiển thị menu như yêu cầu và cho phép người dùng nhập lựa chọn của họ.
 //Bước 3: Sử dụng cấu trúc điều kiện switch … case để xét giá trị người dùng nhập vào và điều hướng đến chức năng tương
-var choice;
-let isCheck = true;
-while(isCheck){
-    choice = parseInt(prompt(`Mời bạn nhập số mình chọn: .
-    1.Tính chu vi và diện tích hình chữ nhật.
-    2.Tính chu vi và diện tích hình tam giác.
-    3.tính chu vi và diện tích hình tròn.
-    4.Thoát`));
-    switch(choice){
-        case 1:
-            var length = parseInt(prompt("Mời bạn nhập chiều dài: "));
-            var width = parseInt(prompt("Mời bạn nhập chiều rộng: "));
-            let choice2 = parseInt(prompt(`Mời bàn chọn bàn nhậu tiếp thep: 
-            1.Tính chu vi hình chữ nhật.
-            2.Tính diện tích hình chữ nhật.`))
-            switch(choice2){
-                case 1:
-                    console.log(`Chu vi hình chữ nhật là: ${(length + width) * 2}`);
-                    break;
-                case 2:
-                    console.log(`Dtich hình chữ nhật là: ${length * width}`);
-                    break;
-            }
-            break;
-        case 2:
-            const a = parseInt(prompt("Nhập cạnh a: "));
-            const b = parseInt(prompt("Nhập cạnh b: "));
-            const c = parseInt(prompt("Nhập cạnh c: "));
-            const p = (a + b + c) / 2;
-            let choice3 = parseInt(prompt(`Mời bạn chọn bước tiếp theo:
-            1.Tính chu vi hình tam giác.
-            2.Tính diện tích hình tam giác.`));
-            switch(choice3){
-                case 1:
-                    console.log(`Chu vi hình tam giác là: ${a + b + c}`);
-                    break;
-                case 2:
-                    console.log(`Diện tích hình tam giác là: ${Math.sqrt(p * (p - a) * (p - b) * (p - c))}`);
-                    break;
-            }
-            break;
-        case 3:
-            const r = parseInt(prompt("Nhập bán kính: "));
-            let choice4 = parseInt(prompt(`Mời bạn chọn bước tiếp theo:
-            1.Tính chu vi hình tròn.
-            2.Tính diện tích hình tròn.`));
-            switch(choice4){
-                case 1:
-                    console.log(`Chu vi hình tròn là: ${2 * Math.PI * r}`);
-                    break;
-                case 2:
-                    console.log(`Diện tích hình tròn là: ${Math.PI * r * r}`);
-                    break;
-            }
-            break;
-        case 4:
-            isCheck = false;
-            break;
-        default:
-            console.log("Nhập sai, vui lòng nhập lại");
-            break;
-    }
-}
+// var choice;
+// let isCheck = true;
+// while(isCheck){
+//     choice = parseInt(prompt(`Mời bạn nhập số mình chọn: .
+//     1.Tính chu vi và diện tích hình chữ nhật.
+//     2.Tính chu vi và diện tích hình tam giác.
+//     3.tính chu vi và diện tích hình tròn.
+//     4.Thoát`));
+//     switch(choice){
+//         case 1:
+//             var length = parseInt(prompt("Mời bạn nhập chiều dài: "));
+//             var width = parseInt(prompt("Mời bạn nhập chiều rộng: "));
+//             let choice2 = parseInt(prompt(`Mời bàn chọn bàn nhậu tiếp thep: 
+//             1.Tính chu vi hình chữ nhật.
+//             2.Tính diện tích hình chữ nhật.`))
+//             switch(choice2){
+//                 case 1:
+//                     console.log(`Chu vi hình chữ nhật là: ${(length + width) * 2}`);
+//                     break;
+//                 case 2:
+//                     console.log(`Dtich hình chữ nhật là: ${length * width}`);
+//                     break;
+//             }
+//             break;
+//         case 2:
+//             const a = parseInt(prompt("Nhập cạnh a: "));
+//             const b = parseInt(prompt("Nhập cạnh b: "));
+//             const c = parseInt(prompt("Nhập cạnh c: "));
+//             const p = (a + b + c) / 2;
+//             let choice3 = parseInt(prompt(`Mời bạn chọn bước tiếp theo:
+//             1.Tính chu vi hình tam giác.
+//             2.Tính diện tích hình tam giác.`));
+//             switch(choice3){
+//                 case 1:
+//                     console.log(`Chu vi hình tam giác là: ${a + b + c}`);
+//                     break;
+//                 case 2:
+//                     console.log(`Diện tích hình tam giác là: ${Math.sqrt(p * (p - a) * (p - b) * (p - c))}`);
+//                     break;
+//             }
+//             break;
+//         case 3:
+//             const r = parseInt(prompt("Nhập bán kính: "));
+//             let choice4 = parseInt(prompt(`Mời bạn chọn bước tiếp theo:
+//             1.Tính chu vi hình tròn.
+//             2.Tính diện tích hình tròn.`));
+//             switch(choice4){
+//                 case 1:
+//                     console.log(`Chu vi hình tròn là: ${2 * Math.PI * r}`);
+//                     break;
+//                 case 2:
+//                     console.log(`Diện tích hình tròn là: ${Math.PI * r * r}`);
+//                     break;
+//             }
+//             break;
+//         case 4:
+//             isCheck = false;
+//             break;
+//         default:
+//             console.log("Nhập sai, vui lòng nhập lại");
+//             break;
+//     }
+// }
 
 //số mũ tự nhiên
 //cho một số tự nhiên N và số mũ P được nhập từ bàn phím
