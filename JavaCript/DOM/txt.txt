@@ -1,0 +1,68 @@
+## DOM có 3 thành phần chính
+
+# 1. Element
+
+# 2. Attribute
+
+# 3 . Text
+
+# Ex: <a href="https://google.com">Google</a>
+
+# element: thẻ a
+
+# attribute: href
+
+# text: google
+
+## Các phương thức truy xuất phần tử dom
+
+# document.getElementById(id) (trả về object)
+
+# document.getElementsByTagName(tag_name) (trả về mảng)
+
+#document.getElementClassName("class-name") (trả về mảng)
+
+#document.querySelector('#id') 
+#document.querySelector('.class')
+
+#document.querySelectorAll(selector) (trả về mảng)
+
+
+# EX: <p id="foo:bar" class="title"></p> => document.querySelector("#foo\\:bar")
+
+## Sự khác nhau giữa innerHTML và textContent
+
+# innertHTML : thay đổi cấu trúc của element
+
+# textContent: thay đổi nội dung văn bản của element
+
+#createElement: tạo phần tử mới
+
+#appendChild: cho hiện lên phân tử
+
+#removeChild: xoá phân tử
+
+#replaceChild: thay thế phần tử cũ bằng phần tử mới
+
+## Event trong DOM
+
+# sự kiện chuột: onmouseover, onmouseout
+
+# sự kiện bàn phím: onkeyup, onkeydown, onkeypress
+
+## Style css cho element
+1.element.style.CSS_Method = "CSS_Value"
+
+
+openModal.addEventListener("click", function() {
+    modal.style.display = "block"
+    overlay.style.display = "block"
+})
+closeModal.addEventListener("click", function() {
+    modal.style.display = "none"
+    overlay.style.display = "none"
+})
+overlay.addEventListener("click", function() {
+    modal.style.display = "none"
+    overlay.style.display = "none"
+})
