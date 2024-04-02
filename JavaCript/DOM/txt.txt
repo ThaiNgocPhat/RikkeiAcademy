@@ -53,16 +53,8 @@
 ## Style css cho element
 1.element.style.CSS_Method = "CSS_Value"
 
+##có ba cách lấy class giống nhau
 
-openModal.addEventListener("click", function() {
-    modal.style.display = "block"
-    overlay.style.display = "block"
-})
-closeModal.addEventListener("click", function() {
-    modal.style.display = "none"
-    overlay.style.display = "none"
-})
-overlay.addEventListener("click", function() {
-    modal.style.display = "none"
-    overlay.style.display = "none"
-})
+#document.querySelector(".class muốn tìm")
+#document.querySelectorAll(".class muốn tìm")
+#document.getElementClassName("class muốn tìm")

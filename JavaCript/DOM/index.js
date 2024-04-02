@@ -111,17 +111,55 @@
 
 
 //bai tập 2:cho một layout:
-//Khi click vào nút Open Modal, một hộp chứa dòng text “Some text in the 
-//Modal” sẽ được hiển thị ra và màn hình xung quanh phải tối đi.
+//Khi click vào nút Open Modal, một hộp chứa dòng text “Some text in the Modal” sẽ được hiển thị ra và màn hình xung quanh phải tối đi.
 //Khi click vào nút “x” hoặc màn hình tối xung quanh, Modal ở trên phải ẩn đi.
-const openModal = document.getElementById("openModal")
-const modal = document.getElementById("modal")
-const closeModal = document.getElementById("closeModal")
-const overlay = document.getElementById("overlay")
+// <div class="container">
+//<h1>Modal Example</h1>
+//<button id="openModal" onClick="">Open Modal</button>
+//<p id="modal">Some text in the Modal</p>
+//<p id="xicon">x</p>
+//</div>
+// const openModal = document.getElementById("openModal")
+// const modal = document.getElementById("modal")
+// const xicon = document.getElementById("xicon")
+// const dom = document.getElementsByClassName("title-icon")[0]
+// console.log(dom)
+// openModal.addEventListener("click", function(){
+//     dom.style.display = "flex"
+// })
+// xicon.addEventListener("click",function(){
+//     dom.style.display = "none"
+// })
 
-openModal.addEventListener("click", function() {
-    modal.style.display = "block"
-    overlay.style.display = "block"
+
+
+//bài tập 3:cho một playouyt
+//Khi click chuột đi qua ô vuông nào, background phải đổi màu sắc theo ô vuông đó:
+const dom = document.getElementById("div1");
+const checkBox1 = document.getElementById("box1");
+const checkBox2 = document.getElementById("box2");
+const checkBox3 = document.getElementById("box3");
+checkBox1.addEventListener("click",function(){
+    dom.style.background = "yellow"
+})
+checkBox2.addEventListener("click",function(){
+    dom.style.background = "brown"
+})
+checkBox3.addEventListener("click",function(){
+    dom.style.background = "gray"
 })
 
+
+
+//bài tập 4:cho một playout
+//Khi hover chuột đi qua dòng text “Hover over me”, một Tooltip sẽ được hiện ra.
+//Khi hover chuột ra ngoài dòng text “Hover over me”, Tooltip sẽ biến mất.
+// const abbr = document.getElementById("abbr");
+// const abbr1 = document.getElementById("abbr1");
+// function displayTooltip(){
+//     abbr.style.display = "flex"
+// }
+// function hideTooltip(){
+//     abbr.style.display = "none"
+// }
 
