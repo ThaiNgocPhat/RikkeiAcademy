@@ -1,28 +1,32 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>DOM</title>
-    <link rel="stylesheet" href="./index.css">
-</head>
+    <link rel="stylesheet" href="./index.css" />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdn.jsdelivr.net/gh/lelinh014756/fui-toast-js@master/assets/css/toast@1.0.1/fuiToast.min.css"
+    />
+  </head>
 
-<body>
+  <body>
+    <div id="fui-toast"></div>
     <!-- <h1>DOM (Document Object Model)</h1>
     <a id="linkGG" href="https://google.com">My Link</a>
 
-    <p id="title"><button>Submit</button></p> -->
-    <!-- <p id="title"></p>
+    <p id="title"><button>Submit</button></p> 
+    <p id="title"></p>
     <p id="title3"></p>
-    <p id="title4"></p> -->
-    <!-- <input id="submit">
-</body> -->
+    <p id="title4"></p> 
+    <input id="submit"> -->
 
-<!-- <div id="congTinh">
+    <!-- <div id="congTinh">
         </div> -->
 
-<!-- <div id="div1">
+    <!-- <div id="div1">
 </div>
 
 <button id="btn">
@@ -43,7 +47,6 @@
     <button id="hideText" onclick="hideText">Hide text</button>
     <button id="showText" onclick="showText">Show Text</button>  -->
 
-
     <!-- <div class="container">
     <h1>Modal Example</h1>
     <button id="openModal" onClick="">Open Modal</button>
@@ -52,7 +55,6 @@
         <p id="xicon">x</p>
     </div>
     </div> -->
-
 
     <!-- <div id="div1">
         <h1>Change background color</h1>
@@ -64,14 +66,93 @@
         </div>
     </div> -->
 
-
     <!-- <div class="title">
         <h1>Tooltip</h1>
         <p>Move the text below: </p>
         <p id="abbr1" onmouseover="displayTooltip()" onmouseout= "hideTooltip()">Hover over me</p>
         <p id="abbr">Tooltip text</p>
     </div> -->
-<script src="./index.js"></script>
-</body>
 
+    <!-- <form onsubmit = "handleSubmit(event)">
+        <input 
+        type="text"
+        id = "username"
+        name = "username"
+        oninput = "handleInput()"
+        placeholder="Enter your username" 
+        />
+        <p id="errorUsername"></p>
+        <input 
+        type="password"
+        id = "password"
+        name = "password"
+        oninput = "handleInputPassword()"
+        placeholder="Enter your password" 
+        />
+        <p id="errorPassword"></p>
+        <button type="submit">Submit form</button>
+    </form> -->
+
+    <div class="container">
+      <div class="register">
+        <h1>Registration</h1>
+        <form class="form" onsubmit="handleSubmit(event)">
+          <input
+            type="text"
+            id="username"
+            name="username"
+            oninput="handleInput()"
+            placeholder="Enter your username"
+          />
+          <p id="errorUsername"></p>
+          <input
+            type="email"
+            id="email"
+            name="email"
+            oninput="handleInputEmail()"
+            placeholder="Enter your email"
+          />
+          <p id="errorEmail"></p>
+          <input
+            type="password"
+            id="password"
+            name="password"
+            oninput="handleInputPassword()"
+            placeholder="Create password"
+          />
+          <p id="errorPassword"></p>
+          <input
+            type="password"
+            id="confirmPassword"
+            name="confirmPassword"
+            oninput="handleInputConfirmPassword()"
+            placeholder="Confirm password"
+          />
+          <p id="errorConfirmPassword"></p>
+          <div class="checkbox">
+            <div class="field">
+              <input
+                type="checkbox"
+                id="checkbox"
+                name="checkbox"
+                oninput="handleCheckBox()"
+              />
+              <label for="checkbox">I accept all terms & conditions</label>
+            </div>
+            <p id="errorCheckBox"></p>
+          </div>
+          <div id="btn">
+            <button type="submit" id="submit">Register Now</button>
+            <p>Already have an account? <a href="#">Login now</a></p>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <script src="./index.js"></script>
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/gh/lelinh014756/fui-toast-js@master/assets/js/toast@1.0.1/fuiToast.min.js"
+    ></script>
+  </body>
 </html>

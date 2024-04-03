@@ -58,3 +58,12 @@
 #document.querySelector(".class muốn tìm")
 #document.querySelectorAll(".class muốn tìm")
 #document.getElementClassName("class muốn tìm")
+
+##oninput: sự kiện sẽ được gọi khi gõ ở ô input => lấy giá trị ô input =>truy xuất ô input => để lấy giá trị thì .value
+##onchange: sự kiện sẽ được gọi khi thay đổi input và click ra ngoài ô input
+##onBlur: sự kiện sẽ được gọi khi click vào ô inout sau đó click ra ngoài
+
+ 
+
+
+ 
