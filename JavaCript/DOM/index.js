@@ -325,7 +325,12 @@ function handleCheckBox() {
 }
 
 //yêu cầu 6: nagwn chặn reset sau mỗi lần submit
-const user = [];
+const congTinh = document.getElementById("congtinh");
+const user = JSON.parse(localStorage.getItem("user")) || [];
+for (let i in user) {
+  congTinh.innerHTML += `<div> ${user[i].name} - ${user[i].email} </div>`;
+}
+
 function handleSubmit(event) {
   event.preventDefault();
   if (checkName && checkMail && checkConfirm && checkCheckBox) {
@@ -339,6 +344,7 @@ function handleSubmit(event) {
     if (index === -1) {
       user.push(newUser);
       console.log(newUser);
+      localStorage.setItem("user", JSON.stringify(user));
       FuiToast.success("You have successfully registered");
     } else {
       FuiToast.error("Email already exists in the system");

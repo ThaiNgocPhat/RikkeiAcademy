@@ -1,0 +1,70 @@
+
+.information-search{
+    display: flex;
+    justify-content:space-around ;
+} 
+.form-information{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    border: 1px solid #000;
+    width: 500px;
+    padding: 0 60px;
+}
+.form-information input[type="text"],input[type="email"],input[type="number"]{
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;    
+    width: 250px;
+}
+.field-group{
+    display: flex;
+    gap:20px;
+}
+.typesex{
+    display: flex;
+    
+}
+#form button{
+    width: 280px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f1f1f1;
+    margin-top: 20px;
+    margin-left: 120px;
+    margin-bottom: 20px;
+} 
+.username,
+.your-mail,
+.phonenumber,
+.youraddress{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 30px;
+    margin-bottom: 20px;
+}
+.typesex label{
+    margin-right: 50px;
+}
+.listStudent{
+     display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+.search{
+    margin-right: 300px;
+}
+.listStudent table{
+    width: 700px;
+    border: 1px solid #ccc;
+}
+.listStudent table tr th{
+    border: 1px solid #ccc;
+}
+.listStudent table tr td{
+    border: 1px solid #ccc;
+}

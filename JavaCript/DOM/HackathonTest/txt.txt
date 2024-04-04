@@ -1,0 +1,65 @@
+//Khi nhấn delete sẽ xoá học viên trong students và hiển thị thông tin các học viên còn lại trên “Danh sách học viên”
+function deleteStudent(studentId){
+    let index = students.findIndex((student) => student.id == studentId);
+    students.splice(index, 1);
+    localStorage.setItem('students', JSON.stringify(students));
+    displayData();
+}
+//Khi nhấn edit, dữ liệu học viên cập nhật được hiển thị trên form “Thông tin học viên”, nhấn lưu lại, thực hiện cập nhật thông tin học viên trong students và hiển thị lại thông tin các học viên trên “Danh sách học viên”
+function editStudent(studentId){
+    localStorage.setItem('studentId', studentId);
+    document.getElementById('save').style.display = 'block';
+    document.getElementById('add').style.display = 'none';
+    let index = students.findIndex((student) => student.id == studentId);
+    fullName.value = students[index].fullName;
+    email.value = students[index].email;
+    phone.value = students[index].phone;
+    address.value = students[index].address;
+}
+function saveStudent(){
+    document.getElementById('save').style.display = 'none';
+    document.getElementById('add').style.display = 'block';
+    let index = students.findIndex((student) => student.id == localStorage.getItem('studentId'));
+    students[index] = {
+        id: students[index].id,
+        fullName: fullName.value,
+        email: email.value,
+        phone: phone.value,
+        address: address.value
+    }
+    localStorage.setItem('students', JSON.stringify(students));
+    displayData();
+    alert('Chỉnh sửa thông tin thành công!!!');
+}
+
+//.Khi nhấn vào nút sắp xếp (anpha b), sắp xếp học viên và hiển thị danh sách học viên đã được sắp xếp theo anpha b trên bảng “Danh sách học viên”
+function sortStudent(){
+    students.sort((a, b) => a.fullName.localeCompare(b.fullName));
+    displayData();
+}
+
+//Ở ô tìm kiếm có thế tìm kiếm học viên theo tên học viên và hiển thị kết quả ở bảng “Danh sách học viên”
+function searchStudent(){
+    let search = document.getElementById('search').value;
+    let result = students.filter((student) => student.fullName.toLowerCase().includes(search.toLowerCase()));
+    let html = '';
+    for(let i in result){
+        html += `
+        <tr>
+            <td>${result[i].fullName}</td>
+            <td>${result[i].email}</td>
+            <td>${result[i].phone}</td>
+            <td>${result[i].address}</td>
+            <button onclick="editStudent('${result[i].id}')">Edit</button>
+            <button onclick="deleteStudent('${result[i].id}')">Delete</button>
+        </tr>
+        `
+    }
+    tbody.innerHTML = html;
+}
+//Thực hiện validate dữ liệu đầu vào trong các chức năng: [20 điểm]
+//Họ và tên: không được để trống
+//Email: phải nhập đúng định dạng email
+//Số điện thoại: phải nhập đúng định dạng số điện thoại di động ở Việt Nam
+//Quê quán: không được để trống
+//Giới tính: default là Nam
