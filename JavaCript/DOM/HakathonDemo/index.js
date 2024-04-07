@@ -46,14 +46,16 @@ function editStudent(studentId) {
   localStorage.setItem("studentId", studentId);//lưu id vào local storage
   document.getElementById("add").style.display = "none";//ẩn nút thêm
   document.getElementById("save").style.display = "block";//hiển thị nút lưu
-  let index = students.findIndex((student) => student.id == studentId); // Tìm vị trí của phần tử có id trong mảng
+  let index = students.findIndex((student) => student.id == studentId);
   console.log(students[index]);
-  fullName.value = students[index].fullName;//lấy giá trị từ mảng students để hiển thị lên ô input
-  date.value = students[index].date;//lấy giá trị từ mảng students để hiển thị lên ô input
-  gender.value = students[index].gender;//lấy giá trị từ mảng students để hiển thị lên ô input
-  classmate.value = students[index].classmate;//lấy giá trị từ mảng students để hiển thị lên ô input
-  image.value = students[index].image;//lấy giá trị từ mảng students để hiển thị lên ô input
+  fullName.value = students[index].fullName;
+  date.value = students[index].date;
+  gender.value = students[index].gender;
+  classmate.value = students[index].classmate;
+  image.value = students[index].image;
+  displayData();
 }
+displayData();
 
 // Save student:
 function saveStudent() {

@@ -7,92 +7,106 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <!-- Viết chương trình Quản Lý Học Viên gồm các chức năng sau: -->
-    <!-- Danh sách học viên được lưu trong một mảng với tên students -->
-    <!-- 2.Nhập đầy đủ thông tin các trường trong form “Thông tin học viên” khi nhấn -->
-    <!-- lưu lại sẽ thêm thông tin học viên vào students và được hiển thị thông tin tất cả học viên trên -->
-    <!-- “Danh sách học viên” -->
-    <!-- 3.Khi nhấn delete sẽ xoá học viên trong students và hiển thị thông tin các học viên còn lại -->
-    <!-- trên “Danh sách học viên”  -->
-     <!-- 4.Khi nhấn edit, dữ liệu học viên cập nhật được hiển thị trên form “Thông tin học viên”, nhấn -->
-    <!-- lưu lại, thực hiện cập nhật thông tin học viên trong students và hiển thị lại thông tin các học -->
-    <!-- viên trên “Danh sách học viên”  -->
-    <!-- 5.Khi nhấn vào nút sắp xếp (anpha b), sắp xếp học viên và hiển thị danh sách học viên đã -->
-    <!-- được sắp xếp theo anpha b trên bảng “Danh sách học viên”  -->
-    <!-- 6.Ở ô tìm kiếm có thế tìm kiếm học viên theo tên học viên và hiển thị kết quả ở bảng “Danh -->
-    <!-- sách học viên”  -->
-    <!-- 7.Thực hiện validate dữ liệu đầu vào trong các chức năng: -->
-    <!-- ● Họ và tên: không được để trống -->
-    <!-- ● Email: phải nhập đúng định dạng email -->
-    <!-- ● Số điện thoại: phải nhập đúng định dạng số điện thoại di động ở Việt Nam -->
-    <!-- ● Quê quán: không được để trống -->
-    <!-- ● Giới tính: default là Nam -->
-
-    <div class="container">
-        <div class="information-search">
-            <div class="form-information">
+   <div class="container">
+    <div class="information-search">
+        <div class="form-information">
             <h2>Thông tin học viên</h2>
             <form id="form" onsubmit="handleSubmit(event)">
                 <div class="username">
-                <label for="name">Họ và tên</label>
-                <input type="text" id="name" name="name" placeholder="Vui lòng nhập tên">
+                    <div class="name-title-input">
+                    <label for="name">Họ và tên</label>
+                    <input 
+                    type="text" 
+                    id="name" 
+                    name="name" 
+                    placeholder="Vui lòng nhập tên"
+                    oninput="handleInputName()"
+                    />
+                    </div>
+                    <div class="name-error">
+                    <p id="errorName"></p>
+                </div>
                 </div>
                 <div class="your-mail">
-                <label for="email">Email</label>
-                <input type="email" id="email" name="email" placeholder="Vui lòng nhập email">
+                    <div class="email-title-input">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" placeholder="Vui lòng nhập email"
+                    oninput="handleInputEmail()"
+                    />
+                    </div>
+                    <p id="errorEmail"></p>
                 </div>
                 <div class="phonenumber">
-                <label for="phone">Số điện thoại</label>
-                <input type="text" id="phone" name="phone" placeholder="Vui lòng nhập số điện thoại">
+                    <div class="phone-title-input">
+                    <label for="phone">Số điện thoại</label>
+                    <input 
+                    type="text" 
+                    id="phone" 
+                    name="phone" 
+                    placeholder="Vui lòng nhập số điện thoại"
+                    oninput="handleInputPhone()"
+                    />
+                    </div>
+                    <div class="input-error">
+                    <p id="errorPhone"></p>
+                    </div>
                 </div>
                 <div class="youraddress">
-                <label for="address">Quê quán</label>
-                <input type="text" id="address" name="address" placeholder="Vui lòng nhập địa chỉ quê quán">
+                    <div class="address-title-input">
+                        <label for="address">Quê quán</label>
+                    <input type="text" id="address" name="address" placeholder="Vui lòng nhập địa chỉ quê quán"
+                    oninput="handleInputAddress()"
+                   />
+                    </div>
+                    <div class="errorAddress">
+                        <p id="errorAddress"></p>
+                    </div>
                 </div>
-                <div class="typesex" id="sex">
-                <label for="sex">Giới tính</label>
-                <div class="field-group">
-                   <div class="field-gender">
-                    <input name="gender" type="radio" value="Nam" id="male"/>
-                    <label for="male">Nam</label>
-                </div>
+                <div class="typesex">
+                    <tr>
+                        <td>
+                        <label for="gender"> Giới tính </label>
+                        </td>
+                        <td>
+                        <input type="radio" id="male" value="Nam" name="gender" checked />
+                        <label for="male">Nam</label>
 
-                <div class="field-gender">
-                    <input name="gender" type="radio" value="Nữ" id="female"/>
-                    <label for="female">Nữ</label>
+                        <input type="radio" id="female" value="Nữ" name="gender" />
+                        <label for="female">Nữ</label>
+                        </td>
+                    </tr>
                 </div>
-            </div>
-            </div>
-                <button type="submit"
-                id="Save" onclick="addStudent()">Lưu lại</button>
+                <button type="button" id="add" onclick="addStudent()">Lưu lại</button>
+                 <button id="save" style="display: none" onclick="saveStudent()">
+                SAVE
+                </button>
             </form>
         </div>
-        </div>
-        <div class="listStudent">
-            <h2>Danh sách học viên</h2>
-            <div class="search">
-                <label for="text">Tìm kiếm tên học viên: </label>
-                <input type="text" id="search" placeholder="Nhập tên học viên">
-                <button id="btn-search">Search</button>
-            </div>
-            <table>
-                <thead>
-                    <tr>
-                        <th>#</th>
-                        <th>Họ và tên</th>
-                        <th>Email</th>
-                        <th>Điện thoại</th>
-                        <th>Địa chỉ</th>
-                        <th>Giới tính</th>
-                        <th>Hành động</th>
-                        <th>Sắp xếp(alpha b)</th>
-                    </tr>
-                    <tbody id="tbody1"></tbody>
-                </thead>
-            </table>
-        </div>
-        </div>
     </div>
+    <div class="listStudent">
+        <h2>Danh sách học viên</h2>
+        <div class="search">
+            <label for="search">Tìm kiếm tên học viên: </label>
+            <input type="text" id="search" placeholder="Nhập tên học viên">
+            <button type="button" id="btn-search" onclick="searchStudents()" >Search</button>
+        </div>
+        <table>
+            <thead>
+                <tr>
+                    <th>#</th>
+                    <th>Họ và tên</th>
+                    <th>Email</th>
+                    <th>Điện thoại</th>
+                    <th>Địa chỉ</th>
+                    <th>Giới tính</th>
+                    <th>Hành động</th>
+                    <th><button id="btn" onclick="sortStudent()">Sắp xếp alpha b</button></th>
+                </tr>
+            </thead>
+            <tbody id="tbody1"></tbody>
+        </table>
+    </div>
+</div>
 
     <script src="index.js"></script>
 </body>

@@ -1,6 +1,7 @@
 
 .information-search{
     display: flex;
+    flex-direction: column;
     justify-content:space-around ;
 } 
 .form-information{
@@ -36,15 +37,53 @@
     margin-left: 120px;
     margin-bottom: 20px;
 } 
-.username,
-.your-mail,
-.phonenumber,
-.youraddress{
+.username{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+.name-title-input{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    gap: 30px;
-    margin-bottom: 20px;
+    gap: 40px;
+}
+.your-mail{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+.email-title-input{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 65px;
+}
+.phonenumber{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+.phone-title-input{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+}
+.youraddress{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+.address-title-input{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 45px;
 }
 .typesex label{
     margin-right: 50px;
@@ -59,7 +98,7 @@
     margin-right: 300px;
 }
 .listStudent table{
-    width: 700px;
+    width: 100%;
     border: 1px solid #ccc;
 }
 .listStudent table tr th{
@@ -67,4 +106,12 @@
 }
 .listStudent table tr td{
     border: 1px solid #ccc;
+}
+.input-error{
+    display: flex;
+    flex-direction: column;
+}
+.name-error{
+    display: flex;
+    flex-direction: column;
 }
