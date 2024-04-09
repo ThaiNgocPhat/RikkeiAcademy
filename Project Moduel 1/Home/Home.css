@@ -1,0 +1,20 @@
+#Header{
+    display: flex;
+    justify-content: space-between;
+}
+.logo-nav{
+    display: flex;
+    align-items: center;
+    gap: 42px;
+}
+.languges-user-shopping{
+    display: flex;
+    align-items: center;
+    gap: 40px;
+}
+.nav a{
+    text-decoration: none;
+    color: black;
+    display: flex;
+    flex-direction:row ;
+}
