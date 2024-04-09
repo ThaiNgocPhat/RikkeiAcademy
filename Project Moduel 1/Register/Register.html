@@ -4,13 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../Login/Login.css">
-    <link rel="stylesheet" href="Home.css">
+    <link rel="stylesheet" href="Register.css">
     <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.4.2/css/all.css">
-    <title>Home</title>
+    <title>Register</title>
 </head>
 <body>
     <!-- Logo-Navigation-Languges-User-Shoping -->
-          <div id="Header">
+        <head>
+        <div id="Header">
             <div class="logo-nav">
                 <div class="logo">
                     <img src="./Picture/Logo.svg" alt="Logo">
@@ -37,58 +38,79 @@
                 </div>
             </div>
         </div>
-    <!-- Header -->
-         <header>
-            <div class="header">
-            <div class="header-image">
-                <img src="./Picture/Hero Section.jpg" alt="Header image">
-            </div>
-            <div class="img-description">
-                <p>VELORETTI BUSINESS</p>
-                <span>Bike Lease Plan For Employees</span>
-            </div>
+    </head>
+    <!-- Register -->
+     <div class="container">
+        <div class="register">
+            <h1>Register</h1>
+        <form  handleSubmit(event)>
+        <div class="form-register">
+                    <label for="username">User name</label>
+                    <input 
+                    type="text" 
+                    id="username" 
+                    name="username" 
+                    oninput = "handleInput()"
+                    placeholder="Enter your username" 
+                    required
+                    />
+                    <p id="errorUsername"></p>
         </div>
-    </header>
-    <!-- Bike plan -->
-    <div class="bike-plan">
-            <div class="bike-plan-img">
-                <img src="./Picture/Text-media-static_background.jpg" alt="Header image">
-            </div>
-            <div class="bike-plan-description">
-                <span>Bike plans for <br> employees.</span>
-                <p>Veloretti Electrics benefit both the environment and the health of <br>
-                your employees. Oh, and they look good too. Cost-free for the <br>
-                employer and outside of the WKR.</p>
-                <p>Discover more</p>
-            </div>
+        <div class="form-register">
+            <label for="password">Password</label>
+            <input 
+            type="password" 
+            id="password" 
+            name="password" 
+            oninput = "handleInputPassword()"
+            placeholder="Enter your password" 
+            required
+            />
+            <p id="errorPassword"></p>
         </div>
-        <!-- Service insurance -->
-        <div class="service-insurance">
-            <div class="service-insurance-img">
-                <img src="./Picture/Text-media-new_wrapper.jpg" alt="">
-            </div>
-            <div class="service-insurance-description">
-                <span>Service, <br> maintenance and <br> insurance</span>
-                <p>The lease includes an all-in service package. <br>
-                Throughout the entire 36 months, you are <br>
-                fully insured against damage, theft and <br>
-                maintenance. In addition, you always have <br>
-                access to roadside assistance. </p>
-            </div>
+        <div class="form-register">
+            <label for="repassword">Repassword</label>
+            <input 
+            type="password" 
+            id="repassword" 
+            name="repassword" 
+            oninput = "handleInputRepassword()"
+            placeholder="Enter your repassword" 
+            required
+            />
+            <p id="errorRepassword"></p>
         </div>
-        <!-- Free for employers -->
-        <div class="bike-free">
-            <div class="bike-free-img">
-                <img src="./Picture/Bike-free.jpg" alt="">
-            </div>
-            <div class="bike-free-description">
-                <span>Free of charge for <br> employers</span>
-                <p>The bike plan is totally independent of the WKR and is free for you as <br>
-                an employer. The employee pays the lease costs and you, as the <br>
-                employer, decide whether you want to contribute to the costs.</p>
-                <p>Cost Example</p>
-                </div>
+        <div class="form-register">
+            <label for="email">Email</label>
+            <input 
+            type="email" 
+            class="form-control" 
+            oninput="handleInputEmail()"
+            id="email" 
+            name="email" 
+            placeholder="Enter your email" 
+            required>
+            <p id="errorEmail"></p>
         </div>
+        <div class="form-register">
+            <label for="phone">Phone number</label>
+            <input 
+            type="text" 
+            class="form-control" 
+            id="phone" 
+            oninput="handleInputPhone()"
+            name="phone" 
+            placeholder="Enter your phone number" 
+            required>
+            <p id="errorPhone"></p>
+        </div>
+        <div class="register-btn">
+        <button type="submit">Đăng ký</button>
+        <a href="../Login/Login.html">Đã có tài khoản? Đăng nhập</a>
+        </div>
+        </form>
+        </div>
+    </div>
     <!-- Footer -->
     <footer>
         <div class="footer">
@@ -136,6 +158,6 @@
         </div>
         </div>
     </footer>
-    <script src="./Login.js"></script>
+    <script src="Register.js"></script>
 </body>
 </html>

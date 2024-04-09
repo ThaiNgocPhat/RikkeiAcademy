@@ -1,20 +1,83 @@
-#Header{
-    display: flex;
-    justify-content: space-between;
+.header{
+    margin-bottom: 100px;
 }
-.logo-nav{
+.header-image img{
+    width: 100%;
+    height: 824px;
+    margin-top: 20px;
+}
+.img-description{
+    position: absolute;
+    top: 39%;
+    left: 3%;
+}
+.img-description p{
+    color: white;
+}
+.img-description span{
+    color: white;
+    font-size: 100px;
+    margin-top: 20px;
+    opacity: 0.8;
+}
+.bike-plan{
     display: flex;
     align-items: center;
-    gap: 42px;
+    margin-left: 40px;
+    margin-bottom: 100px;
 }
-.languges-user-shopping{
+.bike-plan-description{
+    margin-left: 100px;
+}
+.bike-plan-description span{
+    font-size: 70px;
+}
+.bike-plan-description p{
+    opacity: 0.5;
+}
+.bike-plan-img img{
+    width: 635px;
+    height: 636px;
+    margin-right: 200px;
+}
+.service-insurance{
+    position: relative;
+    margin-bottom: 100px;
+}
+.service-insurance-img img{
+    width: 100%;
+    height: 810px;
+    position: relative;
+}
+.service-insurance-description{
+    position: absolute;
+    top: 240px;
+    left: 160px;
+}
+.service-insurance-description span{
+    font-size: 70px;
+    color: white;
+}
+.service-insurance-description p{
+    opacity: 0.6;
+    color: white;
+}
+.bike-free{
     display: flex;
     align-items: center;
-    gap: 40px;
+    margin-left: 40px;
+    margin-bottom: 100px;
 }
-.nav a{
-    text-decoration: none;
-    color: black;
-    display: flex;
-    flex-direction:row ;
+.bike-free-img img{
+    width: 636px;
+    height: 636px;
+}
+.bike-free-description{
+    margin-left: 300px;
+}
+.bike-free-description span{
+    font-size: 70px;
+}
+.bike-free-description p{
+    opacity: 0.5;
 }

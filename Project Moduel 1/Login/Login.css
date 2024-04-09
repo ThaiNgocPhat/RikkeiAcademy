@@ -1,0 +1,119 @@
+.container{
+    width: 1440p;
+}
+#Header{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+.logo-nav{
+    display: flex;
+    align-items: center;
+    gap: 42px;
+    margin-left: 40px;
+}
+.logo-nav a{
+    text-decoration: none;
+    color: black;
+    padding-right: 20px;
+}
+.languges-user-shopping{
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    margin-right: 100px;
+}
+.container{
+    width: 1140px;
+    margin: 0 auto;
+}
+.login{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 500px;
+    background-color: #f1f1f1;
+    margin-bottom:50px;
+    margin-top: 50px;
+}
+.login a{
+    text-decoration: none;
+    color: #007bff;
+
+}
+.form-group{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 30px;
+    
+}
+.form-group input{
+    padding: 10px;
+    border: none;
+    border-radius: 10px;
+    width: 600px;
+}
+.form-group button{
+    padding: 10px;
+    border: none;
+    border-radius: 10px;
+    background-color: #007bff;
+    color: white;
+    font-weight: bold;
+}
+.form-group button:hover{
+    background-color: #0056b3;
+}
+.login button{
+    padding: 10px;
+    border: none;
+    border-radius: 10px;
+    background-color: #007bff;
+    color: white;
+    font-weight: bold;
+}
+.footer{
+    display: flex;
+    justify-content: space-around;
+    background-color:black;
+    padding: 20px;
+}
+.footer a{
+    text-decoration: none;
+    color: white;
+    opacity: 0.5;
+}
+footer h3{
+    color: white;
+}
+.explorer,
+.about,
+.help,
+.join-the-ride{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.join-the-ride{
+    color: white;
+}
+.join-the-ride a{
+    color: white;
+    opacity: 0.5;
+}
+.join-the-ride input{
+    padding: 10px;
+    border: none;
+    border-radius: 10px;
+    width: 200px;
+}
+.join-the-ride button{
+    padding: 10px;
+    border: none;
+    border-radius: 10px;
+    background-color: #007bff;
+    color: white;
+    font-weight: bold;
+}
