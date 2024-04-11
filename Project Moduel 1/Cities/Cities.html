@@ -4,19 +4,20 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../Login/Login.css">
-    <link rel="stylesheet" href="Register.css">
+    <link rel="stylesheet" href="../Home/Home.css">
+    <link rel="stylesheet" href="Cities.css">
     <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.4.2/css/all.css">
-    <title>Register</title>
+    <title>Cities</title>
 </head>
 <body>
- <div class="wrapper">
+    <div class="wrapper">
     <!-- Logo-Navigation-Languges-User-Shoping -->
-        <head>
-        <div id="Header">
-            <div class="logo-nav">
-                <div class="logo">
-                    <img src="./Picture/Logo.svg" alt="Logo">
+      <div class="hero-img">
+                    <img src="./Picture/Hero Section.jpg" alt="">
                 </div>
+          <div id="header">
+            <div class="logo-nav nav">
+                <a href="../Home/Home.html"><img src="./Picture/Logo.svg" alt="Logo"></a>
                 <div class="nav">
                     <a href="#">ELECTRIC <span><i class="fa-thin fa-chevron-down"></i></span></a>
                     <a href="#">CITY <span><i class="fa-thin fa-chevron-down"></i></span></a>
@@ -32,85 +33,73 @@
                     <img src="./Picture/EN.svg" alt="ENGLISH">
                 </div>
                 <div class="user">
-                    <img src="./Picture/usericon.svg" alt="">
+                    <a href="../Login/Login.html"><img src="./Picture/usericon.svg" alt=""></a>
                 </div>
                 <div class="shopping">
-                    <img src="./Picture/shopping.svg" alt="">
+                    <a href="../Pay/Pay.html"><img src="./Picture/shopping.svg" alt=""></a>
                 </div>
             </div>
         </div>
-    </head>
-    <!-- Register -->
-     <div class="container">
-        <div class="register">
-            <h1>Register</h1>
-        <form  onsubmit="handleSubmit(event)">
-        <div class="form-register">
-                    <label for="username">User name</label>
-                    <input 
-                    type="text" 
-                    id="username" 
-                    name="username" 
-                    oninput = "handleInput()"
-                    placeholder="Enter your username" 
-                    required
-                    />
-                    <p id="errorUsername"></p>
+   <!-- Forever forward -->
+    <div class="forever-forward">
+        <h1>Forever forward</h1>
+        <div class="forever-forward-img">
+            <div class="img-left">
+                <img src="./Picture/veloretti.jpg" alt="Error">
+            </div>
+            <div class="img-right">
+                <img src="./Picture/veloretti1.jpg" alt="Error">
+            </div>
         </div>
-        <div class="form-register">
-            <label for="password">Password</label>
-            <input 
-            type="password" 
-            id="password" 
-            name="password" 
-            oninput = "handleInputPassword()"
-            placeholder="Enter your password" 
-            required
-            />
-            <p id="errorPassword"></p>
+        <div class="forever-forward-description">
+            <p>Our women's bicycles are <br>
+                for everyone who likes to <br>
+                combine style with <br>
+                performance. In this <br>
+                range, available are the <br>
+                Café Racer and the <br>
+                Robyn, both frames with a <br>
+                lower tube, making it easy <br>
+                to step through.</p>
         </div>
-        <div class="form-register">
-            <label for="repassword">Repassword</label>
-            <input 
-            type="password" 
-            id="repassword" 
-            name="repassword" 
-            oninput = "handleInputRepassword()"
-            placeholder="Enter your repassword" 
-            required
-            />
-            <p id="errorRepassword"></p>
+    </div>
+    <!-- Cities product -->
+    <!-- City bikes for everyone -->
+   <div class="bikes-for-everyone">
+     <div class="city-bikes">
+        <div class="city-bikes-left">
+            <img src="./Picture/city-bikes-left.jpg" alt="">
         </div>
-        <div class="form-register">
-            <label for="email">Email</label>
-            <input 
-            type="email" 
-            class="form-control" 
-            oninput="handleInputEmail()"
-            id="email" 
-            name="email" 
-            placeholder="Enter your email" 
-            required>
-            <p id="errorEmail"></p>
+        <div class="city-bikes-center">
+            <p>Whether you like it easy or <br>
+                fast, we got both. Our <br>
+                men's range of bicycles <br>
+                combine modern clean <br>
+                design with great quality, <br>
+                so they're perfect for your <br>
+                daily city commute. Our <br>
+                men citybikes are the <br>
+                Caféracer, Caféchaser <br>
+                and the Berlin, but feel <br>
+                free to opt for a women's <br>
+                bike for that easy hop-on- <br>
+                hop-off Amsterdam style.</p>
         </div>
-        <div class="form-register">
-            <label for="phone">Phone number</label>
-            <input 
-            type="text" 
-            class="form-control" 
-            id="phone" 
-            oninput="handleInputPhone()"
-            name="phone" 
-            placeholder="Enter your phone number" 
-            required>
-            <p id="errorPhone"></p>
+        <div class="city-bikes-right">
+            <img src="./Picture/city_bikes_right.jpg" alt="">
         </div>
-        <div class="register-btn">
-        <button type="submit">Đăng ký</button>
-        <a href="../Login/Login.html">Đã có tài khoản? Đăng nhập</a>
-        </div>
-        </form>
-        </div>
+    </div>
+    <div class="city-bikes-img">
+        <img src="./Picture/div.h2d-ac44f41b.png" alt="">
+    </div>
+        <h1>City bikes for <br> everyone</h1>
+   </div>
+    <!--Test bikes -->
+    <div class="test-bikes">
+        <p>Ready to take the Electric Ivy or Ace for a spin? Electric test rides are now available in <br>
+        Amsterdam, Amstelveen, Abcoude, Bussum, Den Haag, Nijmegen, Weesp, Wormerveer, <br>
+        Berlin, Hamburg and Munich. Schedule your test ride now and we'll see you there.</p>
+        <button>Book Now</button>
     </div>
     <!-- Footer -->
     <footer>
@@ -159,7 +148,7 @@
         </div>
         </div>
     </footer>
-    <script src="Register.js"></script>
+    <script src="./Login.js"></script>
     </div>
 </body>
 </html>

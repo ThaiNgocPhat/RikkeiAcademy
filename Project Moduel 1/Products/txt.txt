@@ -1,0 +1,100 @@
+<section>
+            <div class="explore-titleChevon">
+                <div class="explore-title">
+                    <p>Explore our bikes</p>
+                </div>
+                <div class="explore-chevon">
+                    <button class="prev" onclick="moveSlide(-1)">&#10094;</button>
+                    <button class="next" onclick="moveSlide(1)">&#10095;</button>
+                </div>
+            </div>
+                <div class="carousel">
+                    <div class="carousel-container">
+                     <div class="carousel-product">
+                        <div class="carousel-img">
+                        <img src="./Picture/image1.jpg" alt="">
+                    </div>
+                    <div class="title-price">
+                        <div class="bike-title">
+                        <span>Electric Ivy</span>
+                        <p>From €399</p>
+                        </div>
+                        <div class="sextype">
+                            <p>Women</p>
+                            <p>Men</p>
+                        </div>
+                    <div class="title-small">
+                        <span>Two</span>
+                    </div>
+                </div>
+                 <div class="buy-color">
+                    <div class="buy-leanr">
+                        <button>Buy Now</button>
+                        <a href="#">Learn more</a>
+                    </div>
+                </div>
+                </div>
+                    <div class="carousel-product">
+                        <div class="carousel-img">
+                        <img src="./Picture/image1.jpg" alt="">
+                    </div>
+                    <div class="title-price">
+                        <div class="bike-title">
+                        <span>Electric Ivy</span>
+                        <p>From €399</p>
+                        </div>
+                        <div class="sextype">
+                            <p>Women</p>
+                            <p>Men</p>
+                        </div>
+                    <div class="title-small">
+                        <span>Two</span>
+                    </div>
+                </div>
+                 <div class="buy-color">
+                    <div class="buy-leanr">
+                        <button>Buy Now</button>
+                        <a href="#">Learn more</a>
+                    </div>
+                </div>
+                </div>
+                   <div class="carousel-product">
+                        <div class="carousel-img">
+                        <img src="./Picture/image1.jpg" alt="">
+                    </div>
+                    <div class="title-price">
+                        <div class="bike-title">
+                        <span>Electric Ivy</span>
+                        <p>From €399</p>
+                        </div>
+                        <div class="sextype">
+                            <p>Women</p>
+                            <p>Men</p>
+                        </div>
+                    <div class="title-small">
+                        <span>Two</span>
+                    </div>
+                </div>
+                 <div class="buy-color">
+                    <div class="buy-leanr">
+                        <button>Buy Now</button>
+                        <a href="#">Learn more</a>
+                    </div>
+                </div>
+                </div>
+                    </div>
+                </div>
+        </section>
+
+
+
+
+
+   display: flex;
+    align-items: center;
+    margin-left: 40px;
+    margin-bottom: 100px;
+
+    .bike-free-description{
+    margin-left: 300px;
+}

@@ -1,0 +1,209 @@
+.wrapper{
+    width: 1440px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.header-product{
+    position: relative;
+    margin-bottom: 100px;
+}
+.header-product-image{
+    position: relative;
+}
+.header-product-description{
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 300px;
+    left: 60px;
+}
+.header-product-description p{
+    font-size: 15px;
+    color: #f0f0f0;
+}
+.header-product-description span{
+    font-size: 50px;
+    color: #f0f0f0;
+}
+.buy-color{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 130px;
+}
+.product-color button{
+    background-color: #f0f0f0;
+    border: none;
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+}
+.product-color .btn1{
+    background-color: black;
+}
+.product-color .btn2{
+    background-color:gray;
+}
+.product-color .btn3{
+    background-color:rgba(221, 217, 205, 1);
+}
+.buy-now{
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+.buy-now a{
+    color: black;
+
+}
+.buy-now button{
+    background-color:white;
+    color:black;
+    border-radius: 50px;
+    border: none;
+    width:100px;
+    height: 40px;
+    cursor: pointer;
+}
+.product-color{
+    display: flex;
+    gap: 20px;
+}
+.explore-titleChevon{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 100px;
+}
+.explore-title p{
+    font-size: 30px;
+}
+.explore-chevon{
+    display: flex;
+    gap: 30px;
+    font-size: 30px;
+}
+.service-title{
+    font-size: 70px;
+    margin-left: 40px;
+}
+.service-description-logo{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+   margin: 100px 40px 80px 40px;
+}
+.service-description-logo img{
+    width: 27px;
+    height: 42px;
+}
+.service-description-logo p{
+    line-height: 20px;
+    opacity: 0.5;
+}
+.store-img img{
+    height: 790px;
+}
+.service-store{
+    position: relative;
+}
+.store-description{
+    position: absolute;
+    top: 110px;
+    left: 100px;
+}
+.store-description span{
+    font-size: 50px;
+    color: #f0f0f0;
+}
+.store-description p{
+    font-size: 21px;
+    font-weight: 100;
+    color: #f0f0f0;
+}
+.store-description button{
+    width: 254px;
+    height: 51px;
+    background-color: rgba(255, 255, 255, 1);
+    border-radius: 50px;
+}
+.leasing{
+     display: flex;
+    align-items: center;
+    margin: 90px 0px 100px 40px;
+}
+.leasing-description{
+    margin-left: 300px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+.leasing-description span{
+    font-size: 50px;
+}
+.leasing-description p{
+    font-size: 21px;
+    font-weight: 100;
+}
+.talked span{
+    font-size: 70px;
+}
+.customer-talk{
+    display: flex;
+    justify-content: space-around;
+    margin-top: 100px;
+}
+.customer-talk .talk{
+    width: 425px;
+    height: 290px;
+    border: 0.1px ridge black;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+}
+.red-dot-img img{
+    width: 100%;
+    height: 800px;
+}
+.red-dot{
+    position: relative;
+    margin-top: 100px;
+}
+.red-dot-description{
+    position: absolute;
+    top: 250px;
+    left: 150px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+.red-dot-description span{
+    font-size: 50px;
+    color: #f0f0f0;
+}
+.red-dot-description p{
+    font-size: 15px;
+    font-weight: 100;
+    color: #f0f0f0;
+}
+.ride-carefree{
+    display: flex;
+    align-items: center;
+    margin-left: 150px;
+    margin-top: 100px;
+    margin-bottom: 100px;
+}
+.ride-description span{
+    font-size: 50px;
+}
+.ride-description p{
+    font-size: 15px;
+    font-weight: 100;
+}
+.ride-img img{
+    margin-left: 165px;
+}

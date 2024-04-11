@@ -1,58 +1,90 @@
-let email = document.getElementById('email');
-let oldPassword = document.getElementById('oldPassword');
-let newPassword = document.getElementById('newPassword');
-let confirmPassword = document.getElementById('confirmPassword');
-let errorMail = document.getElementById('emailError');
-let errorOldpassword = document.getElementById('oldPasswordError');
-let errorNewpassword = document.getElementById('newPasswordError');
-let errorConfirmNewPassword = document.getElementById('confirmPasswordError');
-var checkMail = false;
+
+let email = document.getElementById("email");
+let oldPassword = document.getElementById("oldPassword");
+let newPassword = document.getElementById("newPassword");
+let confirmNewpassword = document.getElementById("confirmNewPassword");
+let errorEmail = document.getElementById("error-email");
+let errorOldPassword = document.getElementById("error-old-password");
+let errorNewPassword = document.getElementById("error-new-password");
+let errorConfirmPassword = document.getElementById(
+  "error-confirm-new-password"
+);
+let checkEmail = false;
 function handleEmailChange() {
-    if (email.value == "") {
-        errorMail.innerHTML = "Email is required";
-        errorMail.style.color = "red";
-        checkMail = false;
-    } else {
-        errorMail.innerHTML = "";
-        checkMail = true;
-    }
+  if (email.value == "") {
+    errorEmail.innerHTML = "email khong duoc de trong";
+    checkEmail = false;
+    errorEmail.style.display = "flex";
+  } else {
+    errorEmail.innerHTML = "";
+    errorEmail.style.display = "none";
+    checkEmail = true;
+  }
 }
-var checkOldPassword = false;
-function handleInputOldpassword() {
-    if (oldPassword.value == "") {
-        errorOldpassword.innerHTML = "Old password is required";
-        errorOldpassword.style.color = "red";
-        checkOldPassword = false;
-    } else {
-        errorOldpassword.innerHTML = "";
-        checkOldPassword = true;
-    }
+let checkPassword = false;
+function handlePasswordChange() {
+  if (oldPassword.value == "") {
+    errorOldPassword.innerHTML = "password cu khong duoc de trong";
+    checkPassword = false;
+    errorOldPassword.style.display = "flex";
+  } else {
+    errorOldPassword.innerHTML = "";
+    errorOldPassword.style.display = "none";
+    checkPassword = true;
+  }
 }
-var checkNewPassword = false;
-function handleNewPassword() {
-    if (newPassword.value == "") {
-        errorNewpassword.innerHTML = "New password is required";
-        errorNewpassword.style.color = "red";
-        checkNewPassword = false;
-    } else {
-        errorNewpassword.innerHTML = "";
-        checkNewPassword = true;
-    }
+let checkNewPassword = false;
+function handleNewPasswordChange() {
+  if (newPassword.value == "") {
+    errorNewPassword.innerHTML = "password moi khong duoc de trong";
+    checkNewPassword = false;
+    errorNewPassword.style.display = "flex";
+  } else {
+    errorNewPassword.innerHTML = "";
+    errorNewPassword.style.display = "none";
+    checkNewPassword = true;
+  }
 }
-var checkConfirmPassword = false;
-function handleConfirmNewPassword() {
-    if (confirmPassword.value == "") {
-        errorConfirmNewPassword.innerHTML = "Confirm password is required";
-        errorConfirmNewPassword.style.color = "red";
-        checkConfirmPassword = false;
-    } else {
-        errorConfirmNewPassword.innerHTML = "";
-        checkConfirmPassword = true;
-    }
+let checkConfirmNewPassword = false;
+function handleConfirmPasswordChange() {
+  if (confirmNewpassword.value == "") {
+    errorConfirmPassword.innerHTML = "password nhap lai khong duoc de trong";
+    checkConfirmNewPassword = false;
+    errorConfirmPassword.style.display = "flex";
+  } else if (newPassword.value !== confirmNewpassword.value) {
+    errorConfirmPassword.innerHTML = "password moi phai giong password cu";
+    errorConfirmPassword.style.display = "flex";
+    checkConfirmNewPassword = false;
+  } else {
+    errorConfirmPassword.innerHTML = "";
+    errorConfirmPassword.style.display = "none";
+    checkConfirmNewPassword = true;
+  }
 }
-function checkAll(){
-    if(checkMail && checkOldPassword && checkNewPassword && checkConfirmPassword){
-        return true;
+let users = JSON.parse(localStorage.getItem("users")) || [];
+console.log(users);
+function handleSubmit(event) {
+  event.preventDefault();
+  if (
+    checkPassword &&
+    checkEmail &&
+    checkNewPassword &&
+    checkConfirmNewPassword
+  ) {
+    let index = users.findIndex((user) => user.email == email.value);
+    if (index == -1) {
+      alert("email khong ton tai tren he thong");
+    } else {
+      if (users[index].password !== oldPassword.value) {
+        alert("mat khau khong dung");
+      } else {
+        users[index].password = newPassword.value;
+        alert("doi mat khau thanh cong");
+        event.target.reset();
+        localStorage.setItem("users", JSON.stringify("users"));
+      }
     }
-    return false;
+  } else {
+    alert("ban phai nhap day du thong tin");
+  }
 }

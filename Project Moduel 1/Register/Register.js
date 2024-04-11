@@ -101,7 +101,7 @@ function handleInputPhone(){
         checkPhone = true;
     }
 }
-const users = []
+const users = JSON.parse(localStorage.getItem("users")) || [];
 function handleSubmit(event){
     event.preventDefault();
     if(checkName && checkPass && checkRepass && checkEmail && checkPhone){
@@ -111,13 +111,10 @@ function handleSubmit(event){
             email: email.value,
             phone: phone.value
         }
-        users.push(newUser)
-        console.log(newUser, "New User")
-        console.log(users, "All Users")
-    } else {
-        event.preventDefault();
-        alert("Please fill in the form correctly")
+        users.push(newUser);
+        localStorage.setItem("users", JSON.stringify(users));
+        alert("Register success");
+        window.location.href = "login.html";
     }
 }
-
 

@@ -1,0 +1,371 @@
+.wrapper{
+    width: 1440px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.removable-img img{
+    width: 100%;
+    height: 747px;
+}
+.removable-battery-description{
+    position: absolute;
+    top: 240px;
+    left: 300px;
+}
+.removable-battery-description span{
+   font-size: 70px;
+    color: white;
+}
+.removable-battery-description p{
+    opacity: 0.6;
+    color: white;
+}
+.ivy-two{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.ivy-two-img img{
+    width: 720px !important;
+    height: 900px !important;
+}
+.ivy-tow-description{
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    margin-left: 200px;
+}
+.ivy-tow-description span{
+    font-size: 70px;
+}
+.ivy-tow-description p{
+    font-size: 15px;
+    opacity: 0.5;
+}
+.silent-power{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.silent-power-description{
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    margin-right: 100px;
+
+}
+.silent-power-description span{
+    font-size: 70px;
+}
+.silent-power-description p{
+    font-size: 15px;
+    opacity: 0.5;
+}
+.built-in-display{
+  position: relative;
+
+}
+.built-in-display-description{
+    position: absolute;
+    top: 250px;
+    left: 50px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+.built-in-display-description span{
+    font-size: 70px;
+    color: white;
+}
+.built-in-display-description p{
+    opacity: 0.6;
+    color: white;
+}
+.enviolo-automated-gears{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.enviolo-automated-gears-description{
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    margin-left: 200px;
+}
+.enviolo-automated-gears-description span{
+    font-size: 70px;
+}
+.enviolo-automated-gears-description p{
+    font-size: 15px;
+    opacity: 0.5;
+}
+.gate-belt-drive{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.gate-belt-drive-description{
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    margin-right: 100px;
+}
+.gate-belt-drive-description span{
+    font-size: 70px;
+}
+.gate-belt-drive-description p{
+    font-size: 15px;
+    opacity: 0.5;
+}
+.led-brake-light{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.led-brake-light-description{
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    margin-left: 200px;
+}
+.led-brake-light-description span{
+    font-size: 70px;
+}
+.led-brake-light-description p{
+    font-size: 15px;
+    opacity: 0.5;
+}
+.osram-precision-light{
+    position: relative;
+}
+.osram-precision-light-description {
+    position: absolute;
+    top: 200px;
+    left: 150px;
+}
+.osram-precision-light-description span{
+    font-size: 50px;
+    color: white;
+}
+.osram-precision-light-description p{
+    opacity: 0.6;
+    color: white;
+}
+.safety-tracking{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 100px;
+    margin-left: 40px;
+}
+.safety-tracking-description{
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    margin-right: 100px;
+}
+.safety-tracking-description span{
+    font-size: 70px;
+}
+.safety-tracking-description p{
+    font-size: 15px;
+    opacity: 0.5;
+}
+.shimano-hydraulic-discbrakes{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 180px;
+    margin-right: 40px;
+}   
+.shimano-hydraulic-discbrakes-description{
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    margin-left: 200px;
+}
+.shimano-hydraulic-discbrakes-description span{
+    font-size: 70px;
+}
+.shimano-hydraulic-discbrakes-description p{
+    font-size: 15px;
+    opacity: 0.5;
+}
+.edit-bike-img{
+    text-align: center;
+    margin-top: 150px;
+    margin-left: 250px;
+    position: relative;
+}
+.edit-bike{
+    position: relative;
+}
+.edit-btn1{
+    width: 44px;
+    height: 44px;
+    border: 1px solid #000000;
+    border-radius: 50px;
+    background-color: rgba(237, 234, 232, 1);
+    position: absolute;
+    top: 410px;
+    left: 358px;
+}
+.edit-btn2{
+    width: 44px;
+    height: 44px;
+    border: 1px solid #000000;
+    border-radius: 50px;
+    background-color: rgba(237, 234, 232, 1);
+    position: absolute;
+    top: 380px;
+    left: 540px;
+}
+.edit-btn3{
+    width: 44px;
+    height: 44px;
+    border: 1px solid #000000;
+    border-radius: 50px;
+    background-color: rgba(237, 234, 232, 1);
+    position: absolute;
+    top: 450px;
+    left: 650px;
+}
+.edit-btn4{
+    width: 44px;
+    height: 44px;
+    border: 1px solid #000000;
+    border-radius: 50px;
+    background-color: rgba(237, 234, 232, 1);
+    position: absolute;
+    top: 200px;
+    left: 530px;
+}
+.edit-btn5{
+    width: 44px;
+    height: 44px;
+    border: 1px solid #000000;
+    border-radius: 50px;
+    background-color: rgba(237, 234, 232, 1);
+    position: absolute;
+    top: 300px;
+    left: 800px;
+}
+.edit-btn6{
+    width: 44px;
+    height: 44px;
+    border: 1px solid #000000;
+    border-radius: 50px;
+    background-color: rgba(237, 234, 232, 1);
+    position: absolute;
+    top: 150px;
+    left: 900px;
+}
+.edit-btn7{
+    width: 44px;
+    height: 44px;
+    border: 1px solid #000000;
+    border-radius: 50px;
+    background-color: rgba(237, 234, 232, 1);
+    position: absolute;
+    top: 30px;
+    left: 880px;
+}
+.edit-btn8{
+    width: 44px;
+    height: 44px;
+    border: 1px solid #000000;
+    border-radius: 50px;
+    background-color: rgba(237, 234, 232, 1);
+    position: absolute;
+    top: 20px;
+    left: 800px;
+}
+.edit-btn9{
+    width: 44px;
+    height: 44px;
+    border: 1px solid #000000;
+    border-radius: 50px;
+    background-color: rgba(237, 234, 232, 1);
+    position: absolute;
+    top: 380px;
+    left: 1000px;
+}
+.edit-btn10{
+    width: 420px;
+    height: 420px;
+    border: 1px solid #000000;
+    border-radius: 50%;
+    background-color: rgba(237, 234, 232, 1);
+    position: absolute;
+    top: 120px;
+    left: 700px;
+}
+.all-in-the-details h1{
+    font-size: 50px;
+    margin-top: 100px;
+}
+.all-details{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-top: 100px;
+}
+.Frame,
+.components,
+.accessories{
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+.Frame,
+.components,
+.accessories h2{
+    font-size: 30px;
+}
+.Frame-1,
+.components-0,
+.accessories-0{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    margin-left: 30px;
+}
+.Frame-1 span{
+    font-size: 20px;
+}
+.components-0 span{
+    font-size: 20px;
+}
+.accessories-0 span{
+    font-size: 20px;
+}
+.Frame-1 p{
+    font-size: 21px;
+    opacity: 0.5;
+}
+.components-0 p{
+    font-size: 21px;
+    opacity: 0.5;
+}
+.accessories-0 p{
+    font-size: 21px;
+    opacity: 0.5;
+}
+.Frame-1 h3{
+    font-size: 21px;
+}
+.components-0 h3{
+    font-size: 21px;
+}
+.accessories-0 h3{
+    font-size: 21px;
+}
+.download-full-specifications button{
+    width: 300px;
+    height: 60px;
+    background-color:white;
+    font-size: 20px;
+    border: 1px solid #000000;
+    border-radius: 50px;
+    margin-top: 100px;
+}
