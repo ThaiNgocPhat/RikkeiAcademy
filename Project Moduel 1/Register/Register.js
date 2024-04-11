@@ -135,7 +135,7 @@ function handleCheckboxChange() {
   }
 }
 let users = JSON.parse(localStorage.getItem("users")) || [];
-function handleSubmit(event) {
+function handleRegister(event) {
   event.preventDefault();
   if (
     checkName &&
@@ -149,9 +149,9 @@ function handleSubmit(event) {
       name: inpName.value,
       email: inpEmail.value,
       password: inpPassword.value,
-      isActived: true
+      isActive: true
     };
-    let index = users.findIndex((user) => user.email === inpEmail.value);
+    let index = users.findIndex((user) => user.email == inpEmail.value);
     if (index === -1) {
       users.push(newUser);
       console.log(newUser);

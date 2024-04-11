@@ -27,34 +27,38 @@ function handlePasswordChange() {
   }
 }
 
-// Tài khoản đăng nhập phải giống với tài khoản trong local, nếu đúng mới cho login, nếu sai báo tài khoản/email không có trong hệ thống
-const users = JSON.parse(localStorage.getItem("users"));
-console.log(users);
 
+const users = JSON.parse(localStorage.getItem("users"));
 function handleLogin(event) {
   event.preventDefault();
   let isCheckExistedEmail = false;
-  let isCheckExistedPassword = false; // biến kiểm tra password có trùng với email đăng nhập hay không
-  let indexUser = users.findIndex((user) => user.email == email.value); //Không nhập thông tin submit form thì indexUser = -1
+  let isCheckExistedPassword = false;
+  let indexUser = users.findIndex((user) => user.email == email.value);
   if (indexUser !== -1) {
     isCheckExistedEmail = true;
     if (users[indexUser].password === password.value) {
       isCheckExistedPassword = true;
     }
+    
   }
-  if (isCheckEmail === true && isCheckPassword === true) {
-    // Check tài khoản -> check mật khẩu
+if (isCheckEmail === true && isCheckPassword === true) {
     if (isCheckExistedEmail === true) {
-      if (isCheckExistedPassword === false) {
-        alert("Password is incorrect");
-      } else {
-        window.location.href = "../Home/Home.html";
-        event.target.reset();
-      }
+        if (isCheckExistedPassword === true) {
+            if(users[indexUser].isActive == false){
+                alert("Account is not active");
+            } else {
+                alert("Login Success!");
+                window.location.href = "../Home/Home.html";
+                event.target.reset();
+            }
+        } else {
+            alert("Password is incorrect");
+        }
     } else {
-      alert("Email is not exist!");
+        alert("Email is not exist");
     }
-  } else {
-    alert("Ban phai nhap day du thong tin!");
-  }
+} else {
+    alert("Please enter valid email and password!");
+}
+
 }

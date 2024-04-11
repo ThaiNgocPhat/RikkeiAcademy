@@ -4,10 +4,11 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Admin</title>
+    <title>Products</title>
     <link rel="shortcut icon" href="/images/logo_real.png" type="image/png" />
     <!-- GOOGLE FONT -->
     <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link rel="stylesheet" href="./css/Product.css">
     <link
       href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
       rel="stylesheet"
@@ -21,6 +22,7 @@
   </head>
 
   <body>
+    <div class="wrapper">
     <!-- SIDEBAR -->
     <div class="sidebar">
       <div class="sidebar-logo">
@@ -45,7 +47,7 @@
       <!-- SIDEBAR MENU -->
       <ul class="sidebar-menu">
         <li>
-          <a href="#" class="active">
+          <a href="./index.html" class="active">
             <i class="bx bx-home"></i>
             <span>Homepage</span>
           </a>
@@ -82,6 +84,8 @@
       <!-- END SIDEBAR MENU -->
     </div>
     <!-- END SIDEBAR -->
+    
+
 
     <!-- MAIN CONTENT -->
     <div class="main">
@@ -91,8 +95,59 @@
         </div>
         <div class="main-title">dashboard</div>
       </div>
-
+      </div>
+      <!--  -->
+      <div class="search-add">
+            <input type="text" placeholder="Search" id="search" onclick="handleSearch" />
+            <button id="add" onclick="handleAdd()">+Add Product</button>
+          </div>
+      <!--  -->
+       <div class="box-body overflow-scroll">
+                <table>
+                  <thead>
+                    <tr>
+                      <th>NO.</th>
+                      <th>Code</th>
+                      <th>Name</th>
+                      <th>Type</th>
+                      <th>Price</th>
+                      <th>Edit/Delete</th>
+            
+                    </tr>
+                  </thead>
+                  <tbody id="tbody1"></tbody>
+                </table>
+              </div>
+               <!-- Modal -->
+          <div id="myModal" class="modal">
+            <!-- Nội dung modal -->
+            <div id="modal-content">
+              <button id="close" onclick="handleClose()">x</button>
+              <h2>Add Product</h2>
+              <form class="addProductForm" onsubmit="handleProduct()">
+                <div class="code">
+                  <label for="productCode">Code:</label>
+                  <input type="text" id="productCode" name="productCode" required>
+                </div>
+              <div class="name">
+                <label for="productName">Name:</label>
+                <input type="text" id="productName" name="productName" required>
+              </div>
+                <div class="type">
+                  <label for="productType">Type:</label>
+                  <input type="text" id="productType" name="productType" required>
+                </div>
+                <div class="price">
+                  <label for="productPrice">Price:</label>
+                  <input type="text" id="productPrice" name="productPrice" required>
+                </div>
+                <button type="submit" id="saveProductBtn" onclick="handleSaveProduct()">Save Product</button>
+              </form>
+            </div>
+          </div>
     <!-- APP JS -->
     <script src="./js/index.js"></script>
+    <script src="./js/product.js"></script>
+  </div>
   </body>
 </html>

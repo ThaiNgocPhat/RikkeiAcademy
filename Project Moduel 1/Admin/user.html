@@ -23,6 +23,7 @@
   </head>
 
   <body>
+    <div class="wrapper">
     <!-- SIDEBAR -->
     <div class="sidebar">
       <div class="sidebar-logo">
@@ -106,10 +107,9 @@
                   <option value="account">Search by Account</option>
                 </select>
                 <input type="text" name="search" id="search" placeholder="Search..." />
-                <button id="search-btn">
+                <button id="search-btn" onclick="handleSearch()">
                   <i class="bx bx-search"></i>
                 </button>
-                <i class="fa-solid fa-arrow-down-a-z" onclick="arrowDownApha()"></i>
               </div>
               <div class="box-body overflow-scroll">
                 <table>
@@ -137,7 +137,8 @@
     <div class="overlay"></div>
 
     <!-- APP JS -->
-    <script src="./js/user.js"></script>
     <script src="./js/index.js"></script>
+    <script src="./js/user.js"></script>
+    </div>
   </body>
 </html>
