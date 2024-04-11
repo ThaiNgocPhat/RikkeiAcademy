@@ -1,0 +1,19 @@
+.search-section{
+    margin-top: 40px;
+    position: relative;
+}
+.search-section select{
+    height: 30px;
+}
+.search-section input{
+    height: 30px;
+    width: 200px;
+    position: relative;
+}
+.search-section button{
+    position: absolute;
+    border: none;
+    background-color: white;
+    left: 330px;
+    top: 10px;
+}

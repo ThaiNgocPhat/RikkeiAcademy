@@ -1,120 +1,170 @@
-const username = document.getElementById("username");
-const password = document.getElementById("password");   
-const repassword = document.getElementById("repassword");
-const email = document.getElementById("email");
-const phone = document.getElementById("phone");
-const errorUsername = document.getElementById("errorUsername");
-const errorPassword = document.getElementById("errorPassword");
-const errorRepassword = document.getElementById("errorRepassword");
-const errorEmail = document.getElementById("errorEmail");
-const errorPhone = document.getElementById("errorPhone");
-//check lỗi username
-var checkName = false;
-function handleInput() {
-    if(username.value === ""){
-        errorUsername.innerHTML = "Username can not empty"
-        errorUsername.style.color = "red"
-        checkName = false;
-    }else if(username.value.length < 8){
-        errorUsername.innerHTML = "Username must have at least 8 characters"
-        errorUsername.style.color = "red"
-        checkName = false;
-    }else if(username.value === username.value.toLowerCase()){
-        errorUsername.innerHTML = "Username must have at least one uppercase character"
-        errorUsername.style.color = "red"
-        checkName = false;
-    }else{
-        errorUsername.innerHTML = ""
-        checkName = true;
-    }
-}
-//check lỗi password
-var checkPass = false;
-function handleInputPassword(){
-    if(password.value === ""){
-        errorPassword.innerHTML = "Password can not empty"
-        errorPassword.style.color = "red"
-        checkPass = false;
-    }else if(password.value.length < 8){
-        errorPassword.innerHTML = "Password must have at least 8 characters"
-        errorPassword.style.color = "red"
-        checkPass = false;
-    }else if(password.value === password.value.toLowerCase()){
-        errorPassword.innerHTML = "Password must have at least one uppercase character"
-        errorPassword.style.color = "red"
-        checkPass = false;
-    } else {
-        errorPassword.innerHTML = " "
-        checkPass = true;
-    }
-}
-//check lỗi repassword
-var checkRepass = false;
-function handleInputRepassword(){
-    if(repassword.value === ""){
-        errorRepassword.innerHTML = "Repassword can not empty"
-        errorRepassword.style.color = "red"
-        checkRepass = false;
-    }else if(repassword.value !== password.value){
-        errorRepassword.innerHTML = "Repassword must match password"
-        errorRepassword.style.color = "red"
-        checkRepass = false;
-    } else {
-        errorRepassword.innerHTML = " "
-        checkRepass = true;
-    }
-}
-//check lỗi email
-var checkEmail = false;
-function handleInputEmail(){
-    if(email.value === ""){
-        errorEmail.innerHTML = "Email can not empty"
-        errorEmail.style.color = "red"
-        checkEmail = false;
-    } else if(email.value.indexOf("@") === -1){
-        errorEmail.innerHTML = "Email must have @"
-        errorEmail.style.color = "red"
-        checkEmail = false;
-    } else {
-        errorEmail.innerHTML = " "
-        checkEmail = true;
-    }
-}
-//nếu có chữ thì không được
-//check lỗi phone
-var checkPhone = false;
-function handleInputPhone(){
-    if(phone.value === ""){
-        errorPhone.innerHTML = "Phone can not empty"
-        errorPhone.style.color = "red"
-        checkPhone = false;
-    }else if(phone.value.length < 10 || phone.value.length > 11){
-        errorPhone.innerHTML = "Phone must have 10 or 11 numbers"
-        errorPhone.style.color = "red"
-        checkPhone = false;
-        } else if(isNaN(phone.value)){
-        errorPhone.innerHTML = "Phone must be a number"
-        errorPhone.style.color = "red"
-        checkPhone = false;
-    } else {
-        errorPhone.innerHTML = " "
-        checkPhone = true;
-    }
-}
-const users = JSON.parse(localStorage.getItem("users")) || [];
-function handleSubmit(event){
-    event.preventDefault();
-    if(checkName && checkPass && checkRepass && checkEmail && checkPhone){
-        const newUser = {
-            username: username.value,
-            password: password.value,
-            email: email.value,
-            phone: phone.value
-        }
-        users.push(newUser);
-        localStorage.setItem("users", JSON.stringify(users));
-        alert("Register success");
-        window.location.href = "login.html";
-    }
-}
 
+let inpName = document.getElementById("name");
+let errorName = document.getElementById("error-name");
+let checkName = false;
+function handleNameChange() {
+  if (inpName.value === "") {
+    errorName.innerHTML = "Name không được để trống";
+    errorName.style.display = "flex";
+    checkName = false;
+  } else if (inpName.value.length < 6) {
+    errorName.innerHTML = "Name phải có trên 6 ký tự ";
+    errorName.style.display = "flex";
+    checkName = false;
+  } else if (inpName.value === inpName.value.toLowerCase()) {
+    errorName.innerHTML = "Name phải có ít nhất một ký tự viết hoa ";
+    errorName.style.display = "flex";
+    checkName = false;
+  } else {
+    errorName.style.display = "none";
+    checkName = true;
+  }
+}
+//điều kiện email
+let inpEmail = document.getElementById("email");
+let errorEmail = document.getElementById("error-email");
+let checkemail = false;
+function handleEmailChange() {
+  if (inpEmail.value === "") {
+    errorEmail.innerHTML = "Email không được để trống";
+    errorEmail.style.display = "flex";
+    checkemail = false;
+  } else if (inpEmail.value.length < 8) {
+    errorEmail.innerHTML = "Email phải có trên 8 ký tự";
+    errorEmail.style.display = "flex";
+    checkemail = false;
+  } else if (inpEmail.value === inpEmail.value.toLowerCase()) {
+    errorEmail.innerHTML = "Email phải có 1 ký tự viết hoa";
+    errorEmail.style.display = "flex";
+    checkemail = false;
+  } else if (inpEmail.value === inpEmail.value.toUpperCase()) {
+    errorEmail.innerHTML = "Email phải có 1 ký tự viết thường";
+    errorEmail.style.display = "flex";
+    checkemail = false;
+  } else {
+    errorEmail.style.display = "none";
+    checkemail = true;
+  }
+}
+//điều kiện password
+function isAllCharPresent(str) {
+  for (let i = 0; i < str.length; i++) {
+    if (!isNaN(str[i])) return true;
+  }
+  return false;
+}
+let inpPassword = document.getElementById("password");
+let errorPassword = document.getElementById("error-password");
+let checkPassword = false;
+function handlePasswordChange() {
+  if (inpPassword.value === "") {
+    errorPassword.innerHTML = "Password không được để trống";
+    errorPassword.style.display = "flex";
+    checkPassword = false;
+  } else if (inpPassword.value.length < 8) {
+    errorPassword.innerHTML = "Password phải có trên 8 ký tự";
+    errorPassword.style.display = "flex";
+    checkPassword = false;
+  } else if (inpPassword.value === inpPassword.value.toLowerCase()) {
+    errorPassword.innerHTML = "Password phải có 1 ký tự viết hoa";
+    errorPassword.style.display = "flex";
+    checkPassword = false;
+  } else if (inpPassword.value === inpPassword.value.toUpperCase()) {
+    errorPassword.innerHTML = "Password phải có 1 ký tự viết thường";
+    errorPassword.style.display = "flex";
+    checkPassword = false;
+  } else if (!isAllCharPresent(inpPassword.value)) {
+    errorPassword.innerHTML = "Password phải có 1 số";
+    errorPassword.style.display = "flex";
+    checkPassword = false;
+  } else {
+    errorPassword.style.display = "none";
+    checkPassword = true;
+  }
+}
+//Điều kiện confirm password
+let inpConfirmPassword = document.getElementById("confirm-password");
+let errorConfirmPassword = document.getElementById("error-confirm-password");
+let checkConfirmPassword = false;
+function handleCreatePasswordChange() {
+  if (inpConfirmPassword.value === "") {
+    errorConfirmPassword.innerHTML = "Confirmpassword không được để trống";
+    errorConfirmPassword.style.display = "flex";
+    checkConfirmPassword = false;
+  } else if (inpConfirmPassword.value.length < 8) {
+    errorConfirmPassword.innerHTML = "Confirmpassword phải có trên 8 ký tự";
+    errorConfirmPassword.style.display = "flex";
+    checkConfirmPassword = false;
+  } else if (
+    inpConfirmPassword.value === inpConfirmPassword.value.toLowerCase()
+  ) {
+    errorConfirmPassword.innerHTML = "Confirmpassword phải có 1 ký tự viết hoa";
+    errorConfirmPassword.style.display = "flex";
+    checkConfirmPassword = false;
+  } else if (
+    inpConfirmPassword.value === inpConfirmPassword.value.toUpperCase()
+  ) {
+    errorConfirmPassword.innerHTML =
+      "Confirmpassword phải có 1 ký tự viết thường";
+    errorConfirmPassword.style.display = "flex";
+    checkConfirmPassword = false;
+  } else if (!isAllCharPresent(inpConfirmPassword.value)) {
+    errorConfirmPassword.innerHTML = "Confirmpassword phải có 1 số";
+    errorConfirmPassword.style.display = "flex";
+    checkConfirmPassword = false;
+  } else if (inpPassword.value !== inpConfirmPassword.value) {
+    errorConfirmPassword.innerHTML = "Confirmpassword phải giống với password";
+    errorConfirmPassword.style.display = "flex";
+    checkConfirmPassword = false;
+  } else {
+    errorConfirmPassword.style.display = "none";
+    checkConfirmPassword = true;
+  }
+}
+let checkBox = document.getElementById("checkbox");
+let errorCheckBox = document.getElementById("error-checkbox");
+let checkBox2 = false;
+function handleCheckboxChange() {
+  if (checkBox.checked) {
+    errorCheckBox.style.display = "none";
+    checkBox2 = true;
+  } else {
+    errorCheckBox.innerHTML = "Bạn phải tick vào chekbox.";
+    errorCheckBox.style.display = "flex";
+    checkBox2 = false;
+  }
+}
+let users = JSON.parse(localStorage.getItem("users")) || [];
+function handleSubmit(event) {
+  event.preventDefault();
+  if (
+    checkName &&
+    checkemail &&
+    checkPassword &&
+    checkConfirmPassword &&
+    checkBox2
+  ) {
+    let newUser = {
+      id: Math.floor(Math.random() * 1000),
+      name: inpName.value,
+      email: inpEmail.value,
+      password: inpPassword.value,
+      isActived: true
+    };
+    let index = users.findIndex((user) => user.email === inpEmail.value);
+    if (index === -1) {
+      users.push(newUser);
+      console.log(newUser);
+
+      localStorage.setItem("users", JSON.stringify(users));
+      alert("Dang ky tai khoan thanh cong!");
+      event.target.reset();
+      window.location.href = "../Login/Login.html";
+      display();
+    } else {
+      alert(
+        "Email da ton tai trong he thong, ban khong the dang ky nua!!!"
+      );
+    }
+  }
+}

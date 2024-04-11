@@ -3,59 +3,66 @@
     margin-left: auto;
     margin-right: auto;
 }
-.register{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    height: 1000px;
-    gap: 20px;
-    background-color: #f1f1f1;
-    margin-bottom: 50px;
-    margin-top: 50px;
-}
-.form-register{
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-}
-.form-register input{
-    width: 500px;
-    height: 40px;
-    border: none;
-    border-radius: 5px;
-    padding: 5px;
-}
-.form-register button{
-    border-radius: 5px;
-    background-color: #007bff;
-    color: white;
-    cursor: pointer;
-}
-.form-register button:hover{
-    background-color: #0056b3;
-}
-.register-btn{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 30px;
-}
-.register-btn a{
-    text-decoration: none;
-    color: #007bff;
-}
-.register-btn a:hover{
-    color: #0056b3;
-}
-.register-btn button{
-    border-radius: 5px;
-    background-color: #007bff;
-    color: white;
-    cursor: pointer;
-    width: 100px;
-    height: 40px;
-}
-.register-btn button:hover{
-    background-color: #0056b3;
-}
+ #formRegistration {
+        display: flex;
+        gap: 20px;
+      }
+
+      .flex-p-a {
+        display: flex;
+      }
+
+      .input-height {
+        height: 30px;
+        border: 1px solid rgb(149, 145, 145);
+        border-radius: 4px;
+      }
+
+      #btn {
+        height: 35px;
+        color: white;
+        border: none;
+        border-radius: 4px;
+        background-color: rgb(53, 53, 237);
+        cursor: pointer;
+      }
+
+      .magin-link {
+        margin-top: 15px;
+        margin-left: 5px;
+        text-decoration: none;
+      }
+
+      .accept-color {
+        color: rgb(160, 141, 141);
+      }
+      #error-name {
+        display: none;
+        color: red;
+        margin: -10px;
+        margin-left: 3px;
+      }
+      #error-email {
+        display: none;
+        color: red;
+        margin: -10px;
+        margin-left: 3px;
+      }
+      #error-password {
+        display: none;
+        color: red;
+        margin: -10px;
+        margin-left: 3px;
+      }
+      #error-confirm-password {
+        display: none;
+        color: red;
+        margin: -10px;
+        margin-left: 3px;
+      }
+      #error-checkbox {
+        display: none;
+        color: red;
+        margin: -10px;
+        margin-left: 3px;
+      }

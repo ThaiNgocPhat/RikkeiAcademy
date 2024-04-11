@@ -119,3 +119,83 @@ footer h3{
     color: white;
     font-weight: bold;
 }
+ #formRegistration {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 40px;
+        background-color: gray;
+        margin-top: 100px;
+        margin-bottom: 100px;
+      }
+
+      .flex-p-a {
+        display: flex;
+      }
+
+      .input-height {
+        height: 30px;
+        width: 500px;
+        border: none;
+        background-color: rgb(240, 240, 240);
+        border-radius: 4px;
+        padding: 10px;
+      }
+
+      #btn {
+        height: 40px;
+        width: 300px;
+        color: white;
+        border: none;
+        border-radius: 4px;
+        background-color: rgb(53, 53, 237);
+        cursor: pointer;
+      }
+
+      .magin-link {
+        margin-top: 15px;
+        margin-left: 5px;
+        text-decoration: none;
+      }
+
+      .accept-color {
+        color: rgb(160, 141, 141);
+      }
+      .flex-input-span {
+        display: flex;
+        gap: 10px;
+      }
+      .flex-input-span span{
+        color: white;
+      }
+      #error-name {
+        display: none;
+        color: red;
+        margin: -10px;
+        margin-left: 3px;
+      }
+      #error-email {
+        display: none;
+        color: red;
+        margin: -10px;
+        margin-left: 3px;
+      }
+      #error-password {
+        display: none;
+        color: red;
+        margin: -10px;
+        margin-left: 3px;
+      }
+      #error-confirm-password {
+        display: none;
+        color: red;
+        margin: -10px;
+        margin-left: 3px;
+      }
+      #error-checkbox {
+        display: none;
+        color: red;
+        margin: -10px;
+        margin-left: 3px;
+        }

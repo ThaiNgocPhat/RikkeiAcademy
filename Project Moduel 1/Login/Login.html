@@ -40,40 +40,31 @@
         </div>
     </head>
     <!-- Login -->
-         <div class="login">
-            <h1>Login</h1>
-            <form onsubmit="handleSubmit(event)">
-                <div class="form-group">
-                    <label for="email">Email:</label>
-                    <input 
-                    type="email" 
-                    id="email" 
-                    oninput= "checkEmail()"
-                    placeholder="Enter email" 
-                    name="email"
-                    class="error-email"
-                    />
-                </div>
-                <p id="errorEmail"></p>
-                <div class="form-group">
-                    <label for="pwd">Password:</label>
-                    <input 
-                    type="password" 
-                    id="password" 
-                    oninput="checkPassword()"
-                    placeholder="Enter password" 
-                    name="pwd"
-                    class="error-password"
-                    >
-                </div>
-                <p id="errorPassword"></p>
-                <button type="submit" class="btn btn-primary">Đăng nhập</button>
-            </form>
-            <p>Bạn chưa có tài khoản? <a href="../Register/Register.html">Đăng ký ngay!
-        </a>
-        </p>
-        <a href="../ForgotPassword.html">Quên mật khẩu ?</a>
-        </div>
+    <form id="formRegistration" onsubmit="handleLogin(event)">
+        <h1>Login Form</h1>
+      <input
+        class="input-height"
+        oninput="handleEmailChange()"
+        id="email"
+        type="text"
+        placeholder="Enter your email"
+      />
+      <p id="error-email"></p>
+      <input
+        class="input-height"
+        oninput="handlePasswordChange()"
+        id="password"
+        type="password"
+        placeholder="Create password"
+      />
+      <p id="error-password"></p>
+      <p id="error-checkbox"></p>
+      <button type="submit" id="btn">Login Now</button>
+      <div class="flex-p-a">
+        <p>You don't have an account?</p>
+        <a class="magin-link" href="../Register/Register.html">Register now</a>
+      </div>
+    </form>
     <!-- Footer -->
     <footer>
         <div class="footer">

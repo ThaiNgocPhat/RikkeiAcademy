@@ -41,77 +41,53 @@
         </div>
     </head>
     <!-- Register -->
-     <div class="container">
-        <div class="register">
-            <h1>Register</h1>
-        <form  onsubmit="handleSubmit(event)">
-        <div class="form-register">
-                    <label for="username">User name</label>
-                    <input 
-                    type="text" 
-                    id="username" 
-                    name="username" 
-                    oninput = "handleInput()"
-                    placeholder="Enter your username" 
-                    required
-                    />
-                    <p id="errorUsername"></p>
-        </div>
-        <div class="form-register">
-            <label for="password">Password</label>
-            <input 
-            type="password" 
-            id="password" 
-            name="password" 
-            oninput = "handleInputPassword()"
-            placeholder="Enter your password" 
-            required
-            />
-            <p id="errorPassword"></p>
-        </div>
-        <div class="form-register">
-            <label for="repassword">Repassword</label>
-            <input 
-            type="password" 
-            id="repassword" 
-            name="repassword" 
-            oninput = "handleInputRepassword()"
-            placeholder="Enter your repassword" 
-            required
-            />
-            <p id="errorRepassword"></p>
-        </div>
-        <div class="form-register">
-            <label for="email">Email</label>
-            <input 
-            type="email" 
-            class="form-control" 
-            oninput="handleInputEmail()"
-            id="email" 
-            name="email" 
-            placeholder="Enter your email" 
-            required>
-            <p id="errorEmail"></p>
-        </div>
-        <div class="form-register">
-            <label for="phone">Phone number</label>
-            <input 
-            type="text" 
-            class="form-control" 
-            id="phone" 
-            oninput="handleInputPhone()"
-            name="phone" 
-            placeholder="Enter your phone number" 
-            required>
-            <p id="errorPhone"></p>
-        </div>
-        <div class="register-btn">
-        <button type="submit">Đăng ký</button>
-        <a href="../Login/Login.html">Đã có tài khoản? Đăng nhập</a>
-        </div>
-        </form>
-        </div>
-    </div>
+    <form id="formRegistration" onsubmit="handleSubmit(event)">
+        <h1>Registration</h1>
+      <input
+        class="input-height"
+        oninput="handleNameChange()"
+        id="name"
+        type="text"
+        placeholder="Enter your name"
+      />
+      <p id="error-name"></p>
+      <input
+        class="input-height"
+        oninput="handleEmailChange()"
+        id="email"
+        type="text"
+        placeholder="Enter your email"
+      />
+      <p id="error-email"></p>
+      <input
+        class="input-height"
+        oninput="handlePasswordChange()"
+        id="password"
+        type="password"
+        placeholder="Create password"
+      />
+      <p id="error-password"></p>
+      <input
+        class="input-height"
+        oninput="handleCreatePasswordChange()"
+        id="confirm-password"
+        type="password"
+        name=""
+        placeholder="Confirm password"
+      />
+      <p id="error-confirm-password"></p>
+      <div class="flex-input-span">
+        <input id="checkbox" oninput="handleCheckboxChange()" type="checkbox" />
+        <span class="accept-color">I accept all terms & conditions</span>
+      </div>
+      <p id="error-checkbox"></p>
+      <button type="submit" id="btn">Register Now</button>
+      <div class="flex-p-a">
+        <p>Already have an account?</p>
+        <a class="magin-link" href="../Login/Login.html">Login now</a>
+      </div>
+    </form>
+
     <!-- Footer -->
     <footer>
         <div class="footer">
