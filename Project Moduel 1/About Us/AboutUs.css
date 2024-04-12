@@ -1,0 +1,66 @@
+.hero-forever-forward{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 70px;
+    margin-left: 40px;
+}
+.hero-description{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    margin-right: 40px;
+}
+.hero-description span{
+    font-size: 50px;
+}
+.hero-description p{
+    font-size: 21px;
+    opacity: 0.5;
+    font-weight: 100 !important;
+}
+.part-of-pon-bike{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 180px;
+}
+.part{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.part span{
+    font-size: 50px;
+}
+.part p{
+    font-size: 21px;
+    opacity: 0.5;
+}
+.title-europe p{
+    font-size: 120px;
+    text-align: center;
+    margin-top: 100px;
+    margin-bottom: 80px;
+}
+.made-for-you{
+    position: relative;
+}
+.made{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    position: absolute;
+    top: 250px;
+    right:80px;
+}
+.made span{
+    font-size: 50px;
+    color: white;
+}
+.made p{
+    font-size: 21px;
+    opacity: 0.5;
+    color: white;
+    line-height: 20px;
+}

@@ -26,20 +26,41 @@
 }
 .forever-forward-description {
   position: absolute;
-  bottom: -270px;
+  bottom: -200px;
   right: 500px;
 }
 .forever-forward-description p {
-  width: 450px;
-  height: 350px;
+  width: 350px;
+  height: 300px;
   font-size: 25px;
-  border: 1px solid black;
-  padding: 62px 61px 64px 80px;
+  padding: 20px 30px 40px 30px;
   border-radius: 10px;
   background-color: white;
+  border-style: solid;
+  border-width: 1px; 
+  border-color: rgb(248, 241, 241); 
 }
 .bikes-for-everyone {
   position: relative;
+  height: 1175px;
+  margin-bottom: 300px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.city-bikes-title h1 {
+  font-size: 120px;
+  height: 350px;
+  background-color: white;
+  position: absolute;
+  top: 1080px;
+  left: 370px;
+}
+.city-bikes-title p{
+    font-size: 120px;
+    position: absolute;
+    top: 1200px;
+    left: 500px;
 }
 .city-bikes {
   display: flex;
@@ -48,18 +69,21 @@
 }
 .city-bikes-center {
   width: 465px;
-  height: 582px;
-  padding: 81px 58px 88px 80px;
-  border: 1px solid black;
+  height: 482px;
+  padding-top: 50px;
+  padding-left: 100px; 
+  border-radius: 10px;
+  border-style: solid;
+  border-width: 1px; 
+  border-color: rgb(248, 241, 241); 
 }
 .city-bikes p {
-  font-size: 25px;
-  font-weight: 100;
+  font-size: 22px;
+  opacity: 0.5;
+  font-weight: 100 !important;
 }
 .city-bikes-img img {
-  width: 320px;
-  height: 500px;
   position: absolute;
-  bottom: -350px;
+  top: 580px;
   left: 390px;
 }
