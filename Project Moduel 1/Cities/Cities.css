@@ -1,65 +1,65 @@
 .hero-img {
-    position: relative;
+  position: relative;
 }
 #header {
-    position: absolute;
-    top: 20px;
-    display: flex;
-    gap: 400px;
+  position: absolute;
+  top: 20px;
+  display: flex;
+  gap: 400px;
 }
-.forever-forward{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    position: relative;
-    margin-bottom: 500px;
+.forever-forward {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  margin-bottom: 500px;
 }
-.forever-forward h1{
-    font-size: 120px;
+.forever-forward h1 {
+  font-size: 120px;
 }
-.forever-forward-img{
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    gap: 340px;
-    margin-top: 50px;
+.forever-forward-img {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  gap: 340px;
+  margin-top: 50px;
 }
 .forever-forward-description {
-    position: absolute;
-    bottom: -270px;
-    right: 500px;
+  position: absolute;
+  bottom: -270px;
+  right: 500px;
 }
-.forever-forward-description p{
-    width: 450px;
-    height: 350px;
-    font-size: 25px;
-    border: 1px solid black;
-    padding: 62px 61px 64px 80px;
-    border-radius: 10px;
-    background-color: white;
+.forever-forward-description p {
+  width: 450px;
+  height: 350px;
+  font-size: 25px;
+  border: 1px solid black;
+  padding: 62px 61px 64px 80px;
+  border-radius: 10px;
+  background-color: white;
 }
-.bikes-for-everyone{
-    position: relative;
+.bikes-for-everyone {
+  position: relative;
 }
-.city-bikes{
-    display: flex;
-    justify-content: center;
-    margin-top: 100px;
+.city-bikes {
+  display: flex;
+  justify-content: center;
+  margin-top: 100px;
 }
-.city-bikes-center{
-    width: 465px;
-    height: 582px;
-    padding: 81px 58px 88px 80px;
-    border: 1px solid black;
+.city-bikes-center {
+  width: 465px;
+  height: 582px;
+  padding: 81px 58px 88px 80px;
+  border: 1px solid black;
 }
-.city-bikes p{
-    font-size: 25px;
-    font-weight: 100;
+.city-bikes p {
+  font-size: 25px;
+  font-weight: 100;
 }
-.city-bikes-img img{
-    width: 320px;
-    height: 500px;
-    position: absolute;
-    bottom: -350px;
-    left: 390px;
+.city-bikes-img img {
+  width: 320px;
+  height: 500px;
+  position: absolute;
+  bottom: -350px;
+  left: 390px;
 }

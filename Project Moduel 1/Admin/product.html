@@ -22,8 +22,7 @@
   </head>
 
   <body>
-    <div class="wrapper">
-    <!-- SIDEBAR -->
+  <div class="wrapper">
     <div class="sidebar">
       <div class="sidebar-logo">
         <img srcset="./images/logo_real.png 2x" alt="Comapny logo" />
@@ -81,13 +80,8 @@
           </ul>
         </li>
       </ul>
-      <!-- END SIDEBAR MENU -->
     </div>
-    <!-- END SIDEBAR -->
-    
-
-
-    <!-- MAIN CONTENT -->
+     <!-- MAIN CONTENT -->
     <div class="main">
       <div class="main-header">
         <div class="mobile-toggle" id="mobile-toggle">
@@ -96,58 +90,111 @@
         <div class="main-title">dashboard</div>
       </div>
       </div>
-      <!--  -->
-      <div class="search-add">
-            <input type="text" placeholder="Search" id="search" onclick="handleSearch" />
-            <button id="add" onclick="handleAdd()">+Add Product</button>
-          </div>
-      <!--  -->
-       <div class="box-body overflow-scroll">
+      <!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Product Management</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<div class="search-add">
+   <h1>Quản lý sản phẩm</h1>
+   <table border="1" id="product-info-table" style="display: none;">
+     <tr>
+       <th colspan="3" style="text-align: center">Thông tin sản phẩm</th>
+     </tr>
+
+     <tr>
+       <td>
+         <label for="image"> Image product </label>
+       </td>
+       <td>
+         <input type="text" id="image" />
+       </td>
+     </tr>
+
+     <tr>
+       <td>
+         <label for="quantity"> Quantity </label>
+       </td>
+       <td>
+         <input type="text" id="quantity" />
+       </td>
+     </tr>
+
+     <tr>
+       <td>
+         <label for="name"> Name </label>
+       </td>
+       <td>
+         <input type="text" id="fullname" />
+       </td>
+     </tr>
+
+     <tr>
+       <td>
+         <label for="price"> Price </label>
+       </td>
+       <td>
+         <input type="price" id="price" />
+       </td>
+     </tr>
+
+     <tr>
+       <td></td>
+       <td>
+         <button id="add" onclick="addProduct()">ADD</button>
+          <button id="close" onclick="closeAddProduct()">Đóng</button>
+          <button id="save" style="display: none" onclick="saveProduct()">
+           SAVE
+         </button>
+       </td>
+     </tr>
+   </table>
+
+   <table border="1">
+       <div class="row">
+          <div class="col-12">
+            <!-- ORDERS TABLE -->
+            <div class="box">
+              <div class="box-header">Product List</div>
+              <button onclick="displayAddProduct()" id="add-button">+Add Product</button>
+              <button onclick="sortProduct()">Sort</button>
+              <input type="search" name="search" id="search" placeholder="Search" onkeyup="handleSearch()">
+              <div class="box-body overflow-scroll">
                 <table>
                   <thead>
                     <tr>
                       <th>NO.</th>
-                      <th>Code</th>
-                      <th>Name</th>
-                      <th>Type</th>
+                      <th>Image Product</th>
+                      <th>Quantity</th>
+                      <th>Name Product</th>
                       <th>Price</th>
-                      <th>Edit/Delete</th>
-            
+                      <th>Action</th>
                     </tr>
                   </thead>
                   <tbody id="tbody1"></tbody>
                 </table>
               </div>
-               <!-- Modal -->
-          <div id="myModal" class="modal">
-            <!-- Nội dung modal -->
-            <div id="modal-content">
-              <button id="close" onclick="handleClose()">x</button>
-              <h2>Add Product</h2>
-              <form class="addProductForm" onsubmit="handleProduct()">
-                <div class="code">
-                  <label for="productCode">Code:</label>
-                  <input type="text" id="productCode" name="productCode" required>
-                </div>
-              <div class="name">
-                <label for="productName">Name:</label>
-                <input type="text" id="productName" name="productName" required>
-              </div>
-                <div class="type">
-                  <label for="productType">Type:</label>
-                  <input type="text" id="productType" name="productType" required>
-                </div>
-                <div class="price">
-                  <label for="productPrice">Price:</label>
-                  <input type="text" id="productPrice" name="productPrice" required>
-                </div>
-                <button type="submit" id="saveProductBtn" onclick="handleSaveProduct()">Save Product</button>
-              </form>
             </div>
+            <!-- END ORDERS TABLE -->
           </div>
+        </div>
+   </table>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
+
     <!-- APP JS -->
-    <script src="./js/index.js"></script>
     <script src="./js/product.js"></script>
-  </div>
+    <script src="./js/index.js"></script>
+   
+      </div>
+    </div>
   </body>
 </html>

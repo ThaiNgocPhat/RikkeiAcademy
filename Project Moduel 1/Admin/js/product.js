@@ -1,95 +1,164 @@
-//   <div class="box-body overflow-scroll">
-//                 <table>
-//                   <thead>
-//                     <tr>
-//                       <th>NO.</th>
-//                       <th>Code</th>
-//                       <th>Name</th>
-//                       <th>Type</th>
-//                       <th>Price</th>
-//                       <th>Edit/Delete</th>
-            
-//                     </tr>
-//                   </thead>
-//                   <tbody id="tbody1"></tbody>
-//                 </table>
-//               </div>
-//                <!-- Modal -->
-//           <div id="myModal" class="modal">
-//             <!-- Nội dung modal -->
-//             <div class="modal-content">
-//               <span class="close">&times;</span>
-//               <h2>Add Product</h2>
-//               <form class="addProductForm" onsubmit="handleProduct()">
-//                 <div class="code">
-//                   <label for="productCode">Code:</label>
-//                   <input type="text" id="productCode" name="productCode" required>
-//                 </div>
-//               <div class="name">
-//                 <label for="productName">Name:</label>
-//                 <input type="text" id="productName" name="productName" required>
-//               </div>
-//                 <div class="type">
-//                   <label for="productType">Type:</label>
-//                   <input type="text" id="productType" name="productType" required>
-//                 </div>
-//                 <div class="price">
-//                   <label for="productPrice">Price:</label>
-//                   <input type="text" id="productPrice" name="productPrice" required>
-//                 </div>
-//                 <button type="submit" id="saveProductBtn" onclick="handleSaveProduct()">Save Product</button>
-//               </form>
-//             </div>
-//           </div>
-const products = JSON.parse(localStorage.getItem("products")) || [];
-console.log(products);
-function displayProduct(){
-    let tbody = document.getElementById("tbody1");
-    let html = "";
-    for(let i in products){
-          html +=`
-    <tr>
-    <td>${index+1}</td>
-    <td>${products[index].code}</td>
-    <td>${products[index].name}</td>
-    <td>${products[index].type}</td>
-    <td>${products[index].price}</td>
-    <td>
-      <button onclick="handleEdit(${products[index].id})">Edit</button>
-      <button onclick="handleDelete(${products[index].id})">Delete</button>
-    </td>
-  </tr>
-    `;
-    }
-    tbody.innerHTML = html;
+const image = document.getElementById("image");
+const quantity = document.getElementById("quantity");
+const fullname = document.getElementById("fullname");
+const price = document.getElementById("price");
+let products = JSON.parse(localStorage.getItem("products")) || [];
+console.log(JSON.parse(localStorage.getItem("products")));
+let tbody = document.getElementById("tbody1");
+function displayData() {
+  let html = "";
+  for (let i in products) {
+    html += ` 
+  <tr> 
+    <td>${i}</td>
+    <td><img class="img-product" src="${products[i].image}" alt="" /></td>
+    <td>${products[i].quantity}</td>
+    <td>${products[i].fullname}</td>
+    <td>${products[i].price}</td>
+    <td><button onclick="editProduct('${products[i].id}')">Edit</button>
+    <button onclick="deleteProduct('${products[i].id}')">Delete</button></td>
+    </tr>  
+  `;
+  }
+  tbody.innerHTML = html;
 }
-displayProduct();
+// Edit sản phẩm:
+function editProduct(productID) {
+  console.log(productID, "ID");
+  localStorage.setItem("productID", productID);
+  document.getElementById("add").style.display = "none";
+  document.getElementById("save").style.display = "block";
+  let index = products.findIndex((student) => student.id == productID);
+  console.log(products[index]);
+  fullname.value = products[index].fullname;
+  quantity.value = products[index].quantity;
+  price.value = products[index].price;
+  image.value = products[index].image;
+  displayData();
+  document.getElementById("product-info-table").style.display = "block";
+}
+displayData();
 
-// function handleAdd(){
-//     var modal = document.getElementById("myModal");
-//     modal.style.display = "block";
+// Save sản phẩm:
+function saveProduct(name) {
+  document.getElementById("add").style.display = "block";
+  document.getElementById("save").style.display = "none";
+  let index = products.findIndex((product) => product.name === name);
+  products[index].fullname = fullname.value;
+  products[index].quantity = quantity.value;
+  products[index].price = price.value;
+  products[index].image = image.value;
+  localStorage.setItem("products", JSON.stringify(products));
+  displayData();
+  alert("Chỉnh sửa thông tin thành công!!!");
+  document.getElementById("product-info-table").style.display = "none";
+}
+
+// Delete sản phẩm:
+function deleteProduct(productID) {
+  console.log(productID);
+  const index = products.findIndex((student) => student.id == productID);
+  products.splice(index, 1);
+  localStorage.setItem("products", JSON.stringify(products));
+  displayData();
+  alert("Xóa student thành công!");
+  console.log(index);
+}
+
+displayData();
+
+// Thêm sản phẩm
+function addProduct() {
+  const newProduct = {
+    id: Math.floor(Math.random() * 1000),
+    fullname: fullname.value,
+    quantity: quantity.value,
+    price: price.value,
+    image: image.value,
+  };
+  products.push(newProduct);
+  localStorage.setItem("products", JSON.stringify(products));
+  displayData();
+  alert("Thêm sản phẩm mới thành công!!!!");
+  document.getElementById("product-info-table").style.display = "none";
+  fullname.value = '';
+  quantity.value = '';
+  price.value = '';
+  image.value = '';
+}
+
+
+// Hiển thị form thêm sản phẩm
+function displayAddProduct() {
+  document.getElementById("product-info-table").style.display = "block";
+}
+
+// Đóng form thêm sản phẩm
+function closeAddProduct(){
+  document.getElementById("product-info-table").style.display = "none";
+  document.getElementById("add-button").textContent = "+Add Product";
+}
+
+
+//sắp xếp các phàn tử theo a-z
+function sortProduct(){
+  products.sort(function(a,b){
+    return a.fullname.localeCompare(b.fullname);
+  });
+  displayData();
+}
+
+
+//tìm kiếm sản phẩm theo tên
+// function handleSearch(){
+//   let search = document.getElementById("search").value;
+//   let result = products.filter((product) => {
+//     return product.fullname.toLowerCase().includes(search.toLowerCase());
+//   });
+//   let html = "";
+//   for(let i in result){
+//     html += `
+//     <tr>
+//     <td>${i}</td>
+//     <td><img class="img-product" src="${result[i].image}" alt="" /></td>
+//     <td>${result[i].quantity}</td>
+//     <td>${result[i].fullname}</td>
+//     <td>${result[i].price}</td>
+//     <td><button onclick="editProduct('${result[i].id}')">Edit</button>
+//     <button onclick="deleteProduct('${result[i].id}')">Delete</button></td>
+//     </tr>  
+//   `;
+//   }
+//   tbody.innerHTML = html;
+//   if(search === ""){
+//     displayData();
+//   }
 // }
-function handleClose(){
-   let add = document.getElementById("add");
-   let modalContent = document.getElementsByClassName("modal-content")[0];
-   let close = document.getElementsByClassName("close")[0];
-   let dom = document.getElementsByClassName("tile"); 
+function handleSearch() {
+  let search = document.getElementById("search").value.toLowerCase();
+  let result = products.filter((product) => {
+    return product.fullname.toLowerCase().includes(search);
+  });
+
+  let html = "";
+  for (let i = 0; i < result.length; i++) {
+    html += `
+      <tr>
+        <td>${i}</td>
+        <td><img class="img-product" src="${result[i].image}" alt="" /></td>
+        <td>${result[i].quantity}</td>
+        <td>${result[i].fullname}</td>
+        <td>${result[i].price}</td>
+        <td><button onclick="editProduct('${result[i].id}')">Edit</button>
+        <button onclick="deleteProduct('${result[i].id}')">Delete</button></td>
+      </tr>  
+    `;
+  }
+  
+  tbody.innerHTML = html;
+  
+  if (search === "") {
+    displayData();
+  }
 }
 
-// <div class="container">
-//<h1>Modal Example</h1>
-//<button id="openModal" onClick="">Open Modal</button>
-//<p id="modal">Some text in the Modal</p>
-//<p id="xicon">x</p>
-//</div>
-// const openModal = document.getElementById("openModal")
-// const modal = document.getElementById("modal")
-// const xicon = document.getElementById("xicon")
-// const dom = document.getElementsByClassName("title-icon")[0]
-// console.log(dom)
-// openModal.addEventListener("click", function(){
-//     dom.style.display = "flex"
-// })
-// xicon.addEventListener("click",function(){
-//     dom.style.display = "none"
-// })
