@@ -64,3 +64,76 @@
     color: white;
     line-height: 20px;
 }
+
+
+
+
+.header-bikes h1 {
+    font-size: 50px;
+    margin-top: 100px;
+}
+.aboutUs{
+    display: flex;
+    justify-content: space-between;
+    margin-left: 40px;
+    margin-top: 20px;
+    gap: 70px;
+    overflow-x: scroll;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+}
+.aboutus-bikes{
+    width: 540px;
+    height: 510px;
+    border: 1px solid black;
+    border-radius: 4px;
+    background-color: gray;
+    flex: 0 0 auto;
+    scroll-snap-align: start;
+}
+.aboutus-title{
+    display: flex;
+    justify-content: space-between;
+    padding-top: 20px;
+    padding-left: 30px;
+    padding-right: 30px;
+}
+.aboutus-title p{
+    font-size: 30px;
+}
+.aboutus-title span{
+    font-size: 20px;
+    opacity: 0.5;
+}
+.aboutus-sex{
+    display: flex;
+    gap: 30px;
+    margin-left: 30px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+.aboutus-btn-learn{
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    padding-top: 35px;
+    padding-left: 40px;
+}
+.aboutus-btn-learn button{
+    background-color: white;
+    color: black;
+    border-radius: 50px;
+    border: none;
+    width: 100px;
+    height: 40px;
+    cursor: pointer;
+}
+.aboutus-btn-learn a{
+    text-decoration: none;
+    color: black;
+}
+.aboutus-img img{
+    width: 480px;
+    height: 270px;
+    margin-left: 30px;
+}

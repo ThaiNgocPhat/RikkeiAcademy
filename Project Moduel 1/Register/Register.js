@@ -33,11 +33,7 @@ function handleEmailChange() {
     errorEmail.innerHTML = "Email phải có trên 8 ký tự";
     errorEmail.style.display = "flex";
     checkemail = false;
-  } else if (inpEmail.value === inpEmail.value.toLowerCase()) {
-    errorEmail.innerHTML = "Email phải có 1 ký tự viết hoa";
-    errorEmail.style.display = "flex";
-    checkemail = false;
-  } else if (inpEmail.value === inpEmail.value.toUpperCase()) {
+  }  else if (inpEmail.value === inpEmail.value.toUpperCase()) {
     errorEmail.innerHTML = "Email phải có 1 ký tự viết thường";
     errorEmail.style.display = "flex";
     checkemail = false;

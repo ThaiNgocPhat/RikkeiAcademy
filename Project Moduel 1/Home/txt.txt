@@ -28,4 +28,33 @@
                 </div>
             </div>
         </div>
-        
+         <div class="products">
+            <div class="products-left">
+                <div class="main-product">
+                    <div class="product-img">
+                        <img src="./Picture/Ace_Two_-_Graphite.jpg" alt="">
+                    </div>
+                    <div class="title-price">
+                        <div class="bike-title">
+                            <span>Electric Ace</span>
+                            <p>€ 3.299</p>
+                        </div>
+                        <div class="title-small">
+                            <span>Two</span>
+                        </div>
+                        <div class="product-title">
+                            <p>Ace Two Matte Black</p>
+                        </div>
+                    </div>
+                    <div class="chevron-left">
+                        <i class="fa-solid fa-chevron-left"></i>
+                    </div>
+                    <div class="chevron-right">
+                        <i class="fa-solid fa-chevron-right"></i>
+                    </div>
+                    <div class="btn-pay">
+                        <button onclick="handlePay()">Mua ngay</button>
+                    </div>
+                </div>
+            </div>
+        </div>

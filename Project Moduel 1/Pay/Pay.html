@@ -5,18 +5,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../Login/Login.css">
     <link rel="stylesheet" href="../Home/Home.css">
-    <link rel="stylesheet" href="Cities.css">
+    <link rel="stylesheet" href="Pay.css">
     <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.4.2/css/all.css">
-    <title>Cities</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <title>Pay</title>
 </head>
 <body>
     <div class="wrapper">
     <!-- Logo-Navigation-Languges-User-Shoping -->
-      <div class="hero-img">
-                    <img src="./Picture/Hero Section.jpg" alt="">
-                </div>
-          <div id="header">
-            <div class="logo-nav nav">
+          <div id="Header">
+            <div class="logo-nav">
                 <a href="../Home/Home.html"><img src="./Picture/Logo.svg" alt="Logo"></a>
                 <div class="nav">
                     <a href="#">ELECTRIC <span><i class="fa-thin fa-chevron-down"></i></span></a>
@@ -40,103 +38,62 @@
                 </div>
             </div>
         </div>
-   <!-- Forever forward -->
-    <div class="forever-forward">
-        <h1>Forever forward</h1>
-        <div class="forever-forward-img">
-            <div class="img-left">
-                <img src="./Picture/veloretti.jpg" alt="Error">
-            </div>
-            <div class="img-right">
-                <img src="./Picture/veloretti1.jpg" alt="Error">
-            </div>
+    <!-- Pay -->
+  <!-- tôi muốn tạo một pay để khi nhấn vào mua ngay ở những trang khác thì sản phẩm sẽ hiện lên những thông tin cơ bản như
+số thứ tự,hình mẫu,số lương,số tiền.cuối cùng có một hàm tự tính tổng tiền khi số lượng sản phẩm tăng
+cuối cunhg sẽ có một khu vực để thanh toán -->
+    <div class="pay">
+        <div class="pay-title">
+            <h1>Pay</h1>
         </div>
-        <div class="forever-forward-description">
-            <p>Our women's bicycles are <br>
-                for everyone who likes to <br>
-                combine style with <br>
-                performance. In this <br>
-                range, available are the <br>
-                Café Racer and the <br>
-                Robyn, both frames with a <br>
-                lower tube, making it easy <br>
-                to step through.</p>
-        </div>
-    </div>
-    <!-- Cities product -->
-    <div class="cities-overview">
-        <div class="cities-product">
-            <div class="ceferacer">
-                <img src="./Picture/caferacer.jpg" alt="">
-                <div class="price-title">
-                    <p>Caféracer</p>
-                    <span>Women</span>
+        <div class="pay-content">
+            <div class="pay-content-left">
+                <table>
+                    <thead>
+                        <tr>
+                            <td>NO.</td>
+                            <td>Picture</td>
+                            <td>Name</td>
+                            <td>Price</td>
+                        </tr>
+                    </thead>
+                    <tbody id="tbody"></tbody>
+                </table>
+            </div> 
+            <div class="pay-content-right">
+                <div class="pay-content-right-title">
+                    <h2>Payment</h2>
                 </div>
-            </div>
-             <div class="robyn">
-                <img src="./Picture/robyn.jpg" alt="">
-                <div class="price-title">
-                    <p>Robyn</p>
-                    <span>Women</span>
-                </div>
-            </div>
-            <div class="ceferacer">
-                <img src="./Picture/Kids-slider-Caferacer-M.webp" alt="">
-                <div class="price-title">
-                    <p>Caféracer</p>
-                    <span>Men</span>
-                </div>
-            </div>
-             <div class="ceferacer">
-                <img src="./Picture/Kids-slider-Cafechaser.webp" alt="">
-                <div class="price-title">
-                    <p>Caféracer</p>
-                    <span>Men</span>
-                </div>
-            </div>
-            <div class="berlin">
-                <img src="./Picture/Kids-slider-Berlin.webp" alt="">
-                <div class="price-title">
-                    <p>Berlin</p>
-                    <span>Neutral</span>
+                <div class="pay-content-right-form">
+                    <form action="">
+                        <label for="name">Name</label>
+                        <input type="text" id="name" name="name" required>
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" required>
+                        <label for="phone">Phone</label>
+                        <input type="tel" id="phone" name="phone" required>
+                        <label for="address">Address</label>
+                        <input type="text" id="address" name="address" required>
+                        <label for="city">City</label>
+                        <input type="text" id="city" name="city" required>
+                        <label for="zip">Zip Code</label>
+                        <input type="text" id="zip" name="zip" required>
+                        <label for="country">Country</label>
+                        <input type="text" id="country" name="country" required>
+                        <label for="card">Card Number</label>
+                        <input type="text" id="card" name="card" required>
+                        <label for="exp">Expiration Date</label>
+                        <input type="text" id="exp" name="exp" required>
+                        <label for="cvv">CVV</label>
+                        <input type="text" id="cvv" name="cvv" required>
+                        <button type="submit">Pay Now</button>
+                    </form>
                 </div>
             </div>
         </div>
     </div>
-    <!-- City bikes for everyone -->
-   <div class="bikes-for-everyone">
-     <div class="city-bikes">
-        <div class="city-bikes-left">
-            <img src="./Picture/city-bikes-left.jpg" alt="">
-        </div>
-        <div class="city-bikes-center">
-            <p>Whether you like it easy or <br>
-                fast, we got both. Our <br>
-                men's range of bicycles <br>
-                combine modern clean <br>
-                design with great quality, <br>
-                so they're perfect for your <br>
-                daily city commute. Our <br>
-                men citybikes are the <br>
-                Caféracer, Caféchaser <br>
-                and the Berlin, but feel <br>
-                free to opt for a women's <br>
-                bike for that easy hop-on- <br>
-                hop-off Amsterdam style.</p>
-        </div>
-        <div class="city-bikes-right">
-            <img src="./Picture/city_bikes_right.jpg" alt="">
-        </div>
-    </div>
-    <div class="city-bikes-img">
-        <img src="./Picture/Text-media-static_custom-Media.jpg" alt="">
-    </div>
-        <div class="city-bikes-title">
-            <h1>City bikes for</h1>
-            <p>everyone</p>
-        </div>
-   </div>
-    <!--Test bikes -->
+
+    <!--Test bikes -->  
     <div class="test-bikes">
         <p>Ready to take the Electric Ivy or Ace for a spin? Electric test rides are now available in <br>
         Amsterdam, Amstelveen, Abcoude, Bussum, Den Haag, Nijmegen, Weesp, Wormerveer, <br>
@@ -190,7 +147,9 @@
         </div>
         </div>
     </footer>
-    <script src="./Login.js"></script>
+    </div>
+    <script src="Home.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
     </div>
 </body>
 </html>
