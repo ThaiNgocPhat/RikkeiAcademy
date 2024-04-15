@@ -37,6 +37,12 @@ body {
   font-weight: 400;
   font-size: 16px;
 }
+.Header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+}
 .logo-nav{
     display: flex;
     align-items: center;
@@ -56,20 +62,22 @@ body {
     display: flex;
     align-items: center;
     gap: 40px;
-    margin-right: 100px;
+    margin-right: 40px;
 }
 .header{
     margin-bottom: 100px;
+    position: relative;
 }
 .header-image img{
     width: 100%;
     height: 824px;
     margin-top: 20px;
+    position: relative;
 }
 .img-description{
     position: absolute;
-    top: 400px;
-    left: 200px;
+    top: 335px;
+    left: 110px;
 }
 .img-description p{
     color: white;
@@ -164,6 +172,7 @@ body {
     gap: 10px;
     padding-bottom: 20px;
     padding-top: 40px;
+    position: relative;
 }
 .description span{
     font-size: 25px;
@@ -171,6 +180,16 @@ body {
 .description p{
     opacity: 0.5;
 }
+    .circle {
+        position: absolute;
+        left: -30px; 
+        top: 58px; 
+        transform: translateY(-50%);
+        width: 25px;
+        height: 28px;
+        background-color:rgba(42, 42, 42, 0.1);
+        border-radius: 50px;
+    }
 .main-product{
   border: 1px solid black;
   width: 640px;
@@ -200,7 +219,7 @@ body {
     padding-top: 10px;
     padding-left: 35px;
 }
-btn-pay button a{
+.btn-pay button a{
     text-decoration: none;
     color: black;
 }
@@ -413,8 +432,184 @@ footer h3{
   
   .product-left,
   .product-right {
-    width: 655px; /* Độ rộng mong muốn */
-    height: 715px; /* Chiều cao mong muốn */
+    width: 655px;
+    height: 715px;
     background-color: gray;
     border-radius: 10px;
   }
+.description {
+    position: relative;
+}
+
+
+
+
+.electric {
+    position: relative;
+}
+.nav-electric-view {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    padding: 12px 16px;
+    z-index: 1;
+    border-radius:10px ;
+}
+
+.electric:hover .nav-electric-view {
+    display: block;
+}
+
+.nav-electric-view a {
+    display: block;
+    padding: 8px 0;
+    text-decoration: none;
+    color: black;
+}
+.overview a{
+    font-size: 25px;
+}
+.ivy-two-title{
+    position: relative;
+}
+.nav-ivy-two{
+    position: relative;
+}
+.ivy-two-small{
+    position: absolute;
+    top: 6px;
+    left: 30px;
+    opacity: 0.5;
+    font-size: 12px;
+}
+.ace-two-title{
+    position: relative;
+}
+.ace-two-small{
+    position: absolute;
+    top: 6px;
+    left: 40px;
+    font-size: 12px;
+    opacity: 0.5;
+}
+.nav-app,
+.nav-insurance,
+.ace-two-title,
+.overview-electric,
+.nav-ivy-two  a{
+    font-size: 25px;
+    position: relative;
+    margin-bottom: 20px;
+}
+.overview-electric::after,
+.ivy-two-title::after,
+.ace-two-title::after,
+.nav-app ::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -10px;
+    width: 100%;
+    border-bottom: 1px solid #ccc;
+}
+.city{
+    position: relative;
+}
+.nav-city-view{
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    padding: 12px;
+    z-index: 1;
+    border-radius:10px ;
+}
+.city:hover .nav-city-view {
+    display: block;
+}
+.overview-city,
+ .women-city,
+ .men-city a{
+    font-size: 25px;
+    font-size: 25px;
+    position: relative;
+    margin-bottom: 20px;
+}
+.overview-city::after,
+.women-city::after,
+.men-city::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -10px;
+    width: 100%;
+    border-bottom: 1px solid #ccc;
+}
+.kids{
+    position: relative;
+}
+.nav-kids-view{
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    padding: 12px;
+    z-index: 1;
+    border-radius:10px ;
+}
+.kids:hover .nav-kids-view {
+    display: block;
+}
+.overview-kids,
+.tricycle-kids,
+.mini-kids,
+.maxi-kids,
+.junior-kids a {
+    font-size: 25px;
+    position: relative;
+    margin-bottom: 20px;
+}
+
+.overview-kids::after,
+.tricycle-kids::after,
+.mini-kids::after,
+.maxi-kids::after,
+.junior-kids::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -10px;
+    width: 100%;
+    border-bottom: 1px solid #ccc;
+}
+.leasing{
+    position: relative;
+}
+.nav-leasing-view{
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    padding: 12px;
+    z-index: 1;
+    border-radius:10px ;
+}
+.leasing:hover .nav-leasing-view {
+    display: block;
+}
+.employers,
+.employees a{
+    font-size: 25px;
+    position: relative;
+    margin-bottom: 20px;
+}
+.employers::after,
+.employees::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -10px;
+    width: 100%;
+    border-bottom: 1px solid #ccc;
+}

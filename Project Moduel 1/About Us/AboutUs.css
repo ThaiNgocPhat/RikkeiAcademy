@@ -1,3 +1,35 @@
+.header-aboutus-img{
+    position: relative;
+}
+.header-aboutus {
+    position: absolute;
+    top: 0px;
+    left: 150px;
+}
+.header-aboutus h1,
+.header-aboutus a,
+.header-aboutus span,
+.header-aboutus img {
+    color: white;
+}
+.header-aboutus img {
+    filter: invert(100%);
+}
+.about-electric a{
+    color: rgb(202, 196, 196);
+}
+.about-city a{
+    color: rgb(202, 196, 196);
+}
+.about-kids a{
+    color: rgb(202, 196, 196);
+}
+.about-leasing a{
+    color: rgb(202, 196, 196);
+}
+.logo-nav {
+    margin-right: 400px;
+}
 .hero-forever-forward{
     display: flex;
     justify-content: space-between;
@@ -64,10 +96,6 @@
     color: white;
     line-height: 20px;
 }
-
-
-
-
 .header-bikes h1 {
     font-size: 50px;
     margin-top: 100px;
@@ -81,6 +109,7 @@
     overflow-x: scroll;
     scroll-snap-type: x mandatory;
     -webkit-overflow-scrolling: touch;
+    margin-bottom: 100px;
 }
 .aboutus-bikes{
     width: 540px;

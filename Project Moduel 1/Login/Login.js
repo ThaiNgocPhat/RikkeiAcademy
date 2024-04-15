@@ -3,6 +3,7 @@ let password = document.getElementById("password");
 let errorEmail = document.getElementById("error-email");
 let errorPassword = document.getElementById("error-password");
 let isCheckEmail = false;
+
 function handleEmailChange() {
   console.log(email.value, "Value");
   if (email.value === "") {
@@ -27,8 +28,8 @@ function handlePasswordChange() {
   }
 }
 
-
 const users = JSON.parse(localStorage.getItem("users"));
+
 function handleLogin(event) {
   event.preventDefault();
   let isCheckExistedEmail = false;
@@ -39,26 +40,25 @@ function handleLogin(event) {
     if (users[indexUser].password === password.value) {
       isCheckExistedPassword = true;
     }
-    
   }
-if (isCheckEmail === true && isCheckPassword === true) {
-    if (isCheckExistedEmail === true) {
-        if (isCheckExistedPassword === true) {
-            if(users[indexUser].isActive == false){
-                alert("Account is not active");
-            } else {
-                alert("Login Success!");
-                window.location.href = "../Home/Home.html";
-                event.target.reset();
-            }
-        } else {
-            alert("Password is incorrect");
-        }
-    } else {
-        alert("Email is not exist");
-    }
-} else {
-    alert("Please enter valid email and password!");
-}
 
+  if (isCheckEmail === true && isCheckPassword === true) {
+    if (isCheckExistedEmail === true) {
+      if (isCheckExistedPassword === true) {
+        if (users[indexUser].isActive == false) {
+          alert("Account is not active");
+        } else {
+          alert("Login Success!");
+          window.location.href = "../Home/Home.html";
+          event.target.reset();
+        }
+      } else {
+        alert("Password is incorrect");
+      }
+    } else {
+      alert("Email is not exist");
+    }
+  } else {
+    alert("Please enter valid email and password!");
+  }
 }

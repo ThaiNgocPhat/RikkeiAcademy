@@ -25,16 +25,13 @@ let inpEmail = document.getElementById("email");
 let errorEmail = document.getElementById("error-email");
 let checkemail = false;
 function handleEmailChange() {
-  if (inpEmail.value === "") {
+  const email = inpEmail.value.trim(); // Loại bỏ khoảng trắng ở đầu và cuối chuỗi
+  if (email === "") {
     errorEmail.innerHTML = "Email không được để trống";
     errorEmail.style.display = "flex";
     checkemail = false;
-  } else if (inpEmail.value.length < 8) {
-    errorEmail.innerHTML = "Email phải có trên 8 ký tự";
-    errorEmail.style.display = "flex";
-    checkemail = false;
-  }  else if (inpEmail.value === inpEmail.value.toUpperCase()) {
-    errorEmail.innerHTML = "Email phải có 1 ký tự viết thường";
+  } else if (!email.match(/^[^\s@]+@[^\s@]+\.[^\s@]+$/)) {
+    errorEmail.innerHTML = "Email không hợp lệ";
     errorEmail.style.display = "flex";
     checkemail = false;
   } else {
@@ -42,6 +39,7 @@ function handleEmailChange() {
     checkemail = true;
   }
 }
+
 //điều kiện password
 function isAllCharPresent(str) {
   for (let i = 0; i < str.length; i++) {

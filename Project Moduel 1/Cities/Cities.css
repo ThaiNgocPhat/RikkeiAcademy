@@ -1,11 +1,34 @@
-.hero-img {
-  position: relative;
+.header-cities-img{
+    position: relative;
 }
-#header {
-  position: absolute;
-  top: 20px;
+.header-cities {
+    position: absolute;
+    top: 0px;
+    left: 150px;
+}
+.header-cities h1,
+.header-cities a,
+.header-cities span,
+.header-cities img {
+    color: white;
+}
+.header-cities img {
+    filter: invert(100%);
+}
+.cities-electric a{
+    color: rgb(202, 196, 196);
+}
+.cities-city a{
+    color: rgb(202, 196, 196);
+}
+.cities-kids a{
+    color: rgb(202, 196, 196);
+}
+.cities-leasing a{
+    color: rgb(202, 196, 196);
+}
+.nav-cities{
   display: flex;
-  gap: 400px;
 }
 .forever-forward {
   display: flex;

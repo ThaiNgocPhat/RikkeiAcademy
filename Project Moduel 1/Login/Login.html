@@ -3,26 +3,104 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../Home/Home.css">
     <link rel="stylesheet" href="Login.css">
     <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.4.2/css/all.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <title>Login</title>
 </head>
 <body>
     <div class="wrapper">
     <!-- Logo-Navigation-Languges-User-Shoping -->
-        <head>
-        <div id="Header">
+          <div class="Header">
             <div class="logo-nav">
-                <div class="logo">
-                    <img src="./Picture/Logo.svg" alt="Logo">
-                </div>
+                <a href="../Home/Home.html"><img src="./Picture/Logo.svg" alt="Logo"></a>
                 <div class="nav">
-                    <a href="#">ELECTRIC <span><i class="fa-thin fa-chevron-down"></i></span></a>
-                    <a href="#">CITY <span><i class="fa-thin fa-chevron-down"></i></span></a>
-                    <a href="#">KIDS <span><i class="fa-thin fa-chevron-down"></i></span></a>
-                    <a href="#">ACCESSORIES</a>
-                    <a href="#">STORES</a>
-                    <a href="#">LEASING <span><i class="fa-thin fa-chevron-down"></i></span></a>
+                    <div class="electric">
+                        <div class="nav-electric">
+                            <a href="#">ELECTRIC <span><i class="fa-thin fa-chevron-down"></i></span></a>
+                        </div>
+                        <div class="nav-electric-view">
+                            <div class="overview-electric">
+                                <a href="../Overview.html">Overview</a>
+                            </div>
+                            <div class="ivy-two-title">
+                                <div class="nav-ivy-two">
+                                    <a href="../Ivytwo.html">Ivy</a>
+                                </div>    
+                                <div class="ivy-two-small">
+                                    <span>Two</span>
+                                </div>                            
+                            </div>
+                            <div class="ace-two-title">
+                                <div class="ace-two-title">
+                                    <a href="../Acetwo.html">Ace</a>
+                                </div>    
+                                <div class="ace-two-small">
+                                    <span>Two</span>
+                                </div>                            
+                            </div>
+                            <div class="nav-app">
+                                <a href="../App.html">App</a>
+                            </div>
+                             <div class="nav-insurance">
+                                <a href="../insurance.html">Insurance</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="city">
+                        <div class="nav-city">
+                            <a href="#">CITY <span><i class="fa-thin fa-chevron-down"></i></span></a>
+                        </div>
+                        <div class="nav-city-view">
+                                <div class="overview-city">
+                                    <a href="../Overview.html">Overview</a>
+                                </div>
+                                <div class="women-city">
+                                    <a href="../Women.html">Women</a>
+                                </div>
+                                <div class="men-city">
+                                    <a href="../Men.html">Men</a>
+                                </div>
+                            </div>
+                    </div>
+                    <div class="kids">
+                        <div class="nav-kids">
+                            <a href="#">KIDS <span><i class="fa-thin fa-chevron-down"></i></span></a>
+                        </div>
+                        <div class="nav-kids-view">
+                                <div class="overview-kids">
+                                    <a href="../Overview.html">Overview</a>
+                                </div>
+                                <div class="tricycle-kids">
+                                    <a href="../Tricycle.html">Tricycle</a>
+                                </div>
+                                <div class="mini-kids">
+                                    <a href="../Mini.html">Mini</a>
+                                </div>
+                                <div class="maxi-kids">
+                                    <a href="../Maxi.html">Maxi</a>
+                                </div>
+                                <div class="junior-kids">
+                                    <a href="../Junior.html">Junior</a>
+                                </div>
+                            </div>
+                        </div>
+                    <a href="../Accessories.html">ACCESSORIES</a>
+                    <a href="../Stores.html">STORES</a>
+                    <div class="leasing">
+                        <div class="nav-leasing">
+                            <a href="#">LEASING <span><i class="fa-thin fa-chevron-down"></i></span></a>
+                        </div>
+                        <div class="nav-leasing-view">
+                            <div class="employers">
+                                <a href="../Employers.html">Employers</a>
+                            </div>
+                            <div class="employees">
+                                <a href="../Employees.html">Employees</a>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
             <div class="languges-user-shopping">
@@ -31,19 +109,19 @@
                     <img src="./Picture/EN.svg" alt="ENGLISH">
                 </div>
                 <div class="user">
-                    <img src="./Picture/usericon.svg" alt="">
+                    <a href="../Login/Login.html"><img src="./Picture/usericon.svg" alt=""></a>
                 </div>
                 <div class="shopping">
-                    <img src="./Picture/shopping.svg" alt="">
+                    <a href="../Pay/Pay.html"><img src="./Picture/shopping.svg" alt=""></a>
                 </div>
             </div>
         </div>
-    </head>
     <!-- Login -->
-    <form id="formRegistration" onsubmit="handleLogin(event)">
+    <div class="login">
+        <form  onsubmit="handleLogin(event)">
         <h1>Login Form</h1>
       <input
-        class="input-height"
+        class="email"
         oninput="handleEmailChange()"
         id="email"
         type="text"
@@ -51,20 +129,20 @@
       />
       <p id="error-email"></p>
       <input
-        class="input-height"
+        class="password"
         oninput="handlePasswordChange()"
         id="password"
         type="password"
-        placeholder="Create password"
+        placeholder="Enter your password"
       />
       <p id="error-password"></p>
-      <p id="error-checkbox"></p>
-      <button type="submit" id="btn">Login Now</button>
-      <div class="flex-p-a">
+      <button type="submit" id="btn">Login</button>
+      <div class="login-btn">
         <p>You don't have an account?</p>
-        <a class="magin-link" href="../Register/Register.html">Register now</a>
+        <a class="register" href="../Register/Register.html">Register now</a>
       </div>
     </form>
+    </div>
     <!-- Footer -->
     <footer>
         <div class="footer">
@@ -113,6 +191,6 @@
         </div>
     </footer>
     <script src="./Login.js"></script>
-    </div>
+</div>
 </body>
 </html>

@@ -1,0 +1,59 @@
+.wrapper{
+    width: 1440px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.nav-recopver{
+    display: flex;
+}
+.change-password {
+    width: 100%;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 50px;
+  }
+  
+  .change-password h1 {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+  }
+  
+  .recover {
+    margin-bottom: 20px;
+  }
+  
+  .change-mail,
+  .change-old-password,
+  .change-new-password,
+  .change-confirm-new-password {
+    width: 500px;
+    height: 40px;
+    padding: 0 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+  }
+  
+button[type="submit"] {
+    width: 100%;
+    height: 40px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  button[type="submit"]:hover {
+    background-color: #0056b3;
+  }
+  
+  
