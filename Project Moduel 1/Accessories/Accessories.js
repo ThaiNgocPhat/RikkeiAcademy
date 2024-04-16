@@ -3,7 +3,7 @@ let products =JSON.parse(localStorage.getItem('products')) || [];
 console.log(products);
 function getElectricTwo() {
     let html = '';
-    for (let i = 9; i < 18 && i < products.length; i++) {
+    for (let i = 8; i < 19 && i < products.length; i++) {
         html += `
             <div id="electric-two">
                 <span></span>
@@ -24,3 +24,4 @@ function getElectricTwo() {
 }
 
 getElectricTwo()
+

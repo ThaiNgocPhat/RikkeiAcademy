@@ -37,6 +37,7 @@ function editProduct(productID) {
     quantity.value = products[index].quantity;
     price.value = products[index].price;
     image.value = products[index].image;
+    description.value = products[index].description;
     displayData();
     document.getElementById("product-info-table").style.display = "block";
 }

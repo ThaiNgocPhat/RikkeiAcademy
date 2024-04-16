@@ -9,6 +9,7 @@ function handleEmailChange() {
   if (email.value === "") {
     isCheckEmail = false;
     errorEmail.innerHTML = "Email can not empty";
+    errorEmail.style.color = "red";
     errorEmail.style.display = "flex";
   } else {
     isCheckEmail = true;
@@ -21,6 +22,7 @@ function handlePasswordChange() {
   if (password.value === "") {
     isCheckPassword = false;
     errorPassword.innerHTML = "Password can not empty";
+    errorPassword.style.color = "red";
     errorPassword.style.display = "flex";
   } else {
     isCheckPassword = true;
@@ -49,7 +51,7 @@ function handleLogin(event) {
     if (users[indexUser].isActive == false) {
       FuiToast.error("Account is not active!")
     } else {
-      FuiToast.success('Login successfully.')
+      FuiToast.success("Login successfully.")
       window.location.href = "../Home/Home.html";
       
       const currentUser = {

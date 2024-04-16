@@ -1,5 +1,6 @@
 //lấy sản phẩm trên local về hiển thị lên trang chủ
 let mainProduct = document.getElementById('products');
+console.log(document.getElementById('products'));
 let products =JSON.parse(localStorage.getItem('products')) || [];
 console.log(products);
 function getProducts() {
@@ -14,8 +15,8 @@ function getProducts() {
                       </div>
                   </div>
                     <img src="${products[i].image}" alt="..." />
-                    <div class="button-pay">
-                        <button onclick="handlePay(${products[i].name})">Buy now</button>
+                     <div class="button-pay">
+                        <button onclick="handleDetails('${products[i].fullname}')">Details</button>
                     </div>
                   </div>
             `;
@@ -39,14 +40,30 @@ currentEmail.innerHTML = currentUser.email;
 //khi ấn vào logout thì sẽ xóa thông tin user và chuyển về trang login
 function handleSignOut(){
     localStorage.removeItem('currentUser');//xoá curentUser trên local
-    window.location.href = '../Login/Login.html';
-    FuiToast.success('Sign out successfully.');
+    window.location.href = '../Login/Login.html';//chuyển về trang login
+    FuiToast.success('Sign out successfully.'); //thông báo đăng xuất thành công
 }
 
 
-function handlePay(name) {
+function handleDetails(name) {
     console.log(name);
-    window.location.href = `../Details/Details.html?name=${name}`;
-    let product = products.find(product => name === product.name);
-    localStorage.setItem('product', JSON.stringify(product));
+    let product = products.find(product => name === product.fullname);//tìm sản phẩm theo name 
+    console.log(product);
+    localStorage.setItem('product', JSON.stringify(product));//lưu sản phẩm vào local
+    window.location.href = `../Details/Details.html?name=${name}`; //chuyển về trang details
+}
+
+let closeButton = document.getElementById('closeTitle');
+let questionTitle = document.querySelector('.question-title');
+let isClosed = false;
+
+function toggleTitle() {
+    if (isClosed) {
+        questionTitle.style.display = 'block';
+        closeButton.textContent = '-';
+    } else {
+        questionTitle.style.display = 'none';
+        closeButton.textContent = '+';
+    }
+    isClosed = !isClosed; // Đảo ngược giá trị của isClosed
 }

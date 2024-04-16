@@ -4,6 +4,10 @@
     flex-direction: column;
     align-items: center;
     padding: 20px;
+    margin: 50px;
+    background-color: #f8f8f8;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
 .pay-title {
@@ -88,23 +92,6 @@ button {
 
 
 
-
-
-
-
-
-
-.pay {
-    margin: 50px;
-    background-color: #f8f8f8;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
-
-.pay-title h1 {
-    font-size: 28px;
-    color: #333;
-}
 
 .pay-content {
     display: flex;

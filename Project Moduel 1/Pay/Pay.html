@@ -3,7 +3,6 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../Login/Login.css">
     <link rel="stylesheet" href="../Home/Home.css">
     <link rel="stylesheet" href="Pay.css">
     <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.4.2/css/all.css">
@@ -128,19 +127,18 @@
                     <thead>
                         <tr>
                             <td>NO.</td>
-                            <td>Picture</td>
                             <td>Name</td>
-                            <td>Quantity</td>
+                            <td>Picture</td>
                             <td>Price</td>
+                            <td>Quantity</td>
+                            <td>Subtotal</td>
                             <td>Delete</td>
                         </tr>
                     </thead>
                     <tbody id="tbody"></tbody>
-                </table>
-                <div class="total-price">
-                    <p>Total Price:</p>
                     <span id="totalPrice"></span>
-                </div>
+                </table>
+                <!-- <button onclick="handleCheckOut()">Check Out</button> -->
             </div> 
             <div class="pay-content-right">
                 <div class="pay-content-right-title">
@@ -168,7 +166,7 @@
                         <input type="text" id="exp" name="exp" required>
                         <label for="cvv">CVV</label>
                         <input type="text" id="cvv" name="cvv" required>
-                        <button type="submit">Pay Now</button>
+                        <button onclick="handleCheckOut()">Check Out</button>
                     </form>
                 </div>
             </div>
@@ -230,7 +228,7 @@
         </div>
     </footer>
     </div>
-    <script src="../Home/Home.js"></script>
+    <script src="./Pay.js"></script>
     </div>
 </body>
 </html>
