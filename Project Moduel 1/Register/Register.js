@@ -151,14 +151,12 @@ function handleRegister(event) {
       console.log(newUser);
 
       localStorage.setItem("users", JSON.stringify(users));
-      alert("Dang ky tai khoan thanh cong!");
+      FuiToast.success('Register successfully.')
       event.target.reset();
       window.location.href = "../Login/Login.html";
       display();
     } else {
-      alert(
-        "Email da ton tai trong he thong, ban khong the dang ky nua!!!"
-      );
+      FuiToast.error("Email is already in use. Please try again.")
     }
   }
 }

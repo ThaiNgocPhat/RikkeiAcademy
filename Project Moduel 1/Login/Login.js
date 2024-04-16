@@ -47,9 +47,9 @@ function handleLogin(event) {
   }
   if (isCheckExistedEmail && isCheckExistedPassword) {
     if (users[indexUser].isActive == false) {
-      alert("Account is not active");
+      FuiToast.error("Account is not active!")
     } else {
-      alert("Login Success!");
+      FuiToast.success('Login successfully.')
       window.location.href = "../Home/Home.html";
       
       const currentUser = {
@@ -68,11 +68,11 @@ function handleLogin(event) {
     }
   } else {
     if (!isCheckExistedEmail) {
-      alert("Email is not exist");
+      FuiToast.error("Email is not exist");
     } else if (!isCheckExistedPassword) {
-      alert("Password is incorrect");
+      FuiToast.error("Password is not correct")
     } else {
-      alert("Please enter valid email and password!");
+      FuiToast.error("Login failed")
     }
   }
 }

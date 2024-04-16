@@ -73,18 +73,18 @@ function handleSubmit(event) {
   ) {
     let index = users.findIndex((user) => user.email == email.value);
     if (index == -1) {
-      alert("email khong ton tai tren he thong");
+      FuiToast.error("Email is not exist")
     } else {
       if (users[index].password !== oldPassword.value) {
-        alert("mat khau khong dung");
+        FuiToast.error("Password is not correct")
       } else {
         users[index].password = newPassword.value;
-        alert("doi mat khau thanh cong");
+        FuiToast.success('Change password successfully.')
         event.target.reset();
         localStorage.setItem("users", JSON.stringify("users"));
       }
     }
   } else {
-    alert("ban phai nhap day du thong tin");
+    FuiToast.error("Change password failed.")
   }
 }

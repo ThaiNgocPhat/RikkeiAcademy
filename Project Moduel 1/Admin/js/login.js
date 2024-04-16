@@ -21,6 +21,6 @@ document.getElementById("loginForm").addEventListener("submit", function(event) 
   if (username === "admin" && password === "123456") {
     window.location.href = "index.html";
   } else {
-    alert("Tên đăng nhập hoặc mật khẩu không đúng. Vui lòng thử lại.");
+    FuiToast.error("Username or password is incorrect. Please try again.")
   }
 }); 

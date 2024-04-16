@@ -40,7 +40,7 @@ currentEmail.innerHTML = currentUser.email;
 function handleSignOut(){
     localStorage.removeItem('currentUser');//xoá curentUser trên local
     window.location.href = '../Login/Login.html';
-    alert('Sign out success')
+    FuiToast.success('Sign out successfully.');
 }
 
 

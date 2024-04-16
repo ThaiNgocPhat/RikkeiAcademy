@@ -56,10 +56,10 @@ function saveProduct() {
     products[index].description = description.value;
     localStorage.setItem("products", JSON.stringify(products));
     displayData();
-    alert("Chỉnh sửa thông tin thành công!!!");
+    FuiToast.success('Save product successfully.')
     document.getElementById("product-info-table").style.display = "none";
   } else {
-    alert("Không tìm thấy sản phẩm để chỉnh sửa!");
+    FuiToast.error("Save product failed")
   }
   fullname.value = '';
   quantity.value = '';
@@ -78,7 +78,7 @@ function deleteProduct(productID) {
   products.splice(index, 1);
   localStorage.setItem("products", JSON.stringify(products));
   displayData();
-  alert("Xóa student thành công!");
+  FuiToast.success('Delete product successfully.')
   console.log(index);
 }
 
@@ -97,7 +97,7 @@ function addProduct() {
   products.push(newProduct);
   localStorage.setItem("products", JSON.stringify(products));
   displayData();
-  alert("Thêm sản phẩm mới thành công!!!!");
+  FuiToast.success('Add product successfully.')
   fullname.value = '';
   quantity.value = '';
   price.value = '';

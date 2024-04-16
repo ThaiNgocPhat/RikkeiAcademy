@@ -17,7 +17,5 @@ function displayProduct() {
 }
 displayProduct();
 function handleBuyNow() {
-    alert('Pay success');
     window.location.href = '../Pay/Pay.html';
-
 }
