@@ -112,7 +112,7 @@ button {
 }
 
 .pay-content-left {
-    width: 50%;
+    width: 70%;
 }
 
 .pay-content-left table {
@@ -152,6 +152,9 @@ button {
 .pay-content-right-form button:hover {
     background-color: #555;
 }
-
-
-
+.total-price{
+    display: flex;
+    justify-content: space-between;
+}.pay-img{
+    width: 200px;
+}

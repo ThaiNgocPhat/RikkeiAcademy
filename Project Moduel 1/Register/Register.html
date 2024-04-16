@@ -103,16 +103,16 @@
                     </div>
                 </div>
             </div>
-            <div class="languges-user-shopping">
+           <div class="languges-user-shopping">
                 <div class="languges">
                     <span>EN</span>
                     <img src="./Picture/EN.svg" alt="ENGLISH">
                 </div>
-                <div class="user">
-                    <a href="../Login/Login.html"><img src="./Picture/usericon.svg" alt=""></a>
-                </div>
-                <div class="shopping">
-                    <a href="../Pay/Pay.html"><img src="./Picture/shopping.svg" alt=""></a>
+                <a href="../Login/Login.html" id="btn-sign-in"><img src="./Picture/usericon.svg" alt=""></a>
+                <a href="../Pay/Pay.html"><img src="./Picture/shopping.svg" alt=""></a>
+                <div class="log-out" style="display: none;" id="btn-sign-out">
+                        <span id="current-email"></span>
+                        <i class="fa-solid fa-arrow-right-from-bracket" onclick="handleSignOut()"></i>
                 </div>
             </div>
         </div>

@@ -1,0 +1,51 @@
+.electric-two-title{
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+.electric-two-title p{
+    font-size: 120px;
+}
+#electric-two{
+    display: grid;
+    grid-template-columns: 3fr 3fr 3fr;
+    gap: 15px;
+    width: 80%;
+    margin: auto;
+}
+.electric-two{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color:gray;
+    width: 350px;
+    border-radius: 10px;
+}
+.electric-two img{
+    width: 250px;
+    height: 200px;
+}
+.electric-two-description{
+    display: flex;
+    justify-content: space-between;
+    gap:50px;
+    margin-top:10px;  
+}
+.electric-two-description p{
+    opacity: 0.5;
+}
+.electric-two-description span{
+ font-size: 20px;
+}
+.button-accessories button{
+    background-color: #f1c40f;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}

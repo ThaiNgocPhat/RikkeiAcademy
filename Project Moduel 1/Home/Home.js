@@ -1,39 +1,52 @@
-
-
- function handlePay() {
-        let productName = document.getElementById('productName').textContent;
-        let price = document.getElementById('price').textContent;
-        let img = document.getElementById('img').src;
-        let product = {
-            name: productName,
-            price: price,
-            img: img
-        };
-        let productList = JSON.parse(localStorage.getItem('products')) || [];
-        productList.push(product);
-        localStorage.setItem('products', JSON.stringify(productList));
-        displayProducts();
-    }
-
-    function displayProducts() {
-        let tbody = document.getElementById('tbody');
-        tbody.innerHTML = '';
-
-        // Lấy danh sách sản phẩm từ local storage
-        let productList = JSON.parse(localStorage.getItem('products')) || [];
-
-        // Hiển thị thông tin sản phẩm trên bảng
-        productList.forEach(function(product, index) {
-            let newRow = document.createElement('tr');
-            newRow.innerHTML = `
-                <td>${index + 1}</td>
-                <td><img src="path_to_image.jpg" alt="${product.name}"></td>
-                <td>${product.name}</td>
-                <td>${product.price}</td>
+//lấy sản phẩm trên local về hiển thị lên trang chủ
+let mainProduct = document.getElementById('products');
+let products =JSON.parse(localStorage.getItem('products')) || [];
+console.log(products);
+function getProducts() {
+    let html = '';
+    for(let i = 0; i < 8 && i < products.length; i++){
+        html += `
+                  <div class="product-left">
+                  <div>
+                      <div class = "product-description">
+                          <span>${products[i].fullname}</span>
+                          <p>${products[i].price}</p>
+                      </div>
+                  </div>
+                    <img src="${products[i].image}" alt="..." />
+                    <div class="button-pay">
+                        <button onclick="handlePay(${products[i].name})">Buy now</button>
+                    </div>
+                  </div>
             `;
-            tbody.appendChild(newRow);
-        });
     }
+    mainProduct.innerHTML = html;
+}
+getProducts();
 
-    // Hiển thị thông tin sản phẩm ban đầu khi tải trang
-    displayProducts();
+//lấy email hiển thị lên trang chủ,ẩn user và hiện lên button logout
+let currentEmail = document.getElementById('current-email');
+let currentUser = JSON.parse(localStorage.getItem('currentUser')) || {};
+if(currentUser.access_token !== undefined && currentUser.access_token !== ""){ //điều kiện check xem đã đăng nhập chưa 
+    document.getElementById('btn-sign-out').style.display = 'flex';//nếu đã đăng nhập thì hiện button logout
+    document.getElementById('btn-sign-in').style.display = 'none';//ẩn button login
+}else{
+   document.getElementById('btn-sign-out').style.display = 'none';//ẩn button logout
+    document.getElementById('btn-sign-in').style.display = 'flex';//hiện button login
+}
+currentEmail.innerHTML = currentUser.email;
+
+//khi ấn vào logout thì sẽ xóa thông tin user và chuyển về trang login
+function handleSignOut(){
+    localStorage.removeItem('currentUser');//xoá curentUser trên local
+    window.location.href = '../Login/Login.html';
+    alert('Sign out success')
+}
+
+
+function handlePay(name) {
+    console.log(name);
+    window.location.href = `../Details/Details.html?name=${name}`;
+    let product = products.find(product => name === product.name);
+    localStorage.setItem('product', JSON.stringify(product));
+}

@@ -10,9 +10,11 @@
 #product-info-table {
   padding-top: 400px;
   padding-left: 800px;
+  /* position: fixed;
+  position: absolute; */
   position: fixed;
-  position: absolute;
-  left: 0;
+  bottom: 0;
+  right: 0;
   width: 100%;
   height: 100%;
   top: 50%; 

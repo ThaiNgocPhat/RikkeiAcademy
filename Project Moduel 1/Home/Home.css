@@ -64,6 +64,11 @@ body {
     gap: 40px;
     margin-right: 40px;
 }
+.log-out{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
 .header{
     margin-bottom: 100px;
     position: relative;
@@ -180,7 +185,7 @@ body {
 .description p{
     opacity: 0.5;
 }
-    .circle {
+.circle {
         position: absolute;
         left: -30px; 
         top: 58px; 
@@ -190,34 +195,17 @@ body {
         background-color:rgba(42, 42, 42, 0.1);
         border-radius: 50px;
     }
-.main-product{
-  border: 1px solid black;
-  width: 640px;
-  height: 695px;
-  margin-left: 70px;
-  position: relative;
-  margin-bottom: 50px;
-  border-radius: 4px;
-  background-color: rgba(235, 237, 238, 1);
-  display: flex!important;
-}
-.product-img img{
-    width: 570px;
-    height: 500px;
-    padding-left: 70px;
-    padding-top: 70px;
-}
 .button-pay{
-    position: absolute;
-    top: 550px;
-    left: 250px;
     font-size: 20px;
     border-radius: 10px;
     background-color:rgb(243, 182, 89);
     height: 50px;
     width: 150px;
+    border: none;
     padding-top: 10px;
     padding-left: 35px;
+    margin-left: 150px;
+    margin-bottom: 30px;
 }
 .btn-pay button a{
     text-decoration: none;
@@ -244,12 +232,6 @@ body {
     top: 30px;
     left: 230px;
     opacity: 0.5;
-}
-.product-title{
-    position: absolute;
-    top: 80px;
-    left: 30px;
-    font-size: 20px;
 }
 .color-button{
     position: absolute;
@@ -424,22 +406,16 @@ footer h3{
     font-weight: bold;
 }
 
-.product {
-    display: flex;
+#products {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
     gap: 50px;
-    margin-left: 40px;
   }
   
-  .product-left,
-  .product-right {
-    width: 655px;
-    height: 715px;
+  .product-left{
     background-color: gray;
     border-radius: 10px;
   }
-.description {
-    position: relative;
-}
 
 
 
@@ -477,9 +453,6 @@ footer h3{
     position: relative;
 }
 .ivy-two-small{
-    position: absolute;
-    top: 6px;
-    left: 30px;
     opacity: 0.5;
     font-size: 12px;
 }
@@ -487,9 +460,6 @@ footer h3{
     position: relative;
 }
 .ace-two-small{
-    position: absolute;
-    top: 6px;
-    left: 40px;
     font-size: 12px;
     opacity: 0.5;
 }
@@ -506,10 +476,6 @@ footer h3{
 .ivy-two-title::after,
 .ace-two-title::after,
 .nav-app ::after {
-    content: '';
-    position: absolute;
-    left: 0;
-    bottom: -10px;
     width: 100%;
     border-bottom: 1px solid #ccc;
 }
@@ -612,4 +578,19 @@ footer h3{
     bottom: -10px;
     width: 100%;
     border-bottom: 1px solid #ccc;
+}
+.product-description{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-content: center;
+    margin-top: 30px;
+    gap: 50px;
+}
+.product-description span{
+    font-size: 30px;
+}
+.product-description p{
+    opacity: 0.5;
+    font-size: 20px;
 }

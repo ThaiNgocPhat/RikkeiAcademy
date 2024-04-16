@@ -34,31 +34,45 @@ function handleLogin(event) {
   event.preventDefault();
   let isCheckExistedEmail = false;
   let isCheckExistedPassword = false;
-  let indexUser = users.findIndex((user) => user.email == email.value);
+  const email = event.target.email;
+  const password = event.target.password;
+
+  let indexUser = users.findIndex((user) => user.email === email.value);
+  
   if (indexUser !== -1) {
     isCheckExistedEmail = true;
     if (users[indexUser].password === password.value) {
       isCheckExistedPassword = true;
     }
   }
-
-  if (isCheckEmail === true && isCheckPassword === true) {
-    if (isCheckExistedEmail === true) {
-      if (isCheckExistedPassword === true) {
-        if (users[indexUser].isActive == false) {
-          alert("Account is not active");
-        } else {
-          alert("Login Success!");
-          window.location.href = "../Home/Home.html";
-          event.target.reset();
-        }
-      } else {
-        alert("Password is incorrect");
-      }
+  if (isCheckExistedEmail && isCheckExistedPassword) {
+    if (users[indexUser].isActive == false) {
+      alert("Account is not active");
     } else {
-      alert("Email is not exist");
+      alert("Login Success!");
+      window.location.href = "../Home/Home.html";
+      
+      const currentUser = {
+        access_token: "10000000-1000-4000-8000-100000000000".replace(
+          /[018]/g, (c) =>
+            (
+              c ^
+              (crypto.getRandomValues(new Uint8Array(1))[0] &
+                (15 >> (c / 4)))
+            ).toString(16)
+        ), // tạo token cho user
+        email: users[indexUser].email, // lưu email của user
+        products: [], //tạo một mảng rỗng để khi mua sản phẩm để lưu vào
+      };
+      localStorage.setItem("currentUser", JSON.stringify(currentUser));//lưu thông tin user vào local
     }
   } else {
-    alert("Please enter valid email and password!");
+    if (!isCheckExistedEmail) {
+      alert("Email is not exist");
+    } else if (!isCheckExistedPassword) {
+      alert("Password is incorrect");
+    } else {
+      alert("Please enter valid email and password!");
+    }
   }
 }

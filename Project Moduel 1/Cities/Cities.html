@@ -109,13 +109,13 @@
             <div class="languges-user-shopping">
                 <div class="languges">
                     <span>EN</span>
-                    <span><img src="./Picture/EN.svg" alt="ENGLISH"></span>
+                    <img src="./Picture/EN.svg" alt="ENGLISH">
                 </div>
-                <div class="user">
-                    <img src="./Picture/usericon.svg" alt="">
-                </div>
-                <div class="shopping">
-                    <a href="../Pay/Pay.html"><img src="./Picture/shopping.svg" alt=""></a>
+                <a href="../Login/Login.html" id="btn-sign-in"><img src="./Picture/usericon.svg" alt=""></a>
+                <a href="../Pay/Pay.html"><img src="./Picture/shopping.svg" alt=""></a>
+                <div class="log-out" style="display: none;" id="btn-sign-out">
+                        <span id="current-email"></span>
+                        <i class="fa-solid fa-arrow-right-from-bracket" onclick="handleSignOut()"></i>
                 </div>
             </div>
         </div>
@@ -269,7 +269,7 @@
         </div>
         </div>
     </footer>
-    <script src="./Login.js"></script>
+    <script src="../Home/Home.js"></script>
     </div>
 </body>
 </html>

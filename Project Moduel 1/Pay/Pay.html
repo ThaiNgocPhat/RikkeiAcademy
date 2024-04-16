@@ -109,11 +109,11 @@
                     <span>EN</span>
                     <img src="./Picture/EN.svg" alt="ENGLISH">
                 </div>
-                <div class="user">
-                    <a href="../Login/Login.html"><img src="./Picture/usericon.svg" alt=""></a>
-                </div>
-                <div class="shopping">
-                    <a href="../Pay/Pay.html"><img src="./Picture/shopping.svg" alt=""></a>
+                <a href="../Login/Login.html" id="btn-sign-in"><img src="./Picture/usericon.svg" alt=""></a>
+                <a href="../Pay/Pay.html"><img src="./Picture/shopping.svg" alt=""></a>
+                <div class="log-out" style="display: none;" id="btn-sign-out">
+                        <span id="current-email"></span>
+                        <i class="fa-solid fa-arrow-right-from-bracket" onclick="handleSignOut()"></i>
                 </div>
             </div>
         </div>
@@ -123,18 +123,24 @@
             <h1>Pay</h1>
         </div>
         <div class="pay-content">
-            <div class="pay-content-left">
+            <div class="pay-content-left" id="pay-description">
                 <table>
                     <thead>
                         <tr>
                             <td>NO.</td>
                             <td>Picture</td>
                             <td>Name</td>
+                            <td>Quantity</td>
                             <td>Price</td>
+                            <td>Delete</td>
                         </tr>
                     </thead>
                     <tbody id="tbody"></tbody>
                 </table>
+                <div class="total-price">
+                    <p>Total Price:</p>
+                    <span id="totalPrice"></span>
+                </div>
             </div> 
             <div class="pay-content-right">
                 <div class="pay-content-right-title">
@@ -224,8 +230,7 @@
         </div>
     </footer>
     </div>
-    <script src="Pay.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script src="../Home/Home.js"></script>
     </div>
 </body>
 </html>
