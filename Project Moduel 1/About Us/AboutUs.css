@@ -4,7 +4,7 @@
 .header-aboutus {
     position: absolute;
     top: 0px;
-    left: 150px;
+    left:150px;
 }
 .header-aboutus h1,
 .header-aboutus a,
@@ -28,7 +28,7 @@
     color: rgb(202, 196, 196);
 }
 .logo-nav {
-    margin-right: 400px;
+    margin-right: 300px;
 }
 .hero-forever-forward{
     display: flex;

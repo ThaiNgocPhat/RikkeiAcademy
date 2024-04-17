@@ -293,16 +293,6 @@
     top: 380px;
     left: 1000px;
 }
-.edit-btn10{
-    width: 420px;
-    height: 420px;
-    border: 1px solid #000000;
-    border-radius: 50%;
-    background-color: rgba(237, 234, 232, 1);
-    position: absolute;
-    top: 120px;
-    left: 700px;
-}
 .all-in-the-details h1{
     font-size: 50px;
     margin-top: 100px;
