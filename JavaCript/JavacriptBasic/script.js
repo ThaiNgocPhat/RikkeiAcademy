@@ -172,5 +172,19 @@
 // console.log(n);
 
 
-
-
+//Toán tử || thì trả về giá trị true đầu tiên
+console.log(5 || 3);//5
+console.log(0 || 3);//3
+console.log(Nan|| 3);//3
+console.log(undefined || 3);//3
+//Toán tử && thì trả về giá trị false đầu tiên
+console.log(5 && 3);//3
+console.log(0 && 3);//0
+console.log(Nan && 3);//Nan
+console.log(undefined && 3);//undefined
+//Toán tử  ??:nuli coalescing operator trả về giá trị đầu tiên khác null hoặc undefined
+console.log(5 ?? 3);//5
+console.log(0 ?? 3);//0
+console.log(Nan ?? 3);//Nan
+console.log(undefined ?? 3);//3
+console.log(null ?? 3);//3

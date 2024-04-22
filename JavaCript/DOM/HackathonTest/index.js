@@ -140,6 +140,11 @@ function searchStudents() {
 
 
 //yêu cầu 8:Validate dữ liệu nhập vào form “Thông tin học viên”:
+// Họ và tên: không được để trống
+//Email: phải nhập đúng định dạng email
+//Số điện thoại: phải nhập đúng định dạng số điện thoại di động ở Việt Nam
+//Quê quán: không được để trống
+//Giới tính: default là Nam
 function handleInputPhone(){
     let error = document.getElementById("errorPhone");
     if(phone.value.length < 10 || phone.value.length > 11){
@@ -182,13 +187,7 @@ function handleInputAddress(){
         error.innerHTML = "Không được để trống";
         error.style.color = "red";
 }
-}
 function handleSubmit(event) {
   event.preventDefault(); 
 }
-
-// Giới tính: default là Nam
-function handleInputGender(){
-    let genderValue;
-    for(let i in gender){
-        if()
+}

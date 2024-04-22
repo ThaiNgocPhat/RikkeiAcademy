@@ -1,0 +1,118 @@
+let stores = [
+  { id: 1, name: "Milk", count: 100 },
+  { id: 2, name: "Yakult", count: 100 },
+  { id: 3, name: "Butter", count: 100 },
+];
+let carts = [];
+let isCheck = true;
+
+while (isCheck) {
+  let choice = prompt("Enter C/R/U/D/E: ");
+  switch (choice.toUpperCase()) {
+    case "C":
+      let nameProduct = prompt("Enter the product you want to buy: ");
+      let found = false;
+      for (let i in stores) {
+        if (stores[i].name === nameProduct && stores[i].count > 0) {
+          carts.push({ ...stores[i] });
+          stores[i].count--;
+          found = true;
+          break;
+        }
+      }
+      if (!found) {
+        console.log("Product not found or out of stock.");
+      }
+      break;
+    case "R":
+      console.log("Stores:");
+      console.log(stores);
+      console.log("Cart:");
+      console.log(carts);
+      break;
+    case "U":
+      let indexUpdate = parseInt(prompt("Enter the ID to update: "));
+      let countUpdate = parseInt(prompt("Enter the new quantity: "));
+      let cartIndex = carts.findIndex((item) => item.id === indexUpdate);
+      if (cartIndex !== -1) {
+        let storeIndex = stores.findIndex((item) => item.id === indexUpdate);
+        if (storeIndex !== -1) {
+          stores[storeIndex].count += carts[cartIndex].count - countUpdate;
+          carts[cartIndex].count = countUpdate;
+        } else {
+          console.log("Product not found in stores.");
+        }
+      } else {
+        console.log("Product not found in cart.");
+      }
+      break;
+    case "D":
+      let indexDelete = parseInt(prompt("Enter the ID to delete: "));
+      let cartIndexToDelete = carts.findIndex((item) => item.id === indexDelete);
+      if (cartIndexToDelete !== -1) {
+        stores.find((item) => item.id === indexDelete).count += carts[cartIndexToDelete].count;
+        carts.splice(cartIndexToDelete, 1);
+      } else {
+        console.log("Product not found in cart.");
+      }
+      break;
+    case "E":
+      console.log("Thank you for shopping at Rikkei Stores!");
+      isCheck = false;
+      break;
+    default:
+      console.log("Invalid input. Please try again.");
+      break;
+  }
+}
+
+
+
+let stores = [
+  { id: 1, name: "Milk", count: 100 },
+  { id: 2, name: "Yakult", count: 100 },
+  { id: 3, name: "Butter", count: 100 },
+];
+let carts = [];
+let isCheck = true;
+while (isCheck) {
+  let choice = prompt("Nhập vào 5 chữ cái C/R/U/D/E");
+  switch (choice) {
+    case "C":
+      let nameProduct = prompt("Nhập sản phẩm muốn mua: ");
+      for (let i in stores) {
+        if (stores[i].name === nameProduct) {
+          carts.push(stores[i]);
+          stores[i].count = stores[i].count - 1;
+        }
+      }
+      break;
+    case "R":
+      console.log(stores);
+      console.log(carts);
+      break;
+    case "U":
+      let indexUpdate = parseInt(prompt("Nhập vào id cần update: ")); // 1
+      let countUpdate = parseInt(prompt("Nhập vào số lượng muốn thay đổi: "));
+      let indexCarts = carts.findIndex((cart) => cart.id === indexUpdate);
+      carts[indexCarts].count = countUpdate;
+      let indexStores = stores.findIndex((store) => store.id === indexUpdate);
+      stores[indexStores].count = stores[indexStores].count - countUpdate;
+      console.log(carts);
+      console.log(stores);
+      break;
+    case "D":
+      let indexDelete = parseInt(prompt("Nhập vào id cần xóa: "));
+      let indexCartsDelete = carts.findIndex((cart) => cart.id === indexDelete);
+      carts.splice(indexCartsDelete, 1);
+      console.log(carts);
+      break;
+    case "E":
+      console.log("Cảm ơn bạn đã đến với Rikkei Stores");
+      isCheck = false;
+      break;
+    default:
+      console.log("Nhập sai vui lòng nhập lại");
+      break;
+  }
+}

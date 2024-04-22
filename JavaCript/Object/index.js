@@ -1,4 +1,3 @@
-//bài tập 1:quản lý danh sách làm việc trong ngày
 //{} id,title, des, status
 //yêu cầu 1:clg tất cả việc đã hoàn thành làm trong nghày ra
 //yêu cầu 2:CLG tất cả việc chưa hoàn thành trong ngày ra
@@ -60,7 +59,7 @@
 // updateWork(2);
 // console.log(listWork);
 
-//bài tập 2: Tạo một đối tượng chứa thông tin về một người 
+//bài tập 2: Tạo một đối tượng chứa thông tin về một người
 //bao gồm tên, tuổi, địa chỉ và số điện thoại.
 // Sau đó truy xuất các thuộc tính của đối tượng trên
 // let person = {
@@ -97,7 +96,7 @@
 // let students = [];
 // students.push(student,newStudents);
 // console.log(students);
-//Với dữ liệu từ bài 3 hãy tìm ra học sinh có điểm trung bình cao hơn 
+//Với dữ liệu từ bài 3 hãy tìm ra học sinh có điểm trung bình cao hơn
 //và in ra toàn bộ thông tin của học sinh đó
 // let max = 0;
 // let index = 0;
@@ -110,8 +109,8 @@
 // console.log(students[index]);
 // console.log(max);
 //Tạo thêm đối tượng “newStudent2” với các thuộc tính tương tự như đối tượng “newStudent” với value bất kỳ.
-// Sau đó thêm vào mảng “students” (ở bài 2). 
-//Tính điểm trung bình của các học sinh trong mảng students trên. 
+// Sau đó thêm vào mảng “students” (ở bài 2).
+//Tính điểm trung bình của các học sinh trong mảng students trên.
 //Nếu trên 7.5 thì đánh giá lớp khá, từ 5 đến 7.5 thì đánh giá lớp trung bình, dưới 5 là lớp yếu
 // let newStudents2 ={
 //     id: 3,
@@ -137,9 +136,8 @@
 //     console.log("Yếu")
 // }
 
-
 //bài tập 4:let products = [{ id: 1, name: "Milk", count: 100}, {id: 2, name: "Yakult", count: 100},{id: 3, name: "Butter", count: 100,}];
-//yêu cầu 1:Thêm đối tượng có các thuộc tính tương tự các đối tượng có trong mảng “products”
+// yêu cầu 1:Thêm đối tượng có các thuộc tính tương tự các đối tượng có trong mảng “products”
 // let products = [{ id: 1, name: "Milk", count: 100}, {id: 2, name: "Yakult", count: 100},{id: 3, name: "Butter", count: 100,}];
 // let newProduct = {
 //     id: 4,
@@ -148,18 +146,34 @@
 // }
 // products.push(newProduct);
 // console.log(products);
-//yêu cầu 2:Xóa đối tượng có id là 2
-// products.splice(1,1);
-// console.log(products);
-//Truy vấn đến đối tượng có id là 3, sau đó cập nhật lại giá trị count = 0
+
+// yêu cầu 2:Xóa đối tượng có id là 2
+
+// *****cách 1:
+// ****const index = products.findIndex(product => product.id === 2) // tim kiem vi tri phan tu dau tien thoa man dieu kien, neu khong tim thay tra ve -1
+// if(index !== -1) products.splice(index,1);
+// else console.log("Khong tim thay phan tu")
+
+// *****cách 2:
+// *****Filter: de loc cac phan tu thoa man,xoa phan tu do va tra ve mang moi ma khong co phan tu do
+// products = products.filter(product => product.id !==2)
+// console.log(products)
+
+// yêu cầu 3:Truy vấn đến đối tượng có id là 3, sau đó cập nhật lại giá trị count = 0
 // for(let i in products){
 //     if(products[i].id == 3){
 //         products[i].count = 0;
 //     }
 // }
 // console.log(products);
-//Cho từ khóa “Butter”. Kiểm tra từ khóa có trong mảng “products” hay không? Nếu Có in toàn bộ thông tin, 
-//nếu Không hiển thị thông báo “Không có dữ liệu bạn tìm kiếm”
+
+// ******cách 2:dùng findIndex
+// const index = products.findIndex(product => product.id === 3)
+// products[index].count = 0;
+// console.log(products[index]);
+
+// yêu cầu 4:Cho từ khóa “Butter”. Kiểm tra từ khóa có trong mảng “products” hay không? Nếu Có in toàn bộ thông tin,
+// nếu Không hiển thị thông báo “Không có dữ liệu bạn tìm kiếm”
 // let isCheck = false
 // let result = ""
 // for(let i in products){
@@ -167,13 +181,24 @@
 //         isCheck = true
 //         result = products[i];
 //     }
-// } 
+// }
 // if(isCheck){
 //     console.log(result)
 // }else{
 //         console.log(`Không tìm thấy dữ liệu bạn cần tìm`);
 //     }
+// cách 2:dùng filter
+// const filterButter = products.filter(product => product.name === "Butter")
+// if(filterButter.length === 0) console.log("Không tìm thấy phần tử thoả mãn")
+// else console.log(filterButter)
 
+// cách 3:findIndex:
+// const index = products.findIndex(product => product.name === "Butter")
+//     if(index === -1){
+//         console.log("Không tìm thấy dữ liệu cần tìm")
+//     }else{
+//         console.log(products[index]);
+//     }
 
 //bài tập 2:Tạo một class Dog có những thuộc tính:
 //yêu cầu 1:Tên và tốc độ di chuyển
@@ -208,8 +233,7 @@
 // dog.bark();
 // dog.catchCat(cat);
 
-
-//bài tập 3:Tạo một đối tượng User chưa thông tin người dùng bao gồm: tên, email, địa chỉ, điện thoại. Tạo class Admin kế thừa từ class User. 
+//bài tập 3:Tạo một đối tượng User chưa thông tin người dùng bao gồm: tên, email, địa chỉ, điện thoại. Tạo class Admin kế thừa từ class User.
 //Thêm thuộc tính “role” vào 2 đối tượng Admin (value=1) và User (value =0)
 //yêu cầu 1:Tạo danh sách người dùng (dạng mảng) và thêm vào 3 user, 1 admin
 // class User{
@@ -233,7 +257,7 @@
 // let admin = new Admin("Admin",")","HN","0123456789");
 // let users = [user1,user2,user3,admin];
 // console.log(users);
-// //yêu cầu 2:Xóa người dùng thông qua tên của họ (không xóa được admin)
+//yêu cầu 2:Xóa người dùng thông qua tên của họ (không xóa được admin)
 // function deleteUser(name){
 //     for(let i in users){
 //         if(users[i].name == name && users[i].role == 0){
@@ -264,6 +288,8 @@
 //         console.log(users[i]);
 //     }
 // }
+
+
 
 
 //bài tập 5:tạo ra dữ liệu để in ra nội dung dưới đây
@@ -343,6 +369,8 @@
 
 
 
+
+
 //bài tập 6:let stores = [{ id: 1, name: "Milk", count: 100}, {id: 2, name: "Yakult", count: 100},{id: 3, name: "Butter", count: 100,}];
 // let carts=[]
 //Cho người dùng nhập vào 5 chữ cái C/R/U/D/E
@@ -350,54 +378,165 @@
 //R – In ra toàn bộ các sản phẩm trong stores và carts
 //U – Hỏi người dùng vị trí update trong carts. Nếu tồn tại cho người dùng nhập vào số lượng muốn thay đổi và khi đó count trong stores cũng cập nhật theo. Update xong in lại stores và carts
 //D – Hỏi người dùng vị trị của sản phẩm muốn xóa trong carts. Tiến hành xóa và in ra lại
-//E – Biến chương trình thành vòng lặp vĩnh cứu và khi người dùng nhập vào E thì sẽ thoát khỏi chương trình và thông báo “Cảm ơn bạn đã đến với Rikkei Stores”
-let stores = [{ id: 1, name: "Milk", count: 100}, {id: 2, name: "Yakult", count: 100},{id: 3, name: "Butter", count: 100,}];
-let carts = [];
-let choice = prompt("Nhập vào 5 chữ cái C/R/U/D/E");
-switch(choice){
-    case "C":
-        let nameProduct = prompt("Nhập tên sản phẩm muốn mua: ");
-        for(let i in stores){
-            if(stores[i].name === nameProducts){
-                carts.push(stores[i]);
-                stores[i].count = stores[i].count - 1;
-            }
-        }
-        break;
-        case "R":
-            console.log(stores);
-            console.log(carts);
-            break;
-        case "U":
-            let indexUpdate = Number(prompt("Nhập vào vị trí cần update"));
-            let count = Number(prompt("Nhập vào số lượng muốn thay đổi"));
-            carts[index - 1].count = count;
-            for(let i in stores){
-                if(stores[i].name === carts[index - 1].name){
-                    stores[i].count = stores[i].count - count;
-                }
-            }
-            console.log(stores);
-            console.log(carts);
-            break;
-        case "D": 
-            let indexDelete = Number(prompt("Nhập vào vị trí cần xóa"));
-            for(let i in stores){
-                if(stores[i].name === carts[index - 1].name){
-                    stores[i].count = stores[i].count + carts[index - 1].count;
-                }
-            }
-            carts.splice(index - 1,1);
-            console.log(stores);
-            console.log(carts);
-            break;
+//E – Biến chương trình thành vòng lặp vĩnh cữu và khi người dùng nhập vào E thì sẽ thoát khỏi chương trình và thông báo “Cảm ơn bạn đã đến với Rikkei Stores”
+// ************cách 1
+// let stores = [
+//     { id: 1, name: "Milk", count: 100 }, 
+//     { id: 2, name: "Yakult", count: 100 },
+//     { id: 3, name: "Butter", count: 100 },
+// ];
+// let carts = [];
+// let isCheck = true;
+// while (isCheck) {
+//     let choice = prompt("Enter C/R/U/D/E: ");
+//     switch (choice.toUpperCase()) {
+//     case "C":
+//         let nameProduct = prompt("Nhập sản phẩm muốn mua: ");
+//         let found = false; // Biến này để kiểm tra xem sản phẩm đã có trong giỏ hàng chưa
+//         for (let i in stores) {
+//         if (stores[i].name === nameProduct) {
+//             for (let j in carts) {
+//             if (carts[j].name === nameProduct) {
+//               carts[j].count++; // Nếu sản phẩm đã có trong giỏ hàng, chỉ cần tăng số lượng mua
+//               found = true; // Đặt biến found thành true để không thêm sản phẩm vào giỏ hàng
+//                 break;
+//             }
+//         }
+//             if (!found) { //Nếu sản phẩm chưa có trong giỏ hàng, thêm mới vào
+//             carts.push({
+//                 id: stores[i].id,
+//                 name: stores[i].name,
+//               count: 1, // Bắt đầu với count = 1 vì là lần đầu tiên mua sản phẩm này
+//             });
+//         }
+//           stores[i].count--; // Giảm số lượng sản phẩm trong cửa hàng đi 1
+//           break; // Thoát khỏi vòng lặp sau khi đã tìm thấy sản phẩm
+//         }
+//         }
+//         break;
+//     case "R":
+//         console.log("Stores:");
+//         console.log(stores);//gọi lại mảng
+//         console.log("Cart:");
+//         console.log(carts);//gọi lại mảng
+//         break;
+//     case "U":
+//         let indexUpdate = parseInt(prompt("Enter the ID to update: "));
+//         let countUpdate = parseInt(prompt("Enter the new quantity: "));
+//         let cartIndex = carts.findIndex((item) => item.id === indexUpdate);//tạo biến cartIndex để tìm giá trị tròn carts
+//         if (cartIndex !== -1) { //check điều kiện 
+//         let storeIndex = stores.findIndex((item) => item.id === indexUpdate);//tạo biến storeIndex để tìm giá trị trong stores
+//         if (storeIndex !== -1) { //check điều kiện 
+//             stores[storeIndex].count = 
+//             stores[storeIndex].count + carts[cartIndex].count - countUpdate;//công thức tính:lấy giá trị của sp trong stores cộng với sp bị lấy đi và nạp vào carts.sau đó trừ cho giá trị nhập vào từ countUpdate
+//             carts[cartIndex].count = countUpdate;//giá trị count trong carts bằng với giá trị từ countUpdate
+//         } else {
+//             console.log("Product not found in stores and carts.");
+//         }
+//         }
+//         break;
+//     case "D":
+//         let indexDelete = parseInt(prompt("Enter the ID to delete: "));
+//         let cartIndexToDelete = carts.findIndex((item) => item.id === indexDelete);
+//         if (cartIndexToDelete !== -1) {
+//         stores.find((item) => item.id === indexDelete).count +=
+//             carts[cartIndexToDelete].count;
+//         carts.splice(cartIndexToDelete, 1);
+//         } else {
+//         console.log("Product not found in cart.");
+//         }
+//         break;
+//     case "E":
+//         console.log("Thank you for shopping at Rikkei Stores!");
+//         isCheck = false;
+//         break;
+//     default:
+//         console.log("Invalid input. Please try again.");
+//         break;
+// }
+// }
+// ********cách 2
+// let stores = [
+//   { id: 1, name: "Milk", count: 100 },
+//   { id: 2, name: "Yakult", count: 100 },
+//   { id: 3, name: "Butter", count: 100 },
+// ];
+// let carts = [];
+// let isCheck = true;
 
-        case "E":
-            console.log("Cảm ơn bạn đã đến với Rikkei Stores");
-            break;
-}
+// while (isCheck) {
+//   let choice = prompt("Nhập vào 5 chữ cái C/R/U/D/E");
+//   switch (choice) {
+//     case "C":
+//       let nameProduct = prompt("Nhập sản phẩm muốn mua: ");
 
+//     //   Tìm kiếm sản phẩm trong cửa hàng
+//       let productIndexStore = stores.findIndex( //taọ biến productIndexStore để tìm giá trị bằng findIndex
+//         (product) => product.name === nameProduct //tìm sản phẩm theo tên
+//       );
 
+//     //   Kiểm tra xem sản phẩm đã có trong giỏ hàng hay chưa bằng some
+//     //   Phương thức some() được gọi trên mảng carts. Phương thức này sẽ trả về true nếu có ít nhất một phần tử trong mảng thỏa mãn điều kiện được chỉ định, và ngược lại trả về false.
+//     //   Nếu có ít nhất một sản phẩm có tên giống nameProduct, biến productInCart sẽ được gán giá trị true, ngược lại sẽ là false.
+//     //   Ví dụ, nếu bạn muốn kiểm tra xem sản phẩm có tên là "Milk" có trong giỏ hàng hay không, đoạn code này sẽ trả về true nếu có ít nhất một sản phẩm trong giỏ hàng có tên là "Milk", và ngược lại trả về false.
+//       let productInCart = carts.some((product) => product.name === nameProduct);//tìm giá trị thoả mãn điều kiện trong mảng
+//       if (productInCart) {
+//         // Nếu sản phẩm đã có trong giỏ hàng, tăng số lượng mua
+//         carts.find((product) => product.name === nameProduct).count++;
+//       } else {
+//         // Nếu sản phẩm chưa có trong giỏ hàng, thêm mới vào
+//         carts.push({
+//           id: stores[productIndexStore].id,
+//           name: stores[productIndexStore].name,
+//           count: 1, // Bắt đầu với count = 1 vì là lần đầu tiên mua sản phẩm này
+//         });
+//       }
+
+//     //   Giảm số lượng sản phẩm trong cửa hàng đi 1
+//         stores[productIndexStore].count--;
+//         break;
+
+//     case "R":
+//         console.log("Stores: ", stores);
+//         console.log("Carts: ", carts);
+//         break;
+//         case "U":
+//         let indexUpdate = parseInt(prompt("Enter the ID to update: "));
+//         let countUpdate = parseInt(prompt("Enter the new quantity: "));
+//         let cartIndex = carts.findIndex((item) => item.id === indexUpdate);//tạo biến cartIndex để tìm giá trị tròn carts
+//         if (cartIndex !== -1) { //check điều kiện 
+//         let storeIndex = stores.findIndex((item) => item.id === indexUpdate);//tạo biến storeIndex để tìm giá trị trong stores
+//         if (storeIndex !== -1) { //check điều kiện 
+//             stores[storeIndex].count = 
+//             stores[storeIndex].count + carts[cartIndex].count - countUpdate;
+//         //   công thức tính:lấy giá trị của sp trong stores cộng với sp bị lấy đi và nạp vào carts
+//         //   sau đó trừ cho giá trị nhập vào từ countUpdate
+//             carts[cartIndex].count = countUpdate;//giá trị count trong carts bằng với giá trị từ countUpdate
+//         } else {
+//             console.log("Product not found in stores and carts.");
+//         }
+//         }
+//         break;
+//         case "D":
+//         let indexDelete = parseInt(prompt("Enter the ID to delete: "));
+//         let cartIndexToDelete = carts.findIndex((item) => item.id === indexDelete);
+//         if (cartIndexToDelete !== -1) {
+//         stores.find((item) => item.id === indexDelete).count +=
+//             carts[cartIndexToDelete].count;
+//         carts.splice(cartIndexToDelete, 1);
+//         } else {
+//         console.log("Product not found in cart.");
+//         }
+//         break;
+//     case "E":
+//         isCheck = false;
+//         break;
+
+//     default:
+//         console.log("Lựa chọn không hợp lệ!");
+//         break;
+//   }
+// }
 
 
 //bài tập 7:Thực hành quản lý nhân viên
@@ -550,6 +689,7 @@ switch(choice){
 
 
 
+
 //bài tập 9:Hướng dẫn tạo đối tượng và sử dụng các phương thức để thêm, sửa, xóa và in ra đối tượng sau khi thay đổi chúng
 //bước 1:Tạo đối tượng players có các thuộc tính và giá trị
 // let players = {
@@ -570,3 +710,4 @@ switch(choice){
 //bước 4:xoá thuộc tính age và in lại đối tượng players
 // delete players.age;
 // console.log(players);
+

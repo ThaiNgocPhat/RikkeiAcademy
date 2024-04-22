@@ -204,151 +204,151 @@
 //yêu cầu 3: Password: không được để trống, phải có trên 8 ký tự, 1 ký tự viết hoa, 1 ký tự viết thường và có 1 số
 //yêu cầu 4: Confirm password: không được để trống, phải có trên 8 ký tự, 1 ký tự viết hoa, 1 ký tự viết thường và có 1 số, confirm phải giống với mật khẩu create
 //yêu cầu 5: Phải tick vào checkbox, nếu không sẽ báo lỗi
-const username = document.getElementById("username");
-const email = document.getElementById("email");
-const password = document.getElementById("password");
-const confirmPassword = document.getElementById("confirmPassword");
-const checkBox = document.getElementById("checkbox");
-const errorUsername = document.getElementById("errorUsername");
-const errorEmail = document.getElementById("errorEmail");
-const errorPassword = document.getElementById("errorPassword");
-const errorConfirmPassword = document.getElementById("errorConfirmPassword");
-const errorCheckBox = document.getElementById("errorCheckBox");
-function isAllCharPresent(str) {
-  for (let i = 0; i < str.length; i++) {
-    if (!isNaN(str[i])) return true; //isNaN là không phải số,thêm ! để phủ định lại thì nó sẽ là số
-  } //nếu là số thì trả về true.không thì false
-  return false;
-}
+// const username = document.getElementById("username");
+// const email = document.getElementById("email");
+// const password = document.getElementById("password");
+// const confirmPassword = document.getElementById("confirmPassword");
+// const checkBox = document.getElementById("checkbox");
+// const errorUsername = document.getElementById("errorUsername");
+// const errorEmail = document.getElementById("errorEmail");
+// const errorPassword = document.getElementById("errorPassword");
+// const errorConfirmPassword = document.getElementById("errorConfirmPassword");
+// const errorCheckBox = document.getElementById("errorCheckBox");
+// function isAllCharPresent(str) {
+//   for (let i = 0; i < str.length; i++) {
+//     if (!isNaN(str[i])) return true; //isNaN là không phải số,thêm ! để phủ định lại thì nó sẽ là số
+//   } //nếu là số thì trả về true.không thì false
+//   return false;
+// }
 
 //yêu cầu 1: Name: không được để trống, phải có trên 6 ký tự, 1 ký tự viết hoa
 //check toàn bộ logic về nó
-var checkName = false;
+// var checkName = false;
 
-function handleInput() {
-  if (username.value == " ") {
-    errorUsername.innerHTML = "Username can not empty";
-    errorUsername.style.color = "red";
-    checkName = false;
-  } else if (username.value < 6) {
-    errorUsername.innerHTML = "Please enter more than 6 characters";
-    errorUsername.style.color = "red";
-    checkName = false;
-  } else if (username.value === username.value.toLowerCase()) {
-    errorUsername.innerHTML = "Must contain a capital letter";
-    errorUsername.style.color = "red";
-    checkName = false;
-  } else {
-    errorUsername.innerHTML = " ";
-    checkName = true;
-  }
-}
+// function handleInput() {
+//   if (username.value == " ") {
+//     errorUsername.innerHTML = "Username can not empty";
+//     errorUsername.style.color = "red";
+//     checkName = false;
+//   } else if (username.value < 6) {
+//     errorUsername.innerHTML = "Please enter more than 6 characters";
+//     errorUsername.style.color = "red";
+//     checkName = false;
+//   } else if (username.value === username.value.toLowerCase()) {
+//     errorUsername.innerHTML = "Must contain a capital letter";
+//     errorUsername.style.color = "red";
+//     checkName = false;
+//   } else {
+//     errorUsername.innerHTML = " ";
+//     checkName = true;
+//   }
+// }
 //yêu cầu 2: Email: không được để trống, phải có trên 8 ký tự, 1 ký tự viết hoa, 1 ký tự viết thường
 //check toàn bộ logic về nó
-var checkMail = false;
-function handleInputEmail() {
-  if (email.value == 0) {
-    errorEmail.innerHTML = "Email can not empty";
-    errorEmail.style.color = "red";
-    checkMail = false;
-  } else if (email.value < 8) {
-    errorEmail.innerHTML = "Please enter more than 6 characters";
-    errorEmail.style.color = "red";
-    checkMail = false;
-  } else if (email.value === username.value.toLowerCase()) {
-    errorEmail.innerHTML = "Must contain a capital letter";
-    errorEmail.style.color = "red";
-    checkMail = false;
-  } else if (email.value !== email.value.toLowerCase()) {
-    errorEmail.innerHTML = "Must contain a lowercase letter";
-    errorEmail.style.color = "red";
-    checkMail = false;
-  } else {
-    errorEmail.innerHTML = " ";
-    checkMail = true;
-  }
-}
+// var checkMail = false;
+// function handleInputEmail() {
+//   if (email.value == 0) {
+//     errorEmail.innerHTML = "Email can not empty";
+//     errorEmail.style.color = "red";
+//     checkMail = false;
+//   } else if (email.value < 8) {
+//     errorEmail.innerHTML = "Please enter more than 6 characters";
+//     errorEmail.style.color = "red";
+//     checkMail = false;
+//   } else if (email.value === username.value.toLowerCase()) {
+//     errorEmail.innerHTML = "Must contain a capital letter";
+//     errorEmail.style.color = "red";
+//     checkMail = false;
+//   } else if (email.value !== email.value.toLowerCase()) {
+//     errorEmail.innerHTML = "Must contain a lowercase letter";
+//     errorEmail.style.color = "red";
+//     checkMail = false;
+//   } else {
+//     errorEmail.innerHTML = " ";
+//     checkMail = true;
+//   }
+// }
 //yêu cầu 3: Password: không được để trống, phải có trên 8 ký tự, 1 ký tự viết hoa, 1 ký tự viết thường và có 1 số trong mật khẩu
 //check toàn bộ logic về nó
-var checkPassword = false;
-function handleInputPassword() {
-  if (password.value == 0) {
-    errorPassword.innerHTML = "Password can not empty";
-    errorPassword.style.color = "red";
-    checkPassword = false;
-  } else if (password.value < 8) {
-    errorPassword.innerHTML = "Please enter more than 8 characters";
-    errorPassword.style.color = "red";
-    checkPassword = false;
-  } else if (password.value === password.value.toLowerCase()) {
-    errorPassword.innerHTML = "Must contain a capital letter";
-    errorPassword.style.color = "red";
-    checkPassword = false;
-  } else if (!isAllCharPresent(password.value)) {
-    errorPassword.innerHTML = "Must contain a number";
-    errorPassword.style.color = "red";
-    checkPassword = false;
-  } else {
-    errorPassword.innerHTML = " ";
-    checkPassword = true;
-  }
-}
+// var checkPassword = false;
+// function handleInputPassword() {
+//   if (password.value == 0) {
+//     errorPassword.innerHTML = "Password can not empty";
+//     errorPassword.style.color = "red";
+//     checkPassword = false;
+//   } else if (password.value < 8) {
+//     errorPassword.innerHTML = "Please enter more than 8 characters";
+//     errorPassword.style.color = "red";
+//     checkPassword = false;
+//   } else if (password.value === password.value.toLowerCase()) {
+//     errorPassword.innerHTML = "Must contain a capital letter";
+//     errorPassword.style.color = "red";
+//     checkPassword = false;
+//   } else if (!isAllCharPresent(password.value)) {
+//     errorPassword.innerHTML = "Must contain a number";
+//     errorPassword.style.color = "red";
+//     checkPassword = false;
+//   } else {
+//     errorPassword.innerHTML = " ";
+//     checkPassword = true;
+//   }
+// }
 //yêu cầu 4: Confirm password: không được để trống, phải có trên 8 ký tự, 1 ký tự viết hoa, 1 ký tự viết thường và có 1 số, confirm phải giống với mật khẩu create
 //check toàn bộ logic về nó
-var checkConfirm = false;
-function handleInputConfirmPassword() {
-  if (confirmPassword.value === "") {
-    errorConfirmPassword.innerHTML = "Repassword can not empty";
-    errorConfirmPassword.style.color = "red";
-    checkConfirm = false;
-  } else if (confirmPassword.value !== password.value) {
-    errorConfirmPassword.innerHTML = "Repassword must match password";
-    errorConfirmPassword.style.color = "red";
-    checkConfirm = false;
-  } else {
-    errorConfirmPassword.innerHTML = " ";
-    checkConfirm = true;
-  }
-}
+// var checkConfirm = false;
+// function handleInputConfirmPassword() {
+//   if (confirmPassword.value === "") {
+//     errorConfirmPassword.innerHTML = "Repassword can not empty";
+//     errorConfirmPassword.style.color = "red";
+//     checkConfirm = false;
+//   } else if (confirmPassword.value !== password.value) {
+//     errorConfirmPassword.innerHTML = "Repassword must match password";
+//     errorConfirmPassword.style.color = "red";
+//     checkConfirm = false;
+//   } else {
+//     errorConfirmPassword.innerHTML = " ";
+//     checkConfirm = true;
+//   }
+// }
 //yêu cầu 5: Phải tick vào checkbox, nếu không sẽ báo lỗi
 //check toàn bộ logic về nó
-var checkCheckBox = false;
-function handleCheckBox() {
-  if (checkBox.checked) {
-    errorCheckBox.innerHTML = " ";
-    checkCheckBox = true;
-  } else {
-    errorCheckBox.innerHTML = "Please tick the box";
-    errorCheckBox.style.color = "red";
-    checkCheckBox = false;
-  }
-}
+// var checkCheckBox = false;
+// function handleCheckBox() {
+//   if (checkBox.checked) {
+//     errorCheckBox.innerHTML = " ";
+//     checkCheckBox = true;
+//   } else {
+//     errorCheckBox.innerHTML = "Please tick the box";
+//     errorCheckBox.style.color = "red";
+//     checkCheckBox = false;
+//   }
+// }
 
 //yêu cầu 6: nagwn chặn reset sau mỗi lần submit
-const congTinh = document.getElementById("congtinh");
-const user = JSON.parse(localStorage.getItem("user")) || [];
-for (let i in user) {
-  congTinh.innerHTML += `<div> ${user[i].name} - ${user[i].email} </div>`;
-}
+// const congTinh = document.getElementById("congtinh");
+// const user = JSON.parse(localStorage.getItem("user")) || [];
+// for (let i in user) {
+//   congTinh.innerHTML += `<div> ${user[i].name} - ${user[i].email} </div>`;
+// }
 
-function handleSubmit(event) {
-  event.preventDefault();
-  if (checkName && checkMail && checkConfirm && checkCheckBox) {
-    const newUser = {
-      id: Math.floor(Math.random() * 1000),
-      username: username.value,
-      email: email.value,
-      password: password.value,
-    };
-    const index = user.findIndex((user) => user.email == email.value);
-    if (index === -1) {
-      user.push(newUser);
-      console.log(newUser);
-      localStorage.setItem("user", JSON.stringify(user));
-      FuiToast.success("You have successfully registered");
-    } else {
-      FuiToast.error("Email already exists in the system");
-    }
+// function handleSubmit(event) {
+//   event.preventDefault();
+//   if (checkName && checkMail && checkConfirm && checkCheckBox) {
+//     const newUser = {
+//       id: Math.floor(Math.random() * 1000),
+//       username: username.value,
+//       email: email.value,
+//       password: password.value,
+//     };
+//     const index = user.findIndex((user) => user.email == email.value);
+//     if (index === -1) {
+//       user.push(newUser);
+//       console.log(newUser);
+//       localStorage.setItem("user", JSON.stringify(user));
+//       FuiToast.success("You have successfully registered");
+//     } else {
+//       FuiToast.error("Email already exists in the system");
+//     }
     //cách 2:
     // let isChecked = false;
     // for(let i in user){
@@ -365,9 +365,9 @@ function handleSubmit(event) {
     // }
     // user.push(newUser)
     // console.log(newUser);
-    event.target.reset();
+    // event.target.reset();
     // window.location.href = "login.html"
-  } else {
-    FuiToast.warning("Please enter all information completely!!!");
-  }
-}
+//   } else {
+//     FuiToast.warning("Please enter all information completely!!!");
+//   }
+// }
