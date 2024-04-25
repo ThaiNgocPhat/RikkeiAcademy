@@ -46,8 +46,15 @@ function App() {
             color="white"
             text="Click Me!!!"/>
 
-            <Input />
-            <form onSubmit={handleSubmit}>
+            <Input
+                type={"abc"}
+                placeholder={"input"}
+                id={"input"}
+                value={"input"}
+                onChange={handlePasswordChange}/>
+
+
+                <form onSubmit={handleSubmit}>
                 <label htmlFor="userName">Username</label>
                 <input 
                 type="text" 
