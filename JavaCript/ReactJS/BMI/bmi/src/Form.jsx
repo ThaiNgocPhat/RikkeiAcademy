@@ -4,12 +4,12 @@ const Form = ({ calculateBMI }) => {
   const [height, setHeight] = useState('');
   const [weight, setWeight] = useState('');
 
-  const handleHeightChange = (e) => {
-    setHeight(e.target.value);
+  const handleHeightChange = (event) => {
+    setHeight(event.target.value);
   };
 
-  const handleWeightChange = (e) => {
-    setWeight(e.target.value);
+  const handleWeightChange = (event) => {
+    setWeight(event.target.value);
   };
 
   const handleCalculate = () => {
