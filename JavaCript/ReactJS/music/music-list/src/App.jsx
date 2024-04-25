@@ -3,16 +3,15 @@ import ListSongs from './component/ListSong';
 import InputSong from './component/InputSong';
 
 const App = () => {
-  const [songs, setSongs] = useState([]);
-
-  const addNewSong = (newSong) => {
-    setSongs([...songs, newSong]);
+  const [songs, setSongs] = useState([]);//tạo mảng rỗng để chứa danh sách bài hát
+  const addNewSong = (newSong) => { 
+    setSongs([...songs, newSong]); //thêm bài hát mới vào mảng
   };
 
   const handleDelete = (index) => {
-    const newSongs = [...songs];
-    newSongs.splice(index, 1);
-    setSongs(newSongs);
+     const newSong = [...songs];//tạo newSong để chứa mảng bài hát
+     newSong.splice(index,1)//xoá vị trí bài hát
+     setSongs(...newSong)//cập nhật lại giá trị
   };
 
   return (
