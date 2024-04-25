@@ -1,15 +1,12 @@
 import React from 'react';
 
-const ListSongs = ({ songs, handleDelete }) => { //truyền props cho ListSong từ App
+const ListSongs = ({ ListSong, handleDelete }) => { 
   return (
     <ul>
-      {songs.map((song, index) => ( //duyệt qua từng phần tử của mảng songs
-        //đặt key cho từng phần tử trong mảng
-        <li key={index}> 
-          {song} 
-          <button onClick={() => handleDelete(index)}>Xoá</button>
-        </li>//tạo nút xoá để xoá bài hát 
-      ))}
+      { ListSong?.map((song) => ( <li key = {song.id} > 
+      <span>{song.title}</span> 
+      <button onClick= {() => handleDelete(song.id)}>Delete</button>
+      </li>)) ?? "No songs found"}
     </ul>
   );
 };

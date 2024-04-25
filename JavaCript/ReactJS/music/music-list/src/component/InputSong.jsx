@@ -1,22 +1,13 @@
-import React, { useState } from 'react';
+import React from 'react';
 
-const InputSong = ({ addNewSong }) => { //truyền props từ App
-  const [inputValue, setInputValue] = useState('');//tạo useState với giá trị mặc định là rỗng
-
-  const handleSubmit = (event) => {
-    event.preventDefault();//ngăn chặn hành vi mặc định của form
-    addNewSong(inputValue);//gọi hàm addNewSong từ App.jsx
-    setInputValue('');//xóa giá trị của input
-  };
-
+const InputSong = ({ addNewSong }) => { 
   return (
-    <form onSubmit={handleSubmit}>
+    <form onSubmit={addNewSong}>
       <input
         type="text"
-        value={inputValue}//lấy giá trị từ inputValue
-        onChange={(event) => setInputValue(event.target.value)}//lấy giá trị từ ô input và gán vào inputValue
+        placeholder="Enter song"
       />
-      <button type="submit">Submit</button>
+      <button type="submit">Add new song</button>
     </form>
   );
 };

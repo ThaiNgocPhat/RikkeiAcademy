@@ -3,22 +3,28 @@ import ListSongs from './component/ListSong';
 import InputSong from './component/InputSong';
 
 const App = () => {
-  const [songs, setSongs] = useState([]);//tạo mảng rỗng để chứa danh sách bài hát
-  const addNewSong = (newSong) => { 
-    setSongs([...songs, newSong]); //thêm bài hát mới vào mảng
+  const [songs, setSongs] = useState([]);
+  const addNewSong = (event) => { 
+      event.preventDefault();
+      const newSong = {
+        id: Math.floor(Math.random()*1000),
+        title:event.target[0].value,
+      };
+      setSongs([...songs, newSong]);
+      event.target.reset();
   };
-
-  const handleDelete = (index) => {
-     const newSong = [...songs];//tạo newSong để chứa mảng bài hát
-     newSong.splice(index,1)//xoá vị trí bài hát
-     setSongs(...newSong)//cập nhật lại giá trị
-  };
+  const deleteSong = (id) => {
+    const index = songs.findIndex((songs) => songs.id == id)
+    console.log(index)
+    songs.splice(index, 1);
+    setSongs([...songs]);
+  }
 
   return (
     <div>
       <h1>Quản lý danh sách bài hát</h1>
       <InputSong addNewSong={addNewSong} />
-      <ListSongs songs={songs} handleDelete={handleDelete} />
+      <ListSongs ListSong = {songs} handleDelete= {deleteSong}/>
     </div>
   );
 };
