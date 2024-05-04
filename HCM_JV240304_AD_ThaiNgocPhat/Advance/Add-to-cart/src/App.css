@@ -104,11 +104,13 @@
   width: 480px;
   margin-left: 20px;
 }
+
 .cart-items-container p{
-  color: white;
+ color: white;
   padding: 10px;
+  border-top: 1px white solid;
+  width: 480px;
   margin-left: 20px;
-  border-top: 1px white solid ;
 }
 .cart-item p {
   color: white;
@@ -165,4 +167,14 @@
 .product span,
 .product p {
   animation: fadeIn 0.5s ease-in-out;
+}
+.trash-icon{
+  color: white;
+  cursor: pointer;
+  margin-left: 20px;
+}
+.quantity-trash{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }

@@ -74,11 +74,10 @@ function App() {
  const calculateCartTotal = () => {
    let totalPrice = 0;
    cartItems.forEach((item) => {
-     totalPrice += calculateTotalPrice(item);
+     totalPrice += item.price * item.quantity;
    });
    return totalPrice;
  };
-
 
   return (
     <div>
@@ -89,7 +88,7 @@ function App() {
           cartItems={cartItems}
           handleRemoveFromCart={handleRemoveFromCart}
           handleDecrease={handleDecrease}
-          handleIncrease={handleIncrease} 
+          handleIncrease={handleIncrease}
           calculateCartTotal={calculateCartTotal}
         />
       )}
