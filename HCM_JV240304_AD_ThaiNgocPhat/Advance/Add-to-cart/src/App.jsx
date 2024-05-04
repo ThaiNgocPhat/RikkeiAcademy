@@ -43,13 +43,17 @@ function App() {
   };
 
   const handleDecrease = (product) => {
-    const updatedCart = cartItems.map((item) => {
+    const updatedCart = cartItems.reduce((acc, item) => {
       if (item.id === product.id) {
         const newQuantity = item.quantity - 1;
-        return { ...item, quantity: newQuantity >= 0 ? newQuantity : 0 };
+        if (newQuantity > 0) {
+          acc.push({ ...item, quantity: newQuantity });
+        }
+      } else {
+        acc.push(item);
       }
-      return item;
-    });
+      return acc;
+    }, []);
     updateCart(updatedCart);
   };
 
@@ -67,9 +71,14 @@ function App() {
     setShowCart(!showCart);
   };
 
-  const calculateTotalPrice = (item) => {
-    return item.price * item.quantity;
-  };
+ const calculateCartTotal = () => {
+   let totalPrice = 0;
+   cartItems.forEach((item) => {
+     totalPrice += calculateTotalPrice(item);
+   });
+   return totalPrice;
+ };
+
 
   return (
     <div>
@@ -80,8 +89,8 @@ function App() {
           cartItems={cartItems}
           handleRemoveFromCart={handleRemoveFromCart}
           handleDecrease={handleDecrease}
-          handleIncrease={handleIncrease}
-          calculateTotalPrice={calculateTotalPrice}
+          handleIncrease={handleIncrease} 
+          calculateCartTotal={calculateCartTotal}
         />
       )}
     </div>

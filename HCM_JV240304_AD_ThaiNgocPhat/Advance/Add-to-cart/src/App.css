@@ -92,10 +92,23 @@
   background-color: black;
   border-radius: 10px;
 }
-
+.cart-items-container span{
+  color: white;
+  text-align: center;
+  padding: 20px ;
+}
 .cart-items-container h2 {
   color: white;
-  padding: 10px 20px;
+  padding: 10px;
+  border-bottom: 1px white solid;
+  width: 480px;
+  margin-left: 20px;
+}
+.cart-items-container p{
+  color: white;
+  padding: 10px;
+  margin-left: 20px;
+  border-top: 1px white solid ;
 }
 .cart-item p {
   color: white;
