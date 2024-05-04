@@ -10,10 +10,10 @@ export default function Header({ cartCount, toggleCart }) {
           <a href="#">Trang Chủ</a>
           <a href="#">Danh sách sản phẩm</a>
         </div>
-        <div onClick={toggleCart} className="shoping">
-          <p>
+        <div className="shoping">
+          <button onClick={toggleCart}>
             <FontAwesomeIcon icon={faCartShopping} />
-          </p>
+          </button>
           <span>{cartCount}</span>
         </div>
       </div>

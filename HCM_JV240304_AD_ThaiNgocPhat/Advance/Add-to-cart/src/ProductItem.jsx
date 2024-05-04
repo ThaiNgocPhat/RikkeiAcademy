@@ -11,7 +11,7 @@ export default function ProductItem({ product, handleAddToCart }) {
     <div className="product">
       <img src={product.image} alt={product.name} />
       <span>{product.name}</span>
-      <p>{product.price}đ&nbsp;</p>
+      <p>{product.price}đ</p>
       <button onClick={addToCart}>
         <FontAwesomeIcon icon={faCartPlus} /> Thêm vào giỏ hàng
       </button>

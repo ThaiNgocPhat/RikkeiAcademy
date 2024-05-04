@@ -1,6 +1,6 @@
 import React from "react";
 
-export default function CartItems({ cartItems, handleRemoveFromCart, handleDecrease, handleIncrease }) {
+export default function CartItems({ cartItems, handleRemoveFromCart, handleDecrease, handleIncrease, calculateTotalPrice }) {
 
   return (
     <div className="cart-items-container">
@@ -17,7 +17,7 @@ export default function CartItems({ cartItems, handleRemoveFromCart, handleDecre
               <button onClick={() => handleRemoveFromCart(item)}>Xoá</button>
             </div>
           </div>
-          <p>Total price: $ {item.price * item.quantity}</p>
+          <p>Total price: $ {calculateTotalPrice(item)}</p>
         </div>
       ))}
     </div>
