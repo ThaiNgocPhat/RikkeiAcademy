@@ -25,12 +25,12 @@ function ListWork({ tasks, updateTask, deleteTask, toggleCompleted }) {
             >
               Update
             </button>
-            <button onClick={() => deleteTask(index)}>Xoá</button>
+            <button onClick={() => deleteTask(index)}>Delete</button>
           </div>
         ))}
       </div>
       <p id="taskCount">
-        Số công việc đã làm: {tasks.filter((task) => task.completed).length}/
+        Work done: {tasks.filter((task) => task.completed).length}/
         {tasks.length}
       </p>
     </div>

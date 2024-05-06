@@ -1,21 +1,59 @@
-import React from 'react'
-import Test from './Test';
+import React, { useState } from "react";
+import Header from "./Header";
+import ListProducts from "./ListProducts";
+import CartItems from "./CartItem";
+
+
+import "./App.css";
 
 function App() {
-  let a = 5;
+  const [cartCount, setCartCount] = useState(0);
+  const [cartItems, setCartItems] = useState([]);
+
+  const handleAddToCart = (product) => {
+    setCartCount(cartCount + 1);
+    setCartItems([...cartItems, product]);
+  };
+
+  const handleRemoveFromCart = (product) => {
+    setCartCount(cartCount - 1);
+    const updatedCartItems = cartItems.filter((item) => item.id !== product.id);
+    setCartItems(updatedCartItems);
+  };
+  const handleDecrease = (product) => {
+    const updatedCartItems = cartItems.map((item) => {
+      if (item.id === product.id) {
+        return { ...item, quantity: item.quantity - 1 };
+      }
+      return item;
+    });
+    setCartItems(updatedCartItems);
+  }
+  const handleIncrease = (product) => { 
+    const updatedCartItems = cartItems.map((item) => {
+      if (item.id === product.id) {
+        return { ...item, quantity: item.quantity + 1 };
+      }
+      return item;
+    });
+    setCartItems(updatedCartItems);
+  }
   return (
-    <>
-      ComApp Value a: {a}
-      <Test 
-        number={a} 
-        number2={a + 5}  
-        xyz={{ 
-          id: 1,
-          name: 'John'
-        }} 
+    <div>
+      <Header cartCount={cartCount}
         />
-    </>
+      <ListProducts handleAddToCart={handleAddToCart}
+      />
+      <CartItems
+        cartItems={cartItems}
+        handleRemoveFromCart={handleRemoveFromCart}
+        handleDecrease = {handleDecrease} 
+        handleIncrease = {handleIncrease}
+      />
+    </div>
   );
 }
 
-export default App
+export default App;
+
+

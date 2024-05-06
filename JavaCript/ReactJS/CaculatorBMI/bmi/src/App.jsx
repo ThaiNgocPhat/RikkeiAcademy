@@ -5,9 +5,9 @@ function App() {
   const [result, setResult] = useState('');
   const handleSubmit = (event) => {
     event.preventDefault();
-    const weight = event.target[0].value;
-    const height = event.target[1].value;
-    const bmi = weight / (height * height);
+    const weight = event.target[0].value;//giá trị ô input của weight
+    const height = event.target[1].value;//giá trị ô input của height
+    const bmi = weight / (height * height);//phép tính BMI
     if(bmi < 18.5){
       setResult('Gầy')
     }else if(bmi >= 18.5 && bmi <= 24.9){
@@ -21,7 +21,7 @@ function App() {
     }else{
       setResult('Béo phì độ 3')
     }
-    event.target.reset;
+    event.target.reset;//reset lại form
   }
   return (
     <>

@@ -1,44 +1,31 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Management User</title>
-    <link rel="shortcut icon" href="/images/logo_real.png" type="image/png" />
-    <link rel="stylesheet" href="./css/user.css">
-    <!-- GOOGLE FONT -->
-    <link rel="preconnect" href="https://fonts.gstatic.com" />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.4.2/css/all.css">
-    <link
-      href="https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="./css/reset.css" />
-    <link rel="stylesheet" href="./css/index.css" />
-  </head>
-
-  <body>
-    <div class="wrapper">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Management User</title>
+  <link rel="shortcut icon" href="/images/logo_real.png" type="image/png">
+  <link rel="stylesheet" href="./css/user.css">
+  <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.4.2/css/all.css">
+  <link rel="stylesheet" href="https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css">
+  <link rel="stylesheet" href="./css/reset.css">
+  <link rel="stylesheet" href="./css/index.css">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="wrapper">
     <!-- SIDEBAR -->
     <div class="sidebar">
       <div class="sidebar-logo">
-        <img srcset="./images/logo_real.png 2x" alt="Comapny logo" />
+        <img srcset="./images/logo_real.png 2x" alt="Company logo">
         <div class="sidebar-close" id="sidebar-close">
           <i class="bx bx-left-arrow-alt"></i>
         </div>
       </div>
       <div class="sidebar-user">
         <div class="sidebar-user-info">
-          <img
-            src="https://vectorified.com/images/admin-icon-png-2.png"
-            alt="User picture"
-            class="profile-image"
-          />
+          <img src="https://vectorified.com/images/admin-icon-png-2.png" alt="User picture" class="profile-image">
           <div class="sidebar-user-name">Admin</div>
         </div>
         <a class="btn btn-outline" href="login.html">
@@ -47,25 +34,9 @@
       </div>
       <!-- SIDEBAR MENU -->
       <ul class="sidebar-menu">
-        <li>
-          <a href="#" class="active">
-            <i class="bx bx-home"></i>
-            <span>Homepage</span>
-          </a>
-        </li>
-        <li>
-          <a href="product.html">
-            <i class="bx bx-shopping-bag"></i>
-            <span>Product</span>
-          </a>
-        </li>
-        <li>
-          <a href="user.html">
-            <i class="bx bx-chart"></i>
-            <span>User</span>
-          </a>
-        </li>
-
+        <li><a href="#" class="active"><i class="bx bx-home"></i><span>Homepage</span></a></li>
+        <li><a href="product.html"><i class="bx bx-shopping-bag"></i><span>Product</span></a></li>
+        <li><a href="user.html"><i class="bx bx-chart"></i><span>User</span></a></li>
         <li class="sidebar-submenu">
           <a href="#" class="sidebar-menu-dropdown">
             <i class="bx bx-cog"></i>
@@ -73,12 +44,7 @@
             <div class="dropdown-icon"></div>
           </a>
           <ul class="sidebar-menu sidebar-menu-dropdown-content">
-            <li>
-              <a href="#" class="darkmode-toggle" id="darkmode-toggle">
-                darkmode
-                <span class="darkmode-switch"></span>
-              </a>
-            </li>
+            <li><a href="#" class="darkmode-toggle" id="darkmode-toggle">darkmode<span class="darkmode-switch"></span></a></li>
           </ul>
         </li>
       </ul>
@@ -95,35 +61,32 @@
         <div class="main-title">dashboard</div>
       </div>
 
-        <div class="row">
-          <div class="col-12">
-            <!-- ORDERS TABLE -->
-            <div class="box">
-              <div class="box-header">Management User</div>
-              <div class="search-section">
-                <input type="text" name="search" id="search" placeholder="Search..." />
-                <button id="search-btn" onclick="handleSearch()">
-                  <i class="bx bx-search"></i>
-                </button>
-              </div>
-              <div class="box-body overflow-scroll">
-                <table>
-                  <thead>
-                    <tr>
-                      <th>ID</th>
-                      <th>Name</th>
-                      <th>Email</th>
-                      <th>Password</th>
-                      <th>Status</th>
-                      <th>Delete</th>
-                    </tr>
-                  </thead>
-                  <tbody id="tbody1"></tbody>
-                </table>
-              </div>
+      <div class="row">
+        <div class="col-12">
+          <!-- ORDERS TABLE -->
+          <div class="box">
+            <div class="box-header">Management User</div>
+            <div class="search-section">
+              <input type="text" name="search" id="search" placeholder="Search...">
+              <button id="search-btn" onclick="handleSearch()"><i class="bx bx-search"></i></button>
             </div>
-            <!-- END ORDERS TABLE -->
+            <div class="box-body overflow-scroll">
+              <table>
+                <thead>
+                  <tr>
+                    <th>ID</th>
+                    <th>Name</th>
+                    <th>Email</th>
+                    <th>Password</th>
+                    <th>Status</th>
+                    <th>Delete</th>
+                  </tr>
+                </thead>
+                <tbody id="tbody1"></tbody>
+              </table>
+            </div>
           </div>
+          <!-- END ORDERS TABLE -->
         </div>
       </div>
     </div>
@@ -134,6 +97,6 @@
     <!-- APP JS -->
     <script src="./js/index.js"></script>
     <script src="./js/user.js"></script>
-    </div>
-  </body>
+  </div>
+</body>
 </html>

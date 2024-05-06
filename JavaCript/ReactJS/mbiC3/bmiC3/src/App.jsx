@@ -4,13 +4,13 @@ import Form from './Form'
 
 function App() {
   const [result, setResult] = useState('')
- const [valueWeight, setValueWeight] = useState('')
-  const [valueHeigth, setValueHeigth] = useState('')
+  const [valueWeight, setValueWeight] = useState('')//giá trị ô input của weight
+  const [valueHeigth, setValueHeigth] = useState('')//giá trị ô input của height
   const handleWeightChange = (e) => {
-    setValueWeight(e.target.value)
+    setValueWeight(e.target.value)//lấy giá trị của ô input weight
   }
   const handleHeigthChange = (e) => {
-    setValueHeigth(e.target.value)
+    setValueHeigth(e.target.value)//lấy giá trị của ô input height
   }
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -36,7 +36,7 @@ function App() {
           valueWeight={valueWeight}
           handleWeightChange={handleWeightChange}
           handleHeigthChange={handleHeigthChange}
-          handleSubmit={handleSubmit}      
+          handleSubmit={handleSubmit}//truyền props từ Forn sang App      
     />
     <p>Ket qua: {result}</p>
     </>
