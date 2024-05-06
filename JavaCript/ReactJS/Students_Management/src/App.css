@@ -1,0 +1,157 @@
+.information-student {
+  width: 500px;
+  margin: 0 auto;
+  padding: 20px;
+  border-radius: 5px;
+  background-color: #f9f9f9;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+form{
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+.student label {
+  display: inline-block;
+  width: 100px;
+  font-weight: bold;
+}
+
+.student input[type="text"],
+.student input[type="date"] {
+  width: 350px;
+  padding: 5px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+}
+
+.student input[type="text"]:focus,
+.student input[type="date"]:focus {
+  outline: none;
+  border-color: #007bff;
+}
+
+button[type="submit"] {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 3px;
+  padding: 10px 20px;
+  cursor: pointer;
+}
+
+button[type="submit"]:hover {
+  background-color: #0056b3;
+}
+
+.list-student {
+  width: 80%;
+  margin: 20px auto;
+}
+
+.list-student h1 {
+  margin-bottom: 20px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+table th, table td {
+  padding: 10px;
+  border: 1px solid #ccc;
+}
+
+table th {
+  background-color: #007bff;
+  color: #fff;
+}
+
+table td {
+  text-align: center;
+}
+
+table td button {
+  padding: 5px 10px;
+  margin-right: 5px;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+table td button:hover {
+  background-color: #0056b3;
+}
+
+
+.search-student {
+  width: 80%;
+  margin: 20px auto;
+}
+
+.search-student form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+
+.search-student input[type="text"] {
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+}
+
+.search-student input[type="text"].search {
+  width: 200px;
+}
+
+.search-student input[type="text"].sort {
+  width: 150px;
+}
+
+.search-student button {
+  padding: 8px 16px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+.search-student button:hover {
+  background-color: #0056b3;
+}
+
+.view-btn {
+  padding: 5px 10px;
+  background-color: #ff4d4d;
+  color: #fff;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+.edit-btn {
+  padding: 5px 10px;
+  background-color: #ff9933;
+  color: #fff;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+.delete-btn {
+  padding: 5px 10px;
+  background-color: #339933; 
+  color: #fff;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+/* Hover styles */
+.view-btn:hover, .edit-btn:hover, .delete-btn:hover {
+  opacity: 0.8;
+}
