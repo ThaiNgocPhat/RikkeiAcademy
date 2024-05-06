@@ -92,6 +92,7 @@ table td button:hover {
 
 .search-student form {
   display: flex;
+  flex-direction: row;
   justify-content: center;
   align-items: center;
   gap: 20px;

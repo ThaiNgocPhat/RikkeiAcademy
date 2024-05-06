@@ -12,10 +12,7 @@ export default function SearchStudent({handleSubmit}) {
                 className='search'
                 />
                 <button>Tìm kiếm</button>
-                <input type="text" 
-                placeholder='Sắp xếp'
-                className='sort'
-                />
+                <button>Sắp xếp</button>
             </form>
         </div>
     </>
