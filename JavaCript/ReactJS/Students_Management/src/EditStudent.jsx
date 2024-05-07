@@ -5,7 +5,7 @@ function EditStudent({ editingStudent, handleSave, handleCancel }) {
 
   const handleChange = (event) => {
     const { name, value } = event.target;
-    setEditedStudent({
+    setEditedStudent({ 
       ...editedStudent,
       [name]: value,
     });

@@ -27,7 +27,7 @@ export default function SearchStudent({
           <form onSubmit={handleSubmit}>
             <div className="student">
               <label htmlFor="student-id">Mã sinh viên</label>
-              <input type="text" id="student-id" />
+              <input type="text" id="student-id" disabled/>
             </div>
             <div className="student">
               <label htmlFor="student-name">Tên sinh viên</label>

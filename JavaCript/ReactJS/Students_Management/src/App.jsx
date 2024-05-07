@@ -23,7 +23,7 @@ function App() {
 
   const handleAdd = (studentData) => {
     const newStudent = {
-      id: studentData.id,
+      id: Math.floor(Math.random() * 1000),
       name: studentData.name,
       age: studentData.age,
       gender: studentData.gender,
@@ -35,6 +35,8 @@ function App() {
   };
 
   const handleDelete = (index) => {
+    const studentToDelete = students[index];
+    if(!window.confirm(`Bạn có chắc chắn muốn xóa sinh viên ${studentToDelete.name}?`)) return;
     const newStudents = students.filter((student, i) => i !== index);
     setStudents(newStudents);
     localStorage.setItem("students", JSON.stringify(newStudents));
@@ -63,6 +65,7 @@ function App() {
     );
     setStudents(updatedStudents);
     localStorage.setItem("students", JSON.stringify(updatedStudents));
+    alert("Cập nhật thông tin thành công!");
     setEditingStudent(null);
   };
 
