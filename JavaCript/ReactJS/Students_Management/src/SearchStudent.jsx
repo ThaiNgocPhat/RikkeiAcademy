@@ -5,29 +5,32 @@ export default function SearchStudent({
   toggleAddStudentForm,
   handleSubmit,
   handleAdd,
-  onSubmit, onSort, setSearchValue
+  onSort,
+  handleSearchSubmit,
 }) {
   return (
     <div className="search-student">
-       <div className="add-new">
-         <button onClick={toggleAddStudentForm}>Thêm mới sinh viên</button>
-        <form onSubmit={onSubmit}>
+      <div className="add-new">
+        <button onClick={toggleAddStudentForm}>Thêm mới sinh viên</button>
+        <form onSubmit={handleSearchSubmit}>
           <input
-            type="text"
-            placeholder="Nhập mã số hoặc tên sinh viên"
-            className="search"
-            onChange={(event) => setSearchValue(event.target.value)}
+            type="search"
+            name="search"
+            id="search"
+            placeholder="Search"
           />
           <button type="submit">Tìm kiếm</button>
-          <button type="button" onClick={onSort}>Sắp xếp</button>
+          <button type="button" onClick={onSort}>
+            Sắp xếp
+          </button>
         </form>
-       </div>
+      </div>
       {showAddForm && (
         <div className="add-student">
           <form onSubmit={handleSubmit}>
             <div className="student">
               <label htmlFor="student-id">Mã sinh viên</label>
-              <input type="text" id="student-id" disabled/>
+              <input type="text" id="student-id" disabled />
             </div>
             <div className="student">
               <label htmlFor="student-name">Tên sinh viên</label>

@@ -1,0 +1,8 @@
+  const handleSearchSubmit = (event) => {
+    event.preventDefault();
+    const searchValue = search.value.toLowerCase();
+    const searchResults = students.filter((student) =>
+       student.name.toLowerCase().includes(searchValue)
+       );
+       setStudents(searchResults);
+  };

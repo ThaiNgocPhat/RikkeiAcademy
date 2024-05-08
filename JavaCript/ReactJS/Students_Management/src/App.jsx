@@ -10,16 +10,35 @@ function App() {
     JSON.parse(localStorage.getItem("students")) || []
   );
   const [editingStudent, setEditingStudent] = useState(null);
-  const [searchValue, setSearchValue] = useState("");
 
   const toggleAddStudentForm = () => {
     setShowAddForm(!showAddForm);
   };
-
   const handleSubmit = (event) => {
     event.preventDefault();
     event.target.reset();
   };
+  // const handleSort = () => {
+  //   const sortedStudents = [...students].sort((a, b) =>
+  //     (a.name).localeCompare(b.name)
+  //   );
+  //   setStudents(sortedStudents);
+  // };
+  const [isCheck, setIsCheck] = useState(false);
+  const handleSort = () => {
+    setIsCheck(!isCheck);
+    if(!isCheck){
+      const sortedStudents = [...students].sort((a, b) => {
+        if(a.name < b.name) return -1;
+        if(a.name > b.name) return 1;
+        return 0;
+      });
+      setStudents(sortedStudents);
+    }else{
+      const studentSortBegin = JSON.parse(localStorage.getItem("students"));
+      setStudents(studentSortBegin);
+    }
+  } 
 
   const handleAdd = (studentData) => {
     const newStudent = {
@@ -33,7 +52,43 @@ function App() {
     localStorage.setItem("students", JSON.stringify(updatedStudents));
     toggleAddStudentForm();
   };
+  //Search Student
+  const handleSearchSubmit = (event) => {
+    event.preventDefault();
+    const searchFilter = event.target[0].value;
+    if(searchFilter === ""){
+      const studentSearchBegin = JSON.parse(localStorage.getItem("students"));
+      setStudents(studentSearchBegin);
+    }else{
+      const searchResult = students.filter((student) =>
+      student.name.toLowerCase().includes(searchFilter.toLowerCase())
+    );
+    setStudents(searchResult);
+    }
+  };
+ 
+    const handleSave = (editedStudent) => {
+    const updatedStudents = students.map((student) =>
+      student.id === editedStudent.id ? editedStudent : student
+    );
+    setStudents(updatedStudents);
+    localStorage.setItem("students", JSON.stringify(updatedStudents));
+    alert("Cập nhật thông tin thành công!");
+    setEditingStudent(null);
+  };
 
+  const handleCancel = () => {
+    setEditingStudent(null);
+  };
+
+  const handleChange = (event) => {
+    const { name, value } = event.target;
+    setEditingStudent({
+      ...editingStudent,
+      [name]: value,
+    });
+  };
+  //List Student
   const handleDelete = (index) => {
     const studentToDelete = students[index];
     if(!window.confirm(`Bạn có chắc chắn muốn xóa sinh viên ${studentToDelete.name}?`)) return;
@@ -58,36 +113,6 @@ function App() {
 
     alert(infoString);
   };
-
-  const handleSave = (editedStudent) => {
-    const updatedStudents = students.map((student) =>
-      student.id === editedStudent.id ? editedStudent : student
-    );
-    setStudents(updatedStudents);
-    localStorage.setItem("students", JSON.stringify(updatedStudents));
-    alert("Cập nhật thông tin thành công!");
-    setEditingStudent(null);
-  };
-
-  const handleCancel = () => {
-    setEditingStudent(null);
-  };
-
-  const handleChange = (event) => {
-    const { name, value } = event.target;
-    setEditingStudent({
-      ...editingStudent,
-      [name]: value,
-    });
-  };
-
-  const handleSort = () => {
-    const sortedStudents = [...students].sort((a, b) =>
-      a.name.localeCompare(b.name)
-    );
-    setStudents(sortedStudents);
-  };
-
   return (
     <div className="App">
       <SearchStudent
@@ -95,9 +120,8 @@ function App() {
         toggleAddStudentForm={toggleAddStudentForm}
         handleSubmit={handleSubmit}
         handleAdd={handleAdd}
-        onSubmit={handleSubmit}
+        handleSearchSubmit={handleSearchSubmit}
         onSort={handleSort}
-        setSearchValue={setSearchValue}
       />
       <ListStudent
         students={students}
