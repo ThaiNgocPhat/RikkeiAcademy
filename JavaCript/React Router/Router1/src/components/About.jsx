@@ -1,15 +1,39 @@
 import React from 'react'
+import { useNavigate } from 'react-router-dom';
 
-export default function About() { 
+export default function About() {
+const About = [
+  {
+    id: 1,
+    name: "About 1",
+    description: "About 1 description"
+  },
+  {
+    id: 2,
+    name: "About 2",
+    description: "About 2 description"
+  },
+  {
+    id: 3,
+    name: "About 3",
+    description: "About 3 description"
+  }
+];
+  const navigate = useNavigate();
+  const handleDetailPage = (about) => {
+    navigate(`/about/${about.id}`);
+  }
   return (
     <>
      <h2 className="mb-4">About Page</h2>
-     <p>
-      Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididuntut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-     </p>
-     <p>
-      Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. 
-      </p>
+     <ul>
+      {About.map((about) => (
+        <li key={about.id}>
+          {about.name}
+          <button onClick={() => handleDetailPage(about)}>Click Me !!!</button>
+        </li>
+      ))}
+     </ul>
     </>
   )
 };

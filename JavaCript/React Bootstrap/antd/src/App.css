@@ -1,0 +1,40 @@
+.wrapper{
+  width: 1440px;
+  margin: 0 auto;
+}
+.header{
+    margin-left: 50px;
+    margin-top: 20px;
+    padding: 20px;
+    background-color: black;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+.header a{
+    color: white;
+    text-decoration: none;
+    margin-right: 20px;
+    font-size: 20px;
+}
+.icon{
+  color: white;
+}
+.badge{
+  position: absolute;
+  left: 400px;
+  top: 29px;
+  background-color: red;
+}
+.breadcrumb{
+  margin-left: 35px;
+  margin-top: 20px;
+}
+.antd-card{
+  width: 300px;
+
+}
+.antd-card img{
+  width: 300px;
+  height: 200px;
+}

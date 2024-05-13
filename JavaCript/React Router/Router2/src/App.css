@@ -3972,6 +3972,7 @@ textarea.form-control-lg {
   .navbar-expand-lg .navbar-collapse {
     display: flex !important;
     flex-basis: auto;
+    background-color: black;
   }
   .navbar-expand-lg .navbar-toggler {
     display: none;

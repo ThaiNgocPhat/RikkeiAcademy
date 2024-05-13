@@ -1,0 +1,29 @@
+{
+  "login": [
+    {
+      "id": 1,
+      "name": "user1",
+      "password": "password123"
+    },
+    {
+      "id": 2,
+      "name": "user2",
+      "password": "password123"
+    },
+    {
+      "id": 3,
+      "name": "user3",
+      "password": "password123"
+    },
+    {
+      "id": "3694",
+      "username": "user1",
+      "password": "password123"
+    },
+    {
+      "id": "d8fb",
+      "username": "user2",
+      "password": "password123"
+    }
+  ]
+}
