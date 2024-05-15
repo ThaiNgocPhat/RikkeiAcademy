@@ -7,6 +7,7 @@ import "./App.css";
 import AddStudent from "./components/AddSudent";
 
 export default function App() {
+  const student = JSON.parse(localStorage.getItem("student")) || [];
   const [isShow, setIsShow] = useState(false);
   const [isEdit, setIsEdit] = useState(false);
   const [isDelete, setIsDelete] = useState(false);
@@ -167,9 +168,6 @@ const handleSearchSubmit = (event) => {
 }
 
 
-
-
-  const student = JSON.parse(localStorage.getItem("student")) || [];
   return (
     <>
       <Header
