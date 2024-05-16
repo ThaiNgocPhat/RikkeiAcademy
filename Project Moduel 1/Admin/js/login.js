@@ -9,10 +9,7 @@ for (let i = 0; i < input_fields.length; i++) {
     }
   });
 }
-//xử lý đăng nhập.bắt buộc đăng nhập đúng tài khoản và mật khẩu mới cho phép đăng nhập
-//username: admin
-//password: 123456
-//nếu không đúng.không cho đăng nhập và hiển thị alert thông báo
+
 let login = document.getElementById("login");
 document.getElementById("loginForm").addEventListener("submit", function(event) {
   event.preventDefault();

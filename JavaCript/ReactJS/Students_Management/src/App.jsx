@@ -18,12 +18,6 @@ function App() {
     event.preventDefault();
     event.target.reset();
   };
-  // const handleSort = () => {
-  //   const sortedStudents = [...students].sort((a, b) =>
-  //     (a.name).localeCompare(b.name)
-  //   );
-  //   setStudents(sortedStudents);
-  // };
   const [isCheck, setIsCheck] = useState(false);
   const handleSort = () => {
     setIsCheck(!isCheck);

@@ -72,8 +72,8 @@ export default function App() {
 
 
   const handleAddStudent = () => {
-    setIsShow((prev) => {
-      if (!prev) {
+    setIsShow((prev) => { // hiển thị form
+      if (!prev) { // nếu form đang mở thì các form còn lại đóng
         setIsEdit(false);
         setIsDelete(false);
       }
