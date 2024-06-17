@@ -16,7 +16,7 @@ function ListStudent({ students, handleDelete, handleEdit, handleView }) {
           </tr>
         </thead>
         <tbody>
-          {students.map((student, index) => (
+          {students?.map((student, index) => (
             <tr key={index}>
               <td>{index + 1}</td>
               <td>{student.id}</td>

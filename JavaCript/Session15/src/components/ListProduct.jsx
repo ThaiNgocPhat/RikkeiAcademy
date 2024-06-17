@@ -1,7 +1,14 @@
-import React from 'react';
-
-export default function ListProduct({handleIncreaseQuantity, quantities, handleDecreaseQuantity,MenuFood,
-handleBuyNow, handleQuantityChange}) {
+import React, {useState} from 'react';
+import { useSelector } from 'react-redux';
+import { useDispatch } from 'react-redux';
+import { cartAction } from '../stores/slices/cartslice';
+export default function ListProduct({handleIncreaseQuantity, quantities, handleDecreaseQuantity,MenuFood}) {
+    const [countCart, setCountCart] = useState(0);
+    const cartStore = useSelector((store) => {
+        return store.cartStore
+    })
+    const dispatch = useDispatch();
+    console.log(cartStore)
     return (
         <div id='listProduct' className='container'>
             <h1>List Product</h1>
@@ -15,19 +22,17 @@ handleBuyNow, handleQuantityChange}) {
                         <p>{item.description}</p>
                     </div>
                     <div className='item-price-quantity'>
-                        <div className=''>
-                            <button onClick={() => handleIncreaseQuantity(item.id)}>+</button>
-                            <input type="text" placeholder='Quantity' 
-                            value={quantities[item.id]} 
-                            onChange={(e) => handleQuantityChange(item.id, e.target.value)}
-                            />
-                            <button onClick={() => handleDecreaseQuantity(item.id)}>-</button>
-                        </div>
                         <div className='btn'>
                             <p>
                             {item.price} USD
                         </p>
-                        <button onClick={() => handleBuyNow(item.id)}>Buy Now</button>
+                        <button onClick={() => dispatch(cartAction.addToCart({
+                            id: Math.floor(Math.random()*10000),
+                            name: item.name,
+                            price: item.price,
+                            quantity: quantities[item.id],
+                        }))}>Buy Now</button>
+                        <div>{cartStore.item.length}</div>
                         </div>
                     </div>
                 </div>

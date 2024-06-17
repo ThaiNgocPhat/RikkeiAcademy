@@ -3,7 +3,6 @@ import ListWork from "./component/ListWork";
 import InputWork from "./component/InputWork";
 
 function App() {
-  // Initialize tasks with stored tasks or an empty array if there are none
   const [tasks, setTasks] = useState(() => {
     const storedTasks = localStorage.getItem("tasks");
     return storedTasks ? JSON.parse(storedTasks) : [];

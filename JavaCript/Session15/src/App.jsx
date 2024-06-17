@@ -52,25 +52,19 @@ export default function App() {
           alert('Please enter a valid quantity');
       }
   };
-  const handleQuantityChange = (id, value) => {
-    setQuantities(prevQuantities => ({
-        ...prevQuantities,
-        [id]: Number(value)
-    }));
-};
   const handleRemoveFromCart = (id) => {
-    console.log(id)
-    const index = MenuFood.findIndex(item => item.id == id);
-    MenuFood.splice(index, 1);
-    setMenuFood([...MenuFood]);
-  }
+    setQuantities(prevQuantities => {
+        const newQuantities = {...prevQuantities};
+        delete newQuantities[id];
+        return newQuantities;
+    });
+ }
     return (
     <>
     <h1>MiniProject - Shopping Cart ReactJS</h1>
     <ListProduct 
     handleIncreaseQuantity = {handleIncreaseQuantity}
     handleDecreaseQuantity = {handleDecreaseQuantity}
-    handleQuantityChange = {handleQuantityChange}
     handleBuyNow = {handleBuyNow}
     quantities = {quantities}
     MenuFood = {MenuFood}
