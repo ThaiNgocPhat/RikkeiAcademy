@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="c24240ec-5096-49e0-9c6e-ce90850bb5c9" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/../../OOPSynthesis/src/Book.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../OOPSynthesis/src/Category.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../OOPSynthesis/src/Library.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../OOPSynthesis/src/Main.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Refactoring/src/TennisGame.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Refactoring/src/TennisGameTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Session9/Exercise1/src/Circle.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Session9/Exercise1/src/Resizable.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Session9/Exercise2/src/Colorable.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Session9/Exercise2/src/Square.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Session9/Exercise3/src/Colorable.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Session9/Exercise3/src/Square.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Session9/Exercise4/src/Rikkei/Academy/Circle.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Session9/Exercise4/src/Rikkei/Academy/Rectangle.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Session9/Exercise4/src/Rikkei/Academy/Shape.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Bootrap/RekkeiFashtion/Picture/banner1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Bootrap/RekkeiFashtion/Picture/collection-item1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Bootrap/RekkeiFashtion/Picture/collection-item2.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Bootrap/RekkeiFashtion/Picture/collection-item3.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Bootrap/RekkeiFashtion/Picture/product-item1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Bootrap/RekkeiFashtion/Picture/product-item2.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Bootrap/RekkeiFashtion/Picture/product-item3.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Bootrap/RekkeiFashtion/Picture/product-item4.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Bootrap/RekkeiFashtion/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Bootrap/RekkeiFashtion/style.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Bootrap/Restaurant/hinh/about-img.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Bootrap/Restaurant/hinh/hero-bg.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Bootrap/Restaurant/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Bootrap/Restaurant/style.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../HCM_JS220313_BS_ThaiNgocPhat" beforeDir="false" afterPath="$PROJECT_DIR$/../../../HCM_JS220313_BS_ThaiNgocPhat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Session4" beforeDir="false" afterPath="$PROJECT_DIR$/../../Session4" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Session6" beforeDir="false" afterPath="$PROJECT_DIR$/../../Session6" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Session8" beforeDir="false" afterPath="$PROJECT_DIR$/../../Session8" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../JavaCript/HCM-JAVA-04-2024-ontap" beforeDir="false" afterPath="$PROJECT_DIR$/../../../JavaCript/HCM-JAVA-04-2024-ontap" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../JavaCript/Project Test/Session13-React-Redux-Toolkit" beforeDir="false" afterPath="$PROJECT_DIR$/../../../JavaCript/Project Test/Session13-React-Redux-Toolkit" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../LaslesVPN/Picture/Bản sao Ellipse 175.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../LaslesVPN/Picture/Bản sao Ellipse 176.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../LaslesVPN/Picture/Ellipse 175.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../LaslesVPN/Picture/Group 1300.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../LaslesVPN/Picture/Huge Global.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../LaslesVPN/Picture/Logo.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../LaslesVPN/Picture/Sponsored.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../LaslesVPN/Picture/eva_arrow-back-fill.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../LaslesVPN/Picture/feature.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../LaslesVPN/Picture/hero.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../LaslesVPN/Picture/left.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../LaslesVPN/Picture/plan.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../LaslesVPN/Picture/right.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../LaslesVPN/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../LaslesVPN/style.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Session4/Exercise1/Circle.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Session4/Exercise1/main.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Session4/Exercise2/QuadraticEquation.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Session4/Exercise2/main.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Session4/Exercise4/Fan.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Session4/Exercise4/main.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Session4/Exercise5/Students.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Session4/Exercise5/Test.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Session4/Exercise8/Employee.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Session4/Exercise8/main.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../TestFolder/MD2-ReactJS-MiniProject---ShoppingCart" beforeDir="false" afterPath="$PROJECT_DIR$/../../../MD2-ReactJS-MiniProject---ShoppingCart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../TestFolder/ontap_react" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../TestFolder/vite-project/git_flow" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../bacsic" beforeDir="false" afterPath="$PROJECT_DIR$/../../../bacsic" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../../.." />
+  </component>
+  <component name="ProjectColorInfo"><![CDATA[{
+  "associatedIndex": 2
+}]]></component>
+  <component name="ProjectId" id="2i5jAB9UWmXnuXnscktU172n3tH" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "main",
+    "kotlin-language-version-configured": "true",
+    "nodejs_package_manager_path": "npm",
+    "onboarding.tips.debug.path": "/Users/thaingocphat/RikkeiAcademy/Java/Session11/Exercise3/src/Main.java",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="jdk-1.8.0_402-corretto-1.8.0_402-4caba194b151-995e55e7" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="c24240ec-5096-49e0-9c6e-ce90850bb5c9" name="Changes" comment="" />
+      <created>1718787185482</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1718787185482</updated>
+      <workItem from="1718787186502" duration="75000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+</project>
