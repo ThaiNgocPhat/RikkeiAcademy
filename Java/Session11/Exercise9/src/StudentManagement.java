@@ -18,7 +18,7 @@ public class StudentManagement {
             for (Student student : students) {
                 System.out.println(student);
             }
-        }
+        }   
     }
 
     // Phương thức addStudent để thêm một sinh viên vào danh sách sinh viên

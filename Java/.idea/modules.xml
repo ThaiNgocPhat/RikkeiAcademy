@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/Session13/Exercise1/Exercise1.iml" filepath="$PROJECT_DIR$/Session13/Exercise1/Exercise1.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Session8/Exercise1/Exercise11.iml" filepath="$PROJECT_DIR$/Session8/Exercise1/Exercise11.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Session14/Exercise1/Exercise12.iml" filepath="$PROJECT_DIR$/Session14/Exercise1/Exercise12.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Session6/Exercise1/Exercise13.iml" filepath="$PROJECT_DIR$/Session6/Exercise1/Exercise13.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Session9/Exercise1/Exercise14.iml" filepath="$PROJECT_DIR$/Session9/Exercise1/Exercise14.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Session10/Exercise1/Exercise15.iml" filepath="$PROJECT_DIR$/Session10/Exercise1/Exercise15.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Session11/Exercise1/Exercise16.iml" filepath="$PROJECT_DIR$/Session11/Exercise1/Exercise16.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Session12/Exercise1/Exercise17.iml" filepath="$PROJECT_DIR$/Session12/Exercise1/Exercise17.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Session13/Exercise2/Exercise2.iml" filepath="$PROJECT_DIR$/Session13/Exercise2/Exercise2.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Session8/Exercise2/Exercise21.iml" filepath="$PROJECT_DIR$/Session8/Exercise2/Exercise21.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Session14/Exercise2/Exercise22.iml" filepath="$PROJECT_DIR$/Session14/Exercise2/Exercise22.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Session6/Exercise2/Exercise23.iml" filepath="$PROJECT_DIR$/Session6/Exercise2/Exercise23.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Session9/Exercise2/Exercise24.iml" filepath="$PROJECT_DIR$/Session9/Exercise2/Exercise24.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Session10/Exercise2/Exercise25.iml" filepath="$PROJECT_DIR$/Session10/Exercise2/Exercise25.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Session11/Exercise2/Exercise26.iml" filepath="$PROJECT_DIR$/Session11/Exercise2/Exercise26.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Session12/Exercise2/Exercise27.iml" filepath="$PROJECT_DIR$/Session12/Exercise2/Exercise27.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Session13/Exercise3/Exercise3.iml" filepath="$PROJECT_DIR$/Session13/Exercise3/Exercise3.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Session8/Exercise3/Exercise31.iml" filepath="$PROJECT_DIR$/Session8/Exercise3/Exercise31.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Session14/Exercise3/Exercise32.iml" filepath="$PROJECT_DIR$/Session14/Exercise3/Exercise32.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Session6/Exercise3/Exercise33.iml" filepath="$PROJECT_DIR$/Session6/Exercise3/Exercise33.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Session9/Exercise3/Exercise34.iml" filepath="$PROJECT_DIR$/Session9/Exercise3/Exercise34.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Session11/Exercise3/Exercise35.iml" filepath="$PROJECT_DIR$/Session11/Exercise3/Exercise35.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Session12/Exercise3/Exercise36.iml" filepath="$PROJECT_DIR$/Session12/Exercise3/Exercise36.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Session13/Exercise4/Exercise4.iml" filepath="$PROJECT_DIR$/Session13/Exercise4/Exercise4.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Session8/Exercise4/Exercise41.iml" filepath="$PROJECT_DIR$/Session8/Exercise4/Exercise41.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Session6/Exercise4/Exercise42.iml" filepath="$PROJECT_DIR$/Session6/Exercise4/Exercise42.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Session9/Exercise4/Exercise43.iml" filepath="$PROJECT_DIR$/Session9/Exercise4/Exercise43.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Session11/Exercise4/Exercise44.iml" filepath="$PROJECT_DIR$/Session11/Exercise4/Exercise44.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Session12/Exercise4/Exercise45.iml" filepath="$PROJECT_DIR$/Session12/Exercise4/Exercise45.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Session13/Exercise5/Exercise5.iml" filepath="$PROJECT_DIR$/Session13/Exercise5/Exercise5.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Session8/Exercise5/Exercise51.iml" filepath="$PROJECT_DIR$/Session8/Exercise5/Exercise51.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Session6/Exercise5/Exercise52.iml" filepath="$PROJECT_DIR$/Session6/Exercise5/Exercise52.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Session11/Exercise5/Exercise53.iml" filepath="$PROJECT_DIR$/Session11/Exercise5/Exercise53.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Session12/Exercise5/Exercise54.iml" filepath="$PROJECT_DIR$/Session12/Exercise5/Exercise54.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Session6/Exercise6/Exercise6.iml" filepath="$PROJECT_DIR$/Session6/Exercise6/Exercise6.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Session11/Exercise6/Exercise61.iml" filepath="$PROJECT_DIR$/Session11/Exercise6/Exercise61.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Session12/Exercise6/Exercise62.iml" filepath="$PROJECT_DIR$/Session12/Exercise6/Exercise62.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Session6/Exercise7/Exercise7.iml" filepath="$PROJECT_DIR$/Session6/Exercise7/Exercise7.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Session11/Exercise7/Exercise71.iml" filepath="$PROJECT_DIR$/Session11/Exercise7/Exercise71.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Session12/Exercise7/Exercise72.iml" filepath="$PROJECT_DIR$/Session12/Exercise7/Exercise72.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Session6/Exercise8/Exercise8.iml" filepath="$PROJECT_DIR$/Session6/Exercise8/Exercise8.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Session11/Exercise8/Exercise81.iml" filepath="$PROJECT_DIR$/Session11/Exercise8/Exercise81.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Session12/Exercise8/Exercise82.iml" filepath="$PROJECT_DIR$/Session12/Exercise8/Exercise82.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Session6/Exercise9/Exercise9.iml" filepath="$PROJECT_DIR$/Session6/Exercise9/Exercise9.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Session11/Exercise9/Exercise91.iml" filepath="$PROJECT_DIR$/Session11/Exercise9/Exercise91.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Session12/Exercise9/Exercise92.iml" filepath="$PROJECT_DIR$/Session12/Exercise9/Exercise92.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Session10/OOPSynthesis/OOPSynthesis.iml" filepath="$PROJECT_DIR$/Session10/OOPSynthesis/OOPSynthesis.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Refactoring/Refactoring.iml" filepath="$PROJECT_DIR$/Refactoring/Refactoring.iml" />
+      <module fileurl="file://$PROJECT_DIR$/RikkeiAcademy.iml" filepath="$PROJECT_DIR$/RikkeiAcademy.iml" />
+    </modules>
+  </component>
+</project>

@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="1ac1a15f-9164-46e4-9101-e90d55e97c93" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/../HCM_JS220313_BS_ThaiNgocPhat" beforeDir="false" afterPath="$PROJECT_DIR$/../HCM_JS220313_BS_ThaiNgocPhat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/OOPSynthesis/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/OOPSynthesis/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/OOPSynthesis/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/OOPSynthesis/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/OOPSynthesis/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/OOPSynthesis/OOPSynthesis.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/OOPSynthesis/src/Book.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/OOPSynthesis/src/Category.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/OOPSynthesis/src/Library.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/OOPSynthesis/src/Main.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Refactoring/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Refactoring/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Refactoring/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Refactoring/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Refactoring/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Refactoring/Refactoring.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Refactoring/src/Main.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Refactoring/src/TennisGame.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Refactoring/src/TennisGameTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Session11/Exercise9/src/StudentManagement.java" beforeDir="false" afterPath="$PROJECT_DIR$/Session11/Exercise9/src/StudentManagement.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Session12/Exercise7/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/Session12/Exercise7/src/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Session14/Exercise3/src/business/DepartmentBusiness.java" beforeDir="false" afterPath="$PROJECT_DIR$/Session14/Exercise3/src/business/DepartmentBusiness.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Session14/Exercise3/src/business/EmployeeBusiness.java" beforeDir="false" afterPath="$PROJECT_DIR$/Session14/Exercise3/src/business/EmployeeBusiness.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Session14/Exercise3/src/business/IGenericDesign.java" beforeDir="false" afterPath="$PROJECT_DIR$/Session14/Exercise3/src/business/IGenericDesign.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Session14/Exercise3/src/entity/Department.java" beforeDir="false" afterPath="$PROJECT_DIR$/Session14/Exercise3/src/entity/Department.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Session14/Exercise3/src/entity/Employee.java" beforeDir="false" afterPath="$PROJECT_DIR$/Session14/Exercise3/src/entity/Employee.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Session14/Exercise3/src/run/DepartmentManagement.java" beforeDir="false" afterPath="$PROJECT_DIR$/Session14/Exercise3/src/run/DepartmentManagement.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Session15/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Session15/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Session4" beforeDir="false" afterPath="$PROJECT_DIR$/Session4" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Session6" beforeDir="false" afterPath="$PROJECT_DIR$/Session6" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Session6/Exercise2/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Session6/Exercise2/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/Session6/Exercise2/src/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Session8" beforeDir="false" afterPath="$PROJECT_DIR$/Session8" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Session8/Exercise2/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/Session8/Exercise2/src/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Session8/Exercise3/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/Session8/Exercise3/src/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Session9/Exercise3/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/Session9/Exercise3/src/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/java/test.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JavaCript/HCM-JAVA-04-2024-ontap" beforeDir="false" afterPath="$PROJECT_DIR$/../JavaCript/HCM-JAVA-04-2024-ontap" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JavaCript/Project Test/Session13-React-Redux-Toolkit" beforeDir="false" afterPath="$PROJECT_DIR$/../JavaCript/Project Test/Session13-React-Redux-Toolkit" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../bacsic" beforeDir="false" afterPath="$PROJECT_DIR$/../bacsic" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 3
+}</component>
+  <component name="ProjectId" id="2iV6YrXPkgUskOL7tMSgBjU2bl9" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Users/thaingocphat/RikkeiAcademy/Java&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  }
+}</component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="jdk-21.0.1-openjdk-21.0.1-4caba194b151-9b16c6e2" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="1ac1a15f-9164-46e4-9101-e90d55e97c93" name="Changes" comment="" />
+      <created>1719563447638</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1719563447638</updated>
+      <workItem from="1719563448673" duration="3000" />
+      <workItem from="1719906243586" duration="3000" />
+      <workItem from="1719906336976" duration="2000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+</project>
