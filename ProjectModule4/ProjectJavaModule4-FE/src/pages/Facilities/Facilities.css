@@ -1,4 +1,4 @@
-/* FACILITIES TITLE */
+/* ---------------------FACILITIES TITLE -------------------*/
 .facilities-title {
     text-align: center;
     margin-bottom: 50px;
@@ -107,7 +107,7 @@
     }
 }
 
-/* FACILITIES POOL TITLE */
+/* -------------FACILITIES POOL TITLE ------------------*/
 .facilities-pool-title {
     text-align: center;
     margin-bottom: 50px;
@@ -151,22 +151,53 @@
 }
 
 
-/* Lớp phủ (overlay) */
+/* FACILITY POOL CONTENT LEFT */
+.facilities-pool__left {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.facilities-pool__left--content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.facilities-pool__left--content--title p {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+.facilities-pool__left--content--img img {
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.facilities-pool__left--content--img img:hover {
+    transform: scale(1.05);
+}
+
 .facilities-pool__left--overlay {
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, 0.7); /* Màu nền tối với độ trong suốt */
+    background: rgba(0, 0, 0, 0.7);
     display: flex;
     justify-content: center;
     align-items: center;
-    z-index: 1000; /* Đảm bảo lớp phủ nằm trên các phần tử khác */
-  }
-  
-  /* Nút đóng (close button) */
-  .facilities-pool__left--close {
+    z-index: 1000;
+}
+
+.facilities-pool__left--close {
     position: absolute;
     top: 20px;
     right: 20px;
@@ -182,10 +213,9 @@
     cursor: pointer;
     font-size: 24px;
     font-weight: bold;
-  }
-  
-  /* Nội dung lớp phủ */
-  .facilities-pool__left--item {
+}
+
+.facilities-pool__left--item {
     background: #fff;
     padding: 20px;
     border-radius: 8px;
@@ -193,39 +223,641 @@
     max-height: 80%;
     overflow: auto;
     display: flex;
-    flex-direction: row; /* Sắp xếp nội dung theo hàng */
-    gap: 20px; /* Khoảng cách giữa nội dung chữ và hình ảnh */
-  }
-  
-  /* Nội dung chữ bên trái */
-  .facilities-pool__left--item-title {
-    flex: 1; /* Phần nội dung chữ chiếm không gian còn lại */
-    display: flex;
-    flex-direction: column; /* Sắp xếp các phần tử chữ theo cột */
-    justify-content: center; /* Canh giữa nội dung chữ theo chiều dọc */
-  }
-  
-  .facilities-pool__left--item-title h1 {
-    font-size: 36px; /* Tăng kích thước chữ tiêu đề */
-    margin-bottom: 15px; /* Khoảng cách dưới tiêu đề */
-  }
-  
-  .facilities-pool__left--item-title-content p {
-    font-size: 18px; /* Kích thước chữ nội dung chính */
-    margin: 10px 0; /* Khoảng cách giữa các đoạn văn */
-    line-height: 1.6; /* Khoảng cách giữa các dòng chữ */
-  }
-  
-  /* Hình ảnh bên phải */
-  .facilities-pool__left--item-img {
+    flex-direction: row;
+    gap: 20px;
+}
+
+.facilities-pool__left--item-img {
     display: grid;
-    grid-template-columns: repeat(2, 300px); /* Hai hình ảnh mỗi hàng với kích thước cố định 300px */
-    gap: 20px; /* Khoảng cách giữa các hình ảnh */
-  }
-  
-  .facilities-pool__left--item-img img {
-    width: 300px; /* Đặt chiều rộng của hình ảnh */
-    height: 300px; /* Đặt chiều cao của hình ảnh */
-    object-fit: cover; /* Đảm bảo hình ảnh không bị méo */
-  }
-  
+    grid-template-columns: repeat(2, 300px);
+    gap: 20px;
+}
+
+.facilities-pool__left--item-img img {
+    width: 300px;
+    height: 300px;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.facilities-pool__left--item-img img:hover {
+    transform: scale(1.05);
+}
+
+.facilities-pool__left--item-title {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.facilities-pool__left--item-title h1 {
+    font-size: 36px;
+    margin-bottom: 15px;
+}
+
+.facilities-pool__left--item-title-content p {
+    font-size: 18px;
+    margin: 10px 0;
+    line-height: 1.6;
+}
+
+/* FACILITY POOL CONTENT MIDDLE */
+.facilities-pool__mid{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.facilities-pool__mid--content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20px;
+}
+.facilities-pool__mid--content--title p {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+.facilities-pool__mid--content--img img {
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.facilities-pool__mid--content--img img:hover {
+    transform: scale(1.05);
+}
+
+.facilities-pool__mid--overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.facilities-pool__mid--close {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background: #fff;
+    color: #333;
+    border: none;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.facilities-pool__mid--item {
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    max-width: 80%;
+    max-height: 80%;
+    overflow: auto;
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+}
+
+.facilities-pool__mid--item-img {
+    display: grid;
+    grid-template-columns: repeat(2, 300px);
+    gap: 20px;
+}
+
+.facilities-pool__mid--item-img img {
+    width: 300px;
+    height: 300px;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.facilities-pool__mid--item-img img:hover {
+    transform: scale(1.05);
+}
+
+.facilities-pool__mid--item-title {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.facilities-pool__mid--item-title h1 {
+    font-size: 36px;
+    margin-bottom: 15px;
+}
+
+.facilities-pool__mid--item-title-content p {
+    font-size: 18px;
+    margin: 10px 0;
+    line-height: 1.6;
+}
+/* FACILITY POOL CONTENT RIGHT */
+.facilities-pool__right {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.facilities-pool__right--content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.facilities-pool__right--content--title p {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+.facilities-pool__right--content--img img {
+    width: 100%;
+    max-width: 355px;
+    height: auto;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.facilities-pool__right--content--img img:hover {
+    transform: scale(1.05);
+}
+
+.facilities-pool__right--overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.facilities-pool__right--close {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background: #fff;
+    color: #333;
+    border: none;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.facilities-pool__right--item {
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    max-width: 80%;
+    max-height: 80%;
+    overflow: auto;
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+}
+
+.facilities-pool__right--item-img {
+    display: grid;
+    grid-template-columns: repeat(2, 300px);
+    gap: 20px;
+}
+
+.facilities-pool__right--item-img img {
+    width: 300px;
+    height: 300px;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.facilities-pool__right--item-img img:hover {
+    transform: scale(1.05);
+}
+
+.facilities-pool__right--item-title {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.facilities-pool__right--item-title h1 {
+    font-size: 36px;
+    margin-bottom: 15px;
+}
+
+.facilities-pool__right--item-title-content p {
+    font-size: 18px;
+    margin: 10px 0;
+    line-height: 1.6;
+}
+
+
+/*----------FACILITY CAREFUULY HEALTH--------------*/
+.facilities-careffully-health-title{
+    text-align: center;
+    margin-bottom: 50px;
+    padding: 0 20px;
+}
+
+.facilities-careffully-health{
+    display: flex;
+    width: 1200px;
+    margin: 0 auto;
+}
+/* FACILITY CAREFULLY HEALTH CONTENT LEFT */
+.facilities-careffully-health__left {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.facilities-careffully-health__left--content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.facilities-careffully-health__left-content-title h1 {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+.facilities-careffully-health__left-content--img img {
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.facilities-careffully-health__left-content--img img:hover {
+    transform: scale(1.05);
+}
+
+.facilities-careffully-health__left--overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.facilities-careffully-health__left--close {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background: #fff;
+    color: #333;
+    border: none;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.facilities-careffully-health__left-item {
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    max-width: 80%;
+    max-height: 80%;
+    overflow: auto;
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+}
+
+.facilities-careffully-health__left-item-img {
+    display: grid;
+    grid-template-columns: repeat(2, 300px);
+    gap: 20px;
+}
+
+.facilities-careffully-health__left-item-img img {
+    width: 300px;
+    height: 300px;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.facilities-careffully-health__left-item-img img:hover {
+    transform: scale(1.05);
+}
+
+.facilities-careffully-health__left-item-title {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.facilities-careffully-health__left-item-title h1 {
+    font-size: 36px;
+    margin-bottom: 15px;
+}
+
+.facilities-careffully-health__left-item-title-content1 p,
+.facilities-careffully-health__left-item-title-content2 p {
+    font-size: 18px;
+    margin: 10px 0;
+    line-height: 1.6;
+}
+
+
+
+/* FACILITY CAREFULLY HEALTH CONTENT MID */
+.facilities-careffully-health__mid {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.facilities-careffully-health__mid--content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.facilities-careffully-health__mid-content-title h1 {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+.facilities-careffully-health__mid-content--img img {
+    width: 400px;
+    height: 267px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.facilities-careffully-health__mid-content--img img:hover {
+    transform: scale(1.05);
+}
+
+.facilities-careffully-health__mid--overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.facilities-careffully-health__mid--close {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background: #fff;
+    color: #333;
+    border: none;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.facilities-careffully-health__mid-item {
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    max-width: 80%;
+    max-height: 80%;
+    overflow: auto;
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+}
+
+.facilities-careffully-health__mid-item-img {
+    display: grid;
+    grid-template-columns: repeat(2, 300px);
+    gap: 20px;
+}
+
+.facilities-careffully-health__mid-item-img img {
+    width: 300px;
+    height: 300px;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.facilities-careffully-health__mid-item-img img:hover {
+    transform: scale(1.05);
+}
+
+.facilities-careffully-health__mid-item-title {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.facilities-careffully-health__mid-item-title h1 {
+    font-size: 36px;
+    margin-bottom: 15px;
+}
+
+.facilities-careffully-health__mid-item-title-content p {
+    font-size: 18px;
+    margin: 10px 0;
+    line-height: 1.6;
+}
+
+
+
+/* FACILITY CAREFULLY HEALTH CONTENT RIGHT */
+.facilities-careffully-health__right {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.facilities-careffully-health__right--content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.facilities-careffully-health__right-content-title h1 {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+.facilities-careffully-health__right-content--img img {
+    width: 400px;
+    height: 268px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.facilities-careffully-health__right-content--img img:hover {
+    transform: scale(1.05);
+}
+
+.facilities-careffully-health__right--overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.facilities-careffully-health__right--close {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background: #fff;
+    color: #333;
+    border: none;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.facilities-careffully-health__right-item {
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    max-width: 80%;
+    max-height: 80%;
+    overflow: auto;
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+}
+
+.facilities-careffully-health__right-item-img {
+    display: grid;
+    grid-template-columns: repeat(2, 300px);
+    gap: 20px;
+}
+
+.facilities-careffully-health__right-item-img img {
+    width: 300px;
+    height: 300px;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.facilities-careffully-health__right-item-img img:hover {
+    transform: scale(1.05);
+}
+
+.facilities-careffully-health__right-item-title {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.facilities-careffully-health__right-item-title h1 {
+    font-size: 36px;
+    margin-bottom: 15px;
+}
+
+.facilities-careffully-health__right-item-title-content p {
+    font-size: 18px;
+    margin: 10px 0;
+    line-height: 1.6;
+}
+
+
+
+/*--------------KID CLUB----------------*/
+.kid-club-title{
+    text-align: center;
+    margin-bottom: 50px;
+    padding: 0 20px;
+}
+.kid-club-img{
+    display: flex;
+    justify-content: space-around;
+}
+.kid-club-img img{
+    width: 400px;
+    height: 400px;
+    border-radius: 5px;
+}
+
+
+/*-------------------SERVICE CENTER-------------------*/
+.facilities-service{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 100px;
+    margin: 50px 0 50px 0;
+}
+.facilities-service-img img{
+    width: 900px;
+    height: 700px;
+}

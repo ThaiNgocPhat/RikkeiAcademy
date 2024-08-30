@@ -1,0 +1,109 @@
+.facilities-pool__left {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.facilities-pool__left--content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.facilities-pool__left--content--title p {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+.facilities-pool__left--content--img img {
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.facilities-pool__left--content--img img:hover {
+    transform: scale(1.05);
+}
+
+.facilities-pool__left--overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.facilities-pool__left--close {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background: #fff;
+    color: #333;
+    border: none;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.facilities-pool__left--item {
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    max-width: 80%;
+    max-height: 80%;
+    overflow: auto;
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+}
+
+.facilities-pool__left--item-img {
+    display: grid;
+    grid-template-columns: repeat(2, 300px);
+    gap: 20px;
+}
+
+.facilities-pool__left--item-img img {
+    width: 300px;
+    height: 300px;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.facilities-pool__left--item-img img:hover {
+    transform: scale(1.05);
+}
+
+.facilities-pool__left--item-title {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.facilities-pool__left--item-title h1 {
+    font-size: 36px;
+    margin-bottom: 15px;
+}
+
+.facilities-pool__left--item-title-content p {
+    font-size: 18px;
+    margin: 10px 0;
+    line-height: 1.6;
+}

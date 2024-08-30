@@ -1,0 +1,85 @@
+.room-title{
+    font-size: 1.5rem;
+    text-align: center;
+    width: 1200px;
+    margin: 0 auto;
+}
+
+/* -------------------ROOM TITLE--------------------*/
+
+.room-type-title{
+    font-size: 2rem;
+    text-align: center;
+    margin-bottom: 20px;
+}
+.room-type-title button{
+    background-color: #b99141;
+    color: white;
+    border: none;
+    padding: 20px 100px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+.room-type,
+.room-heritage-title{
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+}
+/* Các nút trong phần Room Type */
+.room-type button {
+    background-color: #fff; /* Màu nền trắng mặc định */
+    color: #000; /* Màu chữ đen mặc định */
+    border: 2px solid #ddd; /* Viền nhẹ để nút nổi bật */
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 5px;
+    transition: background-color 0.3s, color 0.3s; /* Hiệu ứng chuyển đổi màu sắc */
+  }
+  
+  /* Màu nền khi hover */
+  .room-type button:hover {
+    background-color: #f0f0f0; /* Màu nền sáng khi hover */
+    color: #996e2c; /* Màu chữ khi hover */
+    border-color: #996e2c; /* Đổi màu viền khi hover */
+  }
+  
+  /* Màu nền của nút đang được chọn (selected) */
+  .room-type button.selected {
+    background-color: #996e2c; /* Màu nền khi nút được chọn */
+    color: #fff; /* Màu chữ khi nút được chọn */
+    border-color: #996e2c; /* Đổi màu viền khi nút được chọn */
+  }
+
+  .room-list{
+    width: 1152px;
+    margin: 0 auto;
+  }
+
+  .room-heritage-title{
+    background-color: #b99141;
+    padding: 10px;
+    margin: 50px;
+  }
+  .room-heritage-title h1{
+    color: #ddd;
+  }
+  
+  .room-heritage__room-deluxe{
+    display: flex;
+    gap: 20px;
+    flex-direction: column;
+  }
+  .room-heritage__room-deluxe1{
+    display: flex;
+    gap: 20px;
+    background-color: #EEEEEE	;
+  }
+  .room-heritage__room-deluxe1 img{
+    width: 480px;
+    height: 281px;
+  }
